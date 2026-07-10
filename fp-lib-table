@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "LM399VoltageStandard") (type "KiCad") (uri "/mnt/workspace/workspace/LM399VoltageStandard") (options "") (descr ""))
+)
