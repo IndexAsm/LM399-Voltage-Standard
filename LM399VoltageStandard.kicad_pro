@@ -60,7 +60,7 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.3,
+          "min_clearance": 0.0,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 3,
@@ -245,6 +245,14 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.3
+        },
+        {
+          "diameter": 0.7,
+          "drill": 0.4
         }
       ],
       "zones_allow_external_fillets": false
@@ -664,13 +672,21 @@
         "uuid": "bff531c5-f25b-49a0-a5ad-7c7b81769883"
       }
     ],
-    "used_designators": "C20-22,#PWR6-8,#PWR71,#PWR79,R6,R12,R14-18,JP8-14",
+    "used_designators": "TP2,TP4-5,R2-3,J1,D1-4,C4-5,C7,C9-15,C18-19,C23-32,#PWR4-5,#PWR7-15,#PWR73-74,#PWR76-78,#PWR80-81,#PWR83,#PWR85-88,U3-7",
     "variants": []
   },
   "sheets": [
     [
       "bff531c5-f25b-49a0-a5ad-7c7b81769883",
       "Główny"
+    ],
+    [
+      "8980c601-e7f6-4eec-b462-e49bc8a3c90e",
+      "PowerSupply"
+    ],
+    [
+      "10aa3d86-fe68-47a6-bc4b-e88fae3a159d",
+      "MCU"
     ]
   ],
   "text_variables": {},
