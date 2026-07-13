@@ -4994,14 +4994,14 @@
 			)
 		)
 	)
-	(footprint "Capacitor_SMD:C_0603_1608Metric"
+	(footprint "Capacitor_SMD:C_1206_3216Metric"
 		(layer "F.Cu")
 		(uuid "25ed2bcf-7b2f-4e74-b5a2-ffcd9c5a9792")
-		(at 130.1325 48.325 -90)
-		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+		(at 130.7 49.3 -90)
+		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C20"
-			(at 0 -1.43 90)
+			(at 0 -1.85 270)
 			(layer "F.SilkS")
 			(uuid "b3dd3ce2-966f-47f4-aa53-977210ebc9bd")
 			(effects
@@ -5012,7 +5012,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 0 1.43 90)
+			(at 0 1.85 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "94307e20-fd13-417b-a680-4a9f8d0745a4")
@@ -5024,7 +5024,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fc6bba3e-98f8-452a-b195-5ce9b90587c0")
@@ -5035,7 +5035,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2b5a6cae-70cd-446c-8d7f-305c8bf754da")
@@ -5046,10 +5046,23 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "dbf80573-5a9f-489a-a0f9-f0c41ec2b405")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Link" "https://www.mouser.pl/en/ProductDetail/Murata-Electronics/GRM3195C1H104JA05D?qs=sGAEpiMZZMvsSlwiRhF8qtsGU%2FCnaNeQltqslDj%252Bbfl9yz60Q4XpLA%3D%3D"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0f3f9427-1721-4318-a751-f3e5383f1856")
 			(effects
 				(font
 					(size 1 1)
@@ -5070,8 +5083,8 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -0.14058 0.51)
-			(end 0.14058 0.51)
+			(start -0.711252 0.91)
+			(end 0.711252 0.91)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -5080,8 +5093,8 @@
 			(uuid "13a0fb60-7b5f-4c4c-a748-72b28b04f7d3")
 		)
 		(fp_line
-			(start -0.14058 -0.51)
-			(end 0.14058 -0.51)
+			(start -0.711252 -0.91)
+			(end 0.711252 -0.91)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -5090,8 +5103,8 @@
 			(uuid "ddfe3d2d-f112-43e9-a0b3-fc01638dbcfc")
 		)
 		(fp_rect
-			(start -1.48 -0.73)
-			(end 1.48 0.73)
+			(start -2.3 -1.15)
+			(end 2.3 1.15)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -5101,8 +5114,8 @@
 			(uuid "a1de72d0-d0f0-4a52-bad8-cd9bd32773d2")
 		)
 		(fp_rect
-			(start -0.8 -0.4)
-			(end 0.8 0.4)
+			(start -1.6 -0.8)
+			(end 1.6 0.8)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -5112,36 +5125,36 @@
 			(uuid "66b24cf9-7a23-44e4-9974-9495c7a7041d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "e194625b-6585-48f4-a726-4afe1a9d4ee5")
 			(effects
 				(font
-					(size 0.4 0.4)
-					(thickness 0.06)
+					(size 0.8 0.8)
+					(thickness 0.12)
 				)
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.775 0 270)
-			(size 0.9 0.95)
+			(at -1.475 0 270)
+			(size 1.15 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.25)
+			(roundrect_rratio 0.217391)
 			(net "/10V")
 			(pintype "passive")
 			(uuid "550b7e8d-220e-4ee2-8b49-bbcdcd506a0f")
 		)
 		(pad "2" smd roundrect
-			(at 0.775 0 270)
-			(size 0.9 0.95)
+			(at 1.475 0 270)
+			(size 1.15 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.25)
+			(roundrect_rratio 0.217391)
 			(net "Masa")
 			(pintype "passive")
 			(uuid "d8bd4f56-1e10-4304-b628-77ab93cc6ab0")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -38351,6 +38364,14 @@
 		(uuid "5043dffc-2a78-497d-bd37-094d03f723f5")
 	)
 	(segment
+		(start 130.7 52.15)
+		(end 130.65 52.2)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "Masa")
+		(uuid "509fc91e-8d23-4fd6-bbf6-92aaff4539b5")
+	)
+	(segment
 		(start 82.6125 109)
 		(end 82.6125 108.9)
 		(width 0.25)
@@ -38519,14 +38540,6 @@
 		(uuid "7fb604b6-2a8f-41a5-9c63-68e945ce8a7b")
 	)
 	(segment
-		(start 130.1325 49.1)
-		(end 130.1325 50.475)
-		(width 0.4)
-		(layer "F.Cu")
-		(net "Masa")
-		(uuid "82fb6c7b-18f1-4bd8-8f1a-6a74dd8b85cc")
-	)
-	(segment
 		(start 121.2 115.4)
 		(end 122.55 115.4)
 		(width 0.5)
@@ -38661,6 +38674,14 @@
 		(layer "F.Cu")
 		(net "Masa")
 		(uuid "c67d81aa-0df8-4ae4-a090-de3ab0442325")
+	)
+	(segment
+		(start 130.7 50.775)
+		(end 130.7 52.15)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "Masa")
+		(uuid "cb7c0075-be8c-4e73-b8e4-65bfe879f0cc")
 	)
 	(segment
 		(start 77.15 120.8)
@@ -38999,7 +39020,7 @@
 		(uuid "34a2da39-3f16-479b-8582-4b89159705bb")
 	)
 	(via
-		(at 130.1325 50.475)
+		(at 130.65 52.2)
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")

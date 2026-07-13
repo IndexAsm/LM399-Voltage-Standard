@@ -1,7 +1,9 @@
 # LM399 10V Voltage Standard
 
-## Overview
-This project is a 10V Voltage Standard which I will use to calibrate my equipment.
+10V Voltage Standard used to calibrate equipment.
+
+<img width="713" height="715" alt="obraz" src="https://github.com/user-attachments/assets/3a56e653-adb8-4d4c-9de5-61b401437008" />
+
 
 ## Functions
   - Uptime tracking
@@ -39,8 +41,14 @@ Also there are a few text fields to input measurements, when the device is first
 
 <img width="743" height="727" alt="obraz" src="https://github.com/user-attachments/assets/2b4be532-8f04-475a-87cf-915e5dc6fe1f" />
 
-<img width="713" height="715" alt="obraz" src="https://github.com/user-attachments/assets/3a56e653-adb8-4d4c-9de5-61b401437008" />
 
 
 ## Software
 I used Kicad to design this board.
+
+## [BOM](LM399VoltageStandard.csv)
+Total cost: 552,22zł + shipping
+That is 145,90$
+
+## Credits
+I relied on MarcoReps's videos to learn everything in order to make this project.

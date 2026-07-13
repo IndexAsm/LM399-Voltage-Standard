@@ -4665,6 +4665,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 232.41 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9ab8a38b-a12f-42c5-8bf8-f84742c9a578")
 		)
@@ -4746,6 +4757,17 @@
 			)
 		)
 		(property "Link" "https://www.mouser.pl/ProductDetail/Analog-Devices/LT3045EDDPBF?qs=oahfZPh6IAItEW%2FaDCA8LQ%3D%3D"
+			(at 172.72 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" "33,14zł"
 			(at 172.72 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -4875,6 +4897,17 @@
 				)
 			)
 		)
+		(property "Price" "1,63zł"
+			(at 100.33 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "7"
 			(uuid "06d7abf4-b50f-4d9f-b51c-59f9dcbba4af")
 		)
@@ -4962,6 +4995,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 177.8 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 177.8 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -5212,6 +5256,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 101.6 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f7a7e2f3-0150-471f-9075-8e78164cae12")
 		)
@@ -5294,6 +5349,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 232.41 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e3c28aca-d6e3-4aa4-af97-3f6ce67bff71")
 		)
@@ -5366,6 +5432,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 171.45 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 171.45 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -5614,6 +5691,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 111.76 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d63c1388-f4f4-404b-a7c4-84eedc11659c")
 		)
@@ -5696,6 +5784,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 240.03 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "ec93608c-1c75-4d45-9024-3337a15837b8")
 		)
@@ -5718,7 +5817,7 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5779,6 +5878,17 @@
 			)
 		)
 		(property "Link" "https://www.mouser.pl/en/ProductDetail/Samsung-Electro-Mechanics/CL21A106KOQNNNF?qs=sGAEpiMZZMsh%252B1woXyUXj%252BV5GOLijFH8pxknU5I2OYE%3D"
+			(at 76.2 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" "1,51zł"
 			(at 76.2 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -5871,6 +5981,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 265.43 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b715945e-0223-43de-b5c7-48944dca6a24")
 		)
@@ -5943,6 +6064,17 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small US symbol"
+			(at 201.93 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 201.93 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -6112,6 +6244,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 154.94 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e840e175-1088-4872-bcaa-55b8d9cb0e7e")
 		)
@@ -6194,6 +6337,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 232.41 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "df8683b9-8086-493e-ba55-8bea7bc465f4")
 		)
@@ -6266,6 +6420,17 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small US symbol"
+			(at 90.17 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 90.17 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -6377,7 +6542,7 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6438,6 +6603,17 @@
 			)
 		)
 		(property "Link" "https://www.mouser.pl/en/ProductDetail/Samsung-Electro-Mechanics/CL21A106KOQNNNF?qs=sGAEpiMZZMsh%252B1woXyUXj%252BV5GOLijFH8pxknU5I2OYE%3D"
+			(at 121.92 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" "1,51zł"
 			(at 121.92 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -6530,6 +6706,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 30.48 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b8eb4ac9-4108-4a0b-96b2-98d12b6d0e84")
 		)
@@ -6602,6 +6789,17 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 186.69 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 186.69 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -6722,6 +6920,17 @@
 				)
 			)
 		)
+		(property "Price" "29.4zł"
+			(at 58.42 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9a59bd64-61da-4380-9185-c44e23688862")
 		)
@@ -6827,6 +7036,17 @@
 			)
 		)
 		(property "Link" "https://www.mouser.pl/ProductDetail/Vishay-Semiconductors/AU3PG-M3-87A?qs=z5NHsHGj0DHMjKPjFfMplA%3D%3D&mgh=1&vip=1&utm_id=20549636368&utm_source=google&utm_medium=cpc&utm_marketing_tactic=emeacorp&gad_source=1&gad_campaignid=20549637556&gclid=Cj0KCQjwjb3SBhDgARIsAMKiWzh7-kt-LDRCP2d-i5VUVBCPEHf-Q3h3HIx2QY1Ba2Nftnte4OfJRv0aAoGjEALw_wcB"
+			(at 58.42 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" "29.4zł"
 			(at 58.42 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -7157,6 +7377,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 275.59 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "997ab703-b33d-4594-9517-0ec79b5af697")
 		)
@@ -7318,6 +7549,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 232.41 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a030c59a-3fd8-4f00-b2f2-84617722e5ba")
 		)
@@ -7399,6 +7641,17 @@
 			)
 		)
 		(property "Link" "https://www.mouser.pl/en/ProductDetail/Texas-Instruments/INA180B3QDBVRQ1?qs=l4Gc20tDgJJbJAbKoVt09A%3D%3D"
+			(at 176.53 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" "2,28zł"
 			(at 176.53 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -7578,6 +7831,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 254 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "96095353-dde4-415b-a1d8-0f12f1c1a987")
 		)
@@ -7652,6 +7916,17 @@
 			)
 		)
 		(property "Description" "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"
+			(at 54.61 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 54.61 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -7737,6 +8012,17 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 195.58 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -7905,6 +8191,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 193.04 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9863caad-0202-4966-97d7-30e2cef013ac")
 		)
@@ -7987,6 +8284,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 39.37 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c41e1de3-e85c-4b47-a075-7ec4acbdf9bc")
 		)
@@ -8059,6 +8367,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 241.3 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 241.3 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -8261,6 +8580,17 @@
 				)
 			)
 		)
+		(property "Price" "29.4zł"
+			(at 66.04 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c71b65a9-86cc-4aa2-8eb2-cbb87eb9880b")
 		)
@@ -8346,6 +8676,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 85.09 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bcf5e9a7-f035-4e24-8a0e-89fcfad8e992")
 		)
@@ -8418,6 +8759,17 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small US symbol"
+			(at 78.74 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 78.74 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -8588,6 +8940,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 162.56 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "ab46f205-c1d7-40bd-95fe-6b7388408875")
 		)
@@ -8739,6 +9102,17 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 262.89 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 262.89 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -8940,6 +9314,17 @@
 				)
 			)
 		)
+		(property "Price" "29.4zł"
+			(at 50.8 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0153dcf6-5289-4fef-a33c-fdfebeb0f3fa")
 		)
@@ -9015,6 +9400,17 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small US symbol"
+			(at 228.6 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -9429,6 +9825,17 @@
 				)
 			)
 		)
+		(property "Price" "0,76zł"
+			(at 223.52 40.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7487cba9-605c-4a19-9946-6402c98b9998")
 		)
@@ -9511,6 +9918,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 140.97 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3f6d14c2-428f-4b44-b82e-c1f5e0fa54ca")
 		)
@@ -9582,6 +10000,17 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 29.21 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 29.21 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -9674,6 +10103,17 @@
 				)
 			)
 		)
+		(property "Price" ""
+			(at 241.3 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dd2b296d-3fb9-4bef-8fec-b8ea54b86f93")
 		)
@@ -9746,6 +10186,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 67.31 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
 			(at 67.31 96.52 0)
 			(hide yes)
 			(show_name no)
