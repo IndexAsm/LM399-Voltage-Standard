@@ -33,3 +33,6 @@ Also there are a few text fields to input measurements, when the device is first
 
 <img width="819" height="691" alt="obraz" src="https://github.com/user-attachments/assets/f24fcce6-77ae-45a3-b81c-41e4847a5c61" />
 <img width="596" height="598" alt="obraz" src="https://github.com/user-attachments/assets/25df28c9-238e-42e3-aba1-659fbdc19282" />
+
+## Software
+I used Kicad to design this board.
