@@ -16,7 +16,10 @@ This project is a 10V Voltage Standard which I will use to calibrate my equipmen
   - Low tempco (I am aiming for < 5pp but that requires long term tests)
   - Low long term drift ( Also requires testing, in order to determine the value)
 
-
+## Calibration
+  - Measure the output and adjust the binary trim network accordingly.
+  - Connect it to a computer and write changes to eeprom (a special program will be created after constructing the first prototype).
+  - Done!
 
 ## Reference
 LM399 is chosen as the main reference, which is later amplified to precise 10V with LT1001. It uses precise Z Foil resistors for gain.
