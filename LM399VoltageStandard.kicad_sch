@@ -1018,105 +1018,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical:MountingHole"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "H"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "MountingHole"
-				(at 0 3.175 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Mounting Hole without connection"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "mounting hole"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "MountingHole*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MountingHole_0_1"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 1.27)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Mechanical:MountingHole_Pad"
 			(pin_numbers
 				(hide yes)
@@ -1542,6 +1443,278 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Sensor_Temperature:LM35-LP"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -6.35 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LM35-LP"
+				(at 1.27 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 1.27 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm35.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Precision centigrade temperature sensor, TO-92"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "temperature sensor thermistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO?92*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LM35-LP_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 3.175) (xy -5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 3.175) (xy -4.445 3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy -4.445 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 1.905) (xy -4.445 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 1.27) (xy -4.445 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 0.635) (xy -4.445 0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -5.08 3.175)
+					(mid -4.445 3.8073)
+					(end -3.81 3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -4.445 -2.54)
+					(radius 1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.175) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 -1.905)
+					(end -5.08 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "LM35-LP_1_1"
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "+V_{S}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "V_{OUT}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "masa:Masa"
 			(power global)
 			(pin_numbers
@@ -1850,10 +2023,22 @@
 		(uuid "26580662-ad81-4830-b036-431e3fca73f9")
 	)
 	(junction
+		(at 77.47 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "37da43a1-4760-47b4-8095-272b0f5d7914")
+	)
+	(junction
 		(at 151.13 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3bb0a9f1-8b00-4211-a57a-467638526248")
+	)
+	(junction
+		(at 44.45 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "41452b1f-c065-4592-86fc-69f5d5942c63")
 	)
 	(junction
 		(at 82.55 43.18)
@@ -1940,6 +2125,12 @@
 		(uuid "82992c95-bab3-4b83-9c6a-ece8b19a4ee7")
 	)
 	(junction
+		(at 44.45 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "84eb89e9-bb68-405f-9021-376cad4b2764")
+	)
+	(junction
 		(at 181.61 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1974,6 +2165,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b28104b3-119b-4ca7-94e5-3df00d68acbf")
+	)
+	(junction
+		(at 44.45 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b92915c3-e8d1-4d5b-8cf5-9bfce3b67664")
 	)
 	(junction
 		(at 191.77 59.69)
@@ -2377,6 +2574,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 49.53) (xy 44.45 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70897099-6167-458c-8039-a832cad15ddb")
+	)
+	(wire
+		(pts
 			(xy 34.29 96.52) (xy 34.29 104.14)
 		)
 		(stroke
@@ -2434,6 +2641,16 @@
 			(type default)
 		)
 		(uuid "7f85efcc-29b6-49b3-a18b-6e90d8dd31b7")
+	)
+	(wire
+		(pts
+			(xy 77.47 105.41) (xy 77.47 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "815ed70d-6577-491e-9e5e-74362de061fd")
 	)
 	(wire
 		(pts
@@ -2567,6 +2784,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 64.77) (xy 44.45 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5818aba-4b43-4c1e-8737-ba99e409d89e")
+	)
+	(wire
+		(pts
 			(xy 223.52 80.01) (xy 232.41 80.01)
 		)
 		(stroke
@@ -2647,6 +2874,16 @@
 	)
 	(wire
 		(pts
+			(xy 77.47 104.14) (xy 77.47 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b77e0d3e-846b-4a6e-84d7-5d3df8a142b9")
+	)
+	(wire
+		(pts
 			(xy 76.2 62.23) (xy 76.2 60.96)
 		)
 		(stroke
@@ -2674,6 +2911,16 @@
 			(type default)
 		)
 		(uuid "bd05471c-bbfa-4900-af65-81e43ae42720")
+	)
+	(wire
+		(pts
+			(xy 44.45 72.39) (xy 44.45 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd9d3170-c8c5-42f2-bdfa-f7c68194fdf3")
 	)
 	(wire
 		(pts
@@ -2764,6 +3011,26 @@
 			(type default)
 		)
 		(uuid "d6b27000-4b40-4ee8-b5ac-84ca9ee702fa")
+	)
+	(wire
+		(pts
+			(xy 44.45 57.15) (xy 44.45 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da6d0053-4917-44d9-a3f5-59f28f15f093")
+	)
+	(wire
+		(pts
+			(xy 77.47 105.41) (xy 83.82 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db0bbbe8-9a74-4f63-8463-941bd144ef00")
 	)
 	(wire
 		(pts
@@ -2864,6 +3131,30 @@
 			(justify right bottom)
 		)
 		(uuid "1f0e8779-6a94-41ff-92b6-945ec4d727cd")
+	)
+	(global_label "TEMP_SENSE"
+		(shape input)
+		(at 87.63 120.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "62eee637-b16a-450c-8fd7-cf5f732b7642")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 102.4683 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -3125,8 +3416,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 30.48 72.39 0)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 31.75 49.53 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3134,21 +3425,19 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "071f7d86-4ee8-4b04-b6aa-39c405ba9822")
-		(property "Reference" "H7"
-			(at 33.02 71.1199 0)
+		(uuid "0696c8c6-5041-4097-9d05-15b0017488e9")
+		(property "Reference" "H5"
+			(at 30.48 45.72 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 33.02 73.6599 0)
+		(property "Value" "MountingHole_Pad"
+			(at 30.48 45.72 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3156,11 +3445,10 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 30.48 72.39 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+			(at 31.75 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3171,7 +3459,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 72.39 0)
+			(at 31.75 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3181,8 +3469,8 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 30.48 72.39 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 31.75 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3191,11 +3479,14 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "1"
+			(uuid "aaf9b8be-e738-49b1-88cd-4bc5b28a3cfd")
 		)
 		(instances
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
-					(reference "H7")
+					(reference "H5")
 					(unit 1)
 				)
 			)
@@ -4152,8 +4443,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 30.48 64.77 0)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 31.75 57.15 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4161,21 +4452,19 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2f5e24f0-4423-4800-8473-194e3d91b96f")
+		(uuid "2a840b27-7133-45ab-b009-c0aeec0c1e2c")
 		(property "Reference" "H6"
-			(at 33.02 63.4999 0)
+			(at 30.48 53.34 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 33.02 66.0399 0)
+		(property "Value" "MountingHole_Pad"
+			(at 30.48 53.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4183,11 +4472,10 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 30.48 64.77 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+			(at 31.75 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4198,7 +4486,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 64.77 0)
+			(at 31.75 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4208,8 +4496,8 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 30.48 64.77 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 31.75 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4218,6 +4506,9 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "1"
+			(uuid "6f9f3d9c-1cb7-4500-9b16-3b9094ec4c4e")
 		)
 		(instances
 			(project "LM399VoltageStandard"
@@ -4302,6 +4593,170 @@
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
 					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+15V")
+		(at 77.47 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "31145ed7-a1ea-463d-8953-ac1f4e2cee27")
+		(property "Reference" "#PWR028"
+			(at 77.47 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+15V_H"
+			(at 77.47 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 77.47 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 77.47 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+15V\""
+			(at 77.47 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "345babc8-cb0a-43fd-83a8-a2e9ee055848")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Temperature:LM35-LP")
+		(at 77.47 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "37bd9d4c-d6df-4b68-8af5-9c5164383339")
+		(property "Reference" "U12"
+			(at 68.58 119.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LM35-LP"
+			(at 68.58 121.9199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 78.74 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm35.pdf"
+			(at 77.47 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Precision centigrade temperature sensor, TO-92"
+			(at 77.47 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9896b8b8-255c-4370-b4e0-65406d8892f7")
+		)
+		(pin "1"
+			(uuid "d02a1ba9-dc78-4278-8ba7-bb1539fac595")
+		)
+		(pin "3"
+			(uuid "d70f437d-6fec-45de-820d-b047193b60d5")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "U12")
 					(unit 1)
 				)
 			)
@@ -4480,30 +4935,19 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 30.48 58.42 0)
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 39.37 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "429f6343-1a02-4fe2-985f-8e03f90d14c4")
-		(property "Reference" "H5"
-			(at 33.02 57.1499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 33.02 59.6899 0)
+		(uuid "42be63fc-7310-4e74-9955-4cdda7fe5706")
+		(property "Reference" "JP16"
+			(at 40.6401 58.42 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4511,11 +4955,23 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 30.48 58.42 0)
+		(property "Value" "Jumper_2_Open"
+			(at 38.1001 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 39.37 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4526,7 +4982,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 58.42 0)
+			(at 39.37 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4536,8 +4992,8 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 30.48 58.42 0)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 39.37 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4546,11 +5002,17 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "2"
+			(uuid "19edc1db-8a8b-4b18-b7b1-70444b0e033e")
+		)
+		(pin "1"
+			(uuid "e39640bb-7dcb-46cc-a5b6-47c85da318db")
 		)
 		(instances
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
-					(reference "H5")
+					(reference "JP16")
 					(unit 1)
 				)
 			)
@@ -4644,6 +5106,90 @@
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
 					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 39.37 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "47c7ee71-92ad-4880-be3c-25711a705301")
+		(property "Reference" "JP15"
+			(at 40.6401 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 38.1001 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 39.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 39.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "79973603-6896-4bf8-8e71-01b9c2cad3f1")
+		)
+		(pin "1"
+			(uuid "6aafc8c7-9c16-45b4-9ba4-a335c6f024ea")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "JP15")
 					(unit 1)
 				)
 			)
@@ -5107,6 +5653,90 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 39.37 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5cd2708d-a1ce-47b4-9594-56683bc9c77e")
+		(property "Reference" "JP17"
+			(at 40.6401 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 38.1001 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 39.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 39.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6dc73c77-e012-4222-9f17-a5752d53f9ed")
+		)
+		(pin "1"
+			(uuid "09cdacef-1d35-4bd3-aa25-e402667f4e1a")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "JP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 31.75 104.14 90)
 		(unit 1)
@@ -5271,6 +5901,162 @@
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "masa:Masa")
+		(at 44.45 80.01 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "691d8b6a-44c0-4ac5-82c5-81be42ba4cae")
+		(property "Reference" "#PWR0104"
+			(at 44.45 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Masa"
+			(at 44.45 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 44.45 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "29a2f228-0c84-4a26-8b1f-60fa0152058b")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 31.75 72.39 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "696c33ee-6bfb-4428-93b6-dfa2b9b6b996")
+		(property "Reference" "H8"
+			(at 30.48 68.58 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 30.48 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+			(at 31.75 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 31.75 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "447d6901-e275-475f-a174-062d50bc0729")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "H8")
 					(unit 1)
 				)
 			)
@@ -6027,6 +6813,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 31.75 64.77 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "97f239c0-3ac5-432e-bf7f-4ca196ba5ea6")
+		(property "Reference" "H7"
+			(at 30.48 60.96 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 30.48 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+			(at 31.75 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 31.75 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "66120edc-26b8-4aef-a9fe-dbe8eeb25036")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "H7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 105.41 59.69 0)
 		(unit 1)
@@ -6103,6 +6966,88 @@
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
 					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 83.82 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a3d4338e-1756-4d4a-98ba-cf8d83fc0a02")
+		(property "Reference" "C46"
+			(at 86.36 106.6862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 86.36 109.2262 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 83.82 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 83.82 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49a23b47-7120-44f7-bde1-f6d3b5852fb7")
+		)
+		(pin "2"
+			(uuid "663a66e9-385c-49d8-ba4f-ee683aa857fb")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -6689,6 +7634,85 @@
 		)
 	)
 	(symbol
+		(lib_id "masa:Masa")
+		(at 77.47 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c1fc50b3-083a-4eb2-9ada-d9caf322e160")
+		(property "Reference" "#PWR0101"
+			(at 77.47 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Masa"
+			(at 77.47 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 77.47 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 77.47 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 77.47 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "441489a4-df83-4b01-afa7-6dcd78a26801")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Jumper:Jumper_2_Open")
 		(at 161.29 67.31 90)
 		(unit 1)
@@ -6767,6 +7791,85 @@
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
 					(reference "JP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "masa:Masa")
+		(at 83.82 110.49 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c55a9945-d31a-4e54-8bbd-4daf8b856fa6")
+		(property "Reference" "#PWR0102"
+			(at 83.82 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Masa"
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 83.82 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c3fd0da8-64ca-45f0-8372-20896e693ce9")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -7358,83 +8461,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 30.48 78.74 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0e118d6-964e-4b2c-b620-9a97511ef868")
-		(property "Reference" "H8"
-			(at 33.02 77.4699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 33.02 80.0099 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 30.48 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 30.48 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "LM399VoltageStandard"
-				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
-					(reference "H8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "masa:Masa")
 		(at 124.46 67.31 0)
 		(unit 1)
@@ -7762,6 +8788,90 @@
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 39.37 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe082b09-6cb0-466d-8ae7-0dcdb1e84fe5")
+		(property "Reference" "JP18"
+			(at 40.6401 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 38.1001 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 39.37 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 39.37 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f7b1f91c-7645-4752-bc6b-c124266dbe8f")
+		)
+		(pin "1"
+			(uuid "73895fc2-b9fd-4adb-9687-b60ce5d6b2d5")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883"
+					(reference "JP18")
 					(unit 1)
 				)
 			)
