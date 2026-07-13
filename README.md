@@ -12,7 +12,7 @@ This project is a 10V Voltage Standard which I will use to calibrate my equipmen
   - Voltage & Current monitoring
 
 ## Specifications
-  - Stable 10.000000V output
+  - Calibrated 10 V reference output with ppm-level stability target
   - Low tempco (I am aiming for < 5ppm but that requires testing)
   - Low long term drift ( Also requires testing, in order to determine the value)
 
