@@ -49,6 +49,7 @@ I used Kicad to design this board.
 ## [BOM](LM399VoltageStandard.csv)
 Total cost: 552,22zł + shipping
 That is 145,90$
+Some parts are left with no price or link. That means I already have them so I did not include them in price calculation.
 
 ## Credits
 I relied on MarcoReps's videos to learn everything in order to make this project.
