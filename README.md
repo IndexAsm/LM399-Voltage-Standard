@@ -13,12 +13,14 @@ This project is a 10V Voltage Standard which I will use to calibrate my equipmen
 
 ## Specifications
   - Stable 10.000000V output
-  - Low tempco (I am aiming for < 5pp but that requires long term tests)
+  - Low tempco (I am aiming for < 5ppm but that requires testing)
   - Low long term drift ( Also requires testing, in order to determine the value)
 
 ## Calibration
+  - Short pins on CAL_EN header.
   - Measure the output and adjust the binary trim network accordingly.
   - Connect it to a computer and write changes to eeprom (a special program will be created after constructing the first prototype).
+  - Open CAL_EN header.
   - Done!
 
 ## Reference
@@ -34,8 +36,11 @@ The reference section has an exposed copper area on the first layer to attach al
 
 Also there are a few text fields to input measurements, when the device is first calibrated.
 
-<img width="819" height="691" alt="obraz" src="https://github.com/user-attachments/assets/f24fcce6-77ae-45a3-b81c-41e4847a5c61" />
-<img width="596" height="598" alt="obraz" src="https://github.com/user-attachments/assets/25df28c9-238e-42e3-aba1-659fbdc19282" />
+
+<img width="743" height="727" alt="obraz" src="https://github.com/user-attachments/assets/2b4be532-8f04-475a-87cf-915e5dc6fe1f" />
+
+<img width="713" height="715" alt="obraz" src="https://github.com/user-attachments/assets/3a56e653-adb8-4d4c-9de5-61b401437008" />
+
 
 ## Software
 I used Kicad to design this board.
