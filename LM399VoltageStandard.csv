@@ -41,7 +41,7 @@
 "R28","1","100R","","","","Resistor_SMD:R_0603_1608Metric"
 "TP2,TP4,TP5","3","TestPoint","","","","TestPoint:TestPoint_Pad_D1.5mm"
 "TP3,TP6,TP7,TP8","4","TestPoint","","","","TestPoint:TestPoint_Pad_4.0x4.0mm"
-"U1","1","LM399","","79,09zł","https://www.mouser.pl/en/ProductDetail/Analog-Devices/LM399AHPBF?qs=ytflclh7QUUM8sawX7U9qQ%3D%3D","Package_TO_SOT_THT:Analog_TO-46-4_ThermalShield"
+"U1","1","LM399","","","https://www.mouser.pl/en/ProductDetail/Analog-Devices/LM399AHPBF?qs=ytflclh7QUUM8sawX7U9qQ%3D%3D","Package_TO_SOT_THT:Analog_TO-46-4_ThermalShield"
 "U2","1","LT1001","","22,51zł","https://www.mouser.pl/ProductDetail/Analog-Devices/LT1001CS8PBF?qs=ytflclh7QUXPrXuaZMy1cA%3D%3D","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 "U3","1","LT3045xDD","","33,14zł","https://www.mouser.pl/ProductDetail/Analog-Devices/LT3045EDDPBF?qs=oahfZPh6IAItEW%2FaDCA8LQ%3D%3D","Package_DFN_QFN:DFN-10-1EP_3x3mm_P0.5mm_EP1.65x2.38mm"
 "U4","1","TLV75533PDRV","","1,63zł","https://www.mouser.pl/en/ProductDetail/Texas-Instruments/TLV75533PDRVR?qs=lc2O%252BfHJPVbmKlktYGVy6A%3D%3D","Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
