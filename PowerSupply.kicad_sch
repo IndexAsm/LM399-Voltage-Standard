@@ -6086,7 +6086,128 @@
 			)
 		)
 		(property "Price" ""
-			(at 30.48 96.52 0)
+			(at 186.69 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50f0abf5-e38f-4c3a-ba38-a01037f06097")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883/8980c601-e7f6-4eec-b462-e49bc8a3c90e"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 58.42 29.21 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5309e791-2b77-4d75-bb28-d94fb4f37dd6")
+		(property "Reference" "D4"
+			(at 59.436 26.162 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PUUP3JH"
+			(at 63.246 23.368 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-277A"
+			(at 58.42 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Diode"
+			(at 58.42 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 58.42 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 58.42 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Link" "https://www.mouser.pl/en/ProductDetail/Taiwan-Semiconductor/PUUP3JH?qs=NeOn4crkEuub6tf3VFnloQ%3D%3D"
+			(at 58.42 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" "29.4zł"
+			(at 58.42 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6097,16 +6218,62 @@
 			)
 		)
 		(pin "2"
-			(uuid "b8eb4ac9-4108-4a0b-96b2-98d12b6d0e84")
+			(uuid "9a59bd64-61da-4380-9185-c44e23688862")
 		)
 		(pin "1"
-			(uuid "ddd0cd2e-9bbe-4c41-87de-badb0ea7ae37")
+			(uuid "fcd023a2-65ba-4582-95fb-c49fe04df283")
+		)
+		(pin "3"
+			(uuid "f3989cff-4430-4152-8722-8cd697228f92")
 		)
 		(instances
 			(project "LM399VoltageStandard"
 				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883/8980c601-e7f6-4eec-b462-e49bc8a3c90e"
-					(reference "C23")
+					(reference "D4")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 58.42 44.45 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5425d837-f654-4378-838d-a15a55efe873")
+		(property "Reference" "D2"
+			(at 58.42 41.402 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PUUP3JH"
+			(at 46.736 25.654 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-277A"
+			(at 58.42 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -6167,8 +6334,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 186.69 30.48 0)
+		(property "Link" "https://www.mouser.pl/en/ProductDetail/Taiwan-Semiconductor/PUUP3JH?qs=NeOn4crkEuub6tf3VFnloQ%3D%3D"
+			(at 58.42 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7530,6 +7697,222 @@
 		)
 	)
 	(symbol
+		(lib_id "masa:Masa")
+		(at 154.94 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "90cf33d2-aa1d-4516-9dc6-75a43be1cb59")
+		(property "Reference" "#PWR077"
+			(at 154.94 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Masa"
+			(at 154.94 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5ce4c7dd-1966-489e-a0b0-72031b77a561")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883/8980c601-e7f6-4eec-b462-e49bc8a3c90e"
+					(reference "#PWR077")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 66.04 36.83 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9646876a-ef64-4c8f-9135-4b79ca9a008b")
+		(property "Reference" "D3"
+			(at 61.722 35.052 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PUUP3JH"
+			(at 60.198 32.004 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-277A"
+			(at 66.04 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 241.3 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a3f698f-2217-4c9b-8f9a-3637c32a0274")
+		(property "Reference" "C45"
+			(at 243.84 115.5762 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 243.84 118.1162 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 241.3 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Link" "https://www.mouser.pl/en/ProductDetail/Taiwan-Semiconductor/PUUP3JH?qs=NeOn4crkEuub6tf3VFnloQ%3D%3D"
+			(at 66.04 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 241.3 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e512a543-4a34-4d6d-9368-594f3f92b027")
+		)
+		(pin "2"
+			(uuid "1eaedb43-3028-410a-aada-b020c65c6578")
+		)
+		(instances
+			(project "LM399VoltageStandard"
+				(path "/bff531c5-f25b-49a0-a5ad-7c7b81769883/8980c601-e7f6-4eec-b462-e49bc8a3c90e"
+					(reference "C45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 85.09 96.52 0)
 		(unit 1)
@@ -8063,8 +8446,9 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1000u"
-			(at 231.14 44.0181 0)
+		(property "Value" "PUUP3JH"
+			(at 53.34 38.0999 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8096,8 +8480,8 @@
 				)
 			)
 		)
-		(property "Description" "Polarized capacitor, small US symbol"
-			(at 228.6 43.18 0)
+		(property "Link" "https://www.mouser.pl/en/ProductDetail/Taiwan-Semiconductor/PUUP3JH?qs=NeOn4crkEuub6tf3VFnloQ%3D%3D"
+			(at 50.8 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
