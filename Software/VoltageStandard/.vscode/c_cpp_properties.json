@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Drivers/STM32G4xx_HAL_Driver/Inc/**",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32G4xx/Include/"
+            ],
+            "defines": ["USB", "ADC_MULTIMODE_SUPPORT", "ADC1"],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu23",
+            "cppStandard": "gnu++20",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
