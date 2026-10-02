@@ -30,6 +30,7 @@
 #include "usbd_cdc_if.h"
 #include <TMP102.h>
 #include <M24Cxx.h>
+#include <CalibrationData.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,6 +41,15 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define USB_BUFLEN 128
+
+
+#define EEPROM_SIZE_KB 8
+
+#define EEPROM_ADDR_INIT_CAL_DONE 0x1
+#define EEPROM_ADDR_OPERATING_TIME 0x2
+#define EEPROM_ADDR_CAL_DATA_STRUC 0xf
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -71,9 +81,52 @@ static void MX_TIM16_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void SaveHourStats() {
-    HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, 0);
+
+uint16_t ReadHourStats(M24Cxx* eeprom) {
+    union HourBuffer {
+        uint8_t b8[2];
+        uint16_t b16;
+    }  buffer;
+
+    M24Cxx_Read_Bytes(eeprom, EEPROM_ADDR_OPERATING_TIME, buffer.b8, 2);
+    return buffer.b16;
 }
+
+void WriteHourStats(M24Cxx* eeprom, uint16_t val) {
+    union HourBuffer {
+        uint8_t b8[2];
+        uint16_t b16;
+    }  buffer;
+
+    buffer.b16 = val;
+
+    M24Cxx_Write_Buffer(eeprom, EEPROM_ADDR_OPERATING_TIME, buffer.b8, 2);
+}
+
+
+void WriteInitialCalibration(
+    M24Cxx* eeprom, 
+    const char* LM399_serial_number, 
+    const char* initial_cal_date,
+    const char* initial_cal_voltage,
+    float initial_cal_temperature
+) {
+
+    if (M24Cxx_Read_Byte(eeprom, EEPROM_ADDR_INIT_CAL_DONE))
+        return;
+    CalibrationDataInfo calInfo;
+    calInfo.entry_addr = 0x20 + sizeof(CalibrationDataInfo);
+    calInfo.entry_size = 0xf;
+    calInfo.len = 0;
+    strcpy(calInfo.LM399_serial_number, LM399_serial_number);
+    strcpy(calInfo.initial_cal_date, initial_cal_date);
+    strcpy(calInfo.initial_cal_voltage, initial_cal_voltage);
+    calInfo.initial_cal_temperature = initial_cal_temperature;
+    M24Cxx_Write_Buffer(eeprom, EEPROM_ADDR_OPERATING_TIME, (uint8_t*)&calInfo, sizeof(CalibrationDataInfo));
+
+    M24Cxx_Write_Byte(&eeprom, EEPROM_ADDR_INIT_CAL_DONE, 1);
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -136,7 +189,12 @@ int main(void)
         32, 
         I2C_MEMADD_SIZE_16BIT
     );
-    //M24Cxx_Write_Byte(&eeprom, 0x0, 0xfc);
+
+    uint16_t uptime_h = ReadHourStats(&eeprom);
+
+
+
+
 
     HAL_Delay(2000);
 
@@ -165,16 +223,17 @@ int main(void)
             uptime_s++;
             if (uptime_s >= 3600) {
                 uptime_s = 0;
-                //SaveHourStats();
+                uptime_h++;
+                WriteHourStats(&eeprom, uptime_h);
             }
-            usbTxBufferLen = snprintf((char*)usbTxBuffer, USB_BUFLEN, "Uptime: %us\r\n", uptime_s);
+            usbTxBufferLen = snprintf((char*)usbTxBuffer, USB_BUFLEN, "Uptime: %uh %us\r\n",uptime_h, uptime_s);
             while(CDC_Transmit_FS(usbTxBuffer, usbTxBufferLen) == USBD_BUSY) {}
 
 
             float temp = TMP102_GetReading(&hi2c1);
             uint32_t integer_part = (int)temp;                             // 12
             uint32_t fractional_part = (int)((temp - integer_part) * 100);
-            usbTxBufferLen = snprintf((char*)usbTxBuffer, USB_BUFLEN, "Temperature: %u.%u°C\r\n", integer_part, fractional_part);
+            usbTxBufferLen = snprintf((char*)usbTxBuffer, USB_BUFLEN, "Temperature: %lu.%lu°C\r\n", integer_part, fractional_part);
             while(CDC_Transmit_FS(usbTxBuffer, usbTxBufferLen) == USBD_BUSY) {}
 
             uint8_t byte_res = M24Cxx_Read_Byte(&eeprom, 0x0);

@@ -4,9 +4,6 @@
 #define TMP102_ADDRESS 0x48 << 1
 #define TMP102_TEMP_REG 0x00
 
-void TMP102_Init(I2C_HandleTypeDef* i2c) {
-
-}
 
 
 float TMP102_GetReading(I2C_HandleTypeDef* i2c) {

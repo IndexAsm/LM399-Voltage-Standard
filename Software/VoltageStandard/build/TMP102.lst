@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccpg6sS4.s 			page 1
+ARM GAS  /tmp/ccG06IjB.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -20,13 +20,13 @@ ARM GAS  /tmp/ccpg6sS4.s 			page 1
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
   19              		.file 1 "Core/Src/TMP102.c"
-  20              		.section	.text.TMP102_Init,"ax",%progbits
+  20              		.section	.text.TMP102_GetReading,"ax",%progbits
   21              		.align	1
-  22              		.global	TMP102_Init
+  22              		.global	TMP102_GetReading
   23              		.syntax unified
   24              		.thumb
   25              		.thumb_func
-  27              	TMP102_Init:
+  27              	TMP102_GetReading:
   28              	.LVL0:
   29              	.LFB329:
    1:Core/Src/TMP102.c **** #include "TMP102.h"
@@ -35,206 +35,183 @@ ARM GAS  /tmp/ccpg6sS4.s 			page 1
    4:Core/Src/TMP102.c **** #define TMP102_ADDRESS 0x48 << 1
    5:Core/Src/TMP102.c **** #define TMP102_TEMP_REG 0x00
    6:Core/Src/TMP102.c **** 
-   7:Core/Src/TMP102.c **** void TMP102_Init(I2C_HandleTypeDef* i2c) {
-  30              		.loc 1 7 42 view -0
-  31              		.cfi_startproc
-  32              		@ args = 0, pretend = 0, frame = 0
-  33              		@ frame_needed = 0, uses_anonymous_args = 0
-  34              		@ link register save eliminated.
+   7:Core/Src/TMP102.c **** 
    8:Core/Src/TMP102.c **** 
-   9:Core/Src/TMP102.c **** }
-  35              		.loc 1 9 1 view .LVU1
-  36 0000 7047     		bx	lr
-  37              		.cfi_endproc
-  38              	.LFE329:
-  40              		.section	.text.TMP102_GetReading,"ax",%progbits
-  41              		.align	1
-  42              		.global	TMP102_GetReading
-  43              		.syntax unified
-  44              		.thumb
-  45              		.thumb_func
-  47              	TMP102_GetReading:
-  48              	.LVL1:
-  49              	.LFB330:
-  10:Core/Src/TMP102.c **** 
-  11:Core/Src/TMP102.c **** 
-ARM GAS  /tmp/ccpg6sS4.s 			page 2
+   9:Core/Src/TMP102.c **** float TMP102_GetReading(I2C_HandleTypeDef* i2c) {
+  30              		.loc 1 9 49 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 8
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 9 49 is_stmt 0 view .LVU1
+  35 0000 10B5     		push	{r4, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 14, -4
+  40 0002 84B0     		sub	sp, sp, #16
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 24
+  43 0004 0446     		mov	r4, r0
+  10:Core/Src/TMP102.c ****     uint8_t buf[8];
+  44              		.loc 1 10 5 is_stmt 1 view .LVU2
+  11:Core/Src/TMP102.c ****     buf[0] = TMP102_TEMP_REG;
+  45              		.loc 1 11 5 view .LVU3
+  46              		.loc 1 11 12 is_stmt 0 view .LVU4
+  47 0006 0023     		movs	r3, #0
+ARM GAS  /tmp/ccG06IjB.s 			page 2
 
 
-  12:Core/Src/TMP102.c **** float TMP102_GetReading(I2C_HandleTypeDef* i2c) {
-  50              		.loc 1 12 49 view -0
-  51              		.cfi_startproc
-  52              		@ args = 0, pretend = 0, frame = 8
-  53              		@ frame_needed = 0, uses_anonymous_args = 0
-  54              		.loc 1 12 49 is_stmt 0 view .LVU3
-  55 0000 10B5     		push	{r4, lr}
-  56              	.LCFI0:
-  57              		.cfi_def_cfa_offset 8
-  58              		.cfi_offset 4, -8
-  59              		.cfi_offset 14, -4
-  60 0002 84B0     		sub	sp, sp, #16
-  61              	.LCFI1:
-  62              		.cfi_def_cfa_offset 24
-  63 0004 0446     		mov	r4, r0
-  13:Core/Src/TMP102.c ****     uint8_t buf[8];
-  64              		.loc 1 13 5 is_stmt 1 view .LVU4
-  14:Core/Src/TMP102.c ****     buf[0] = TMP102_TEMP_REG;
-  65              		.loc 1 14 5 view .LVU5
-  66              		.loc 1 14 12 is_stmt 0 view .LVU6
-  67 0006 0023     		movs	r3, #0
-  68 0008 8DF80830 		strb	r3, [sp, #8]
-  15:Core/Src/TMP102.c ****     HAL_StatusTypeDef ret;
-  69              		.loc 1 15 5 is_stmt 1 view .LVU7
-  16:Core/Src/TMP102.c ****     uint16_t reading = 0x0;
-  70              		.loc 1 16 5 view .LVU8
-  71              	.LVL2:
-  17:Core/Src/TMP102.c ****     float temp = 0.0f;
-  72              		.loc 1 17 5 view .LVU9
-  18:Core/Src/TMP102.c **** 
-  19:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Transmit(i2c, TMP102_ADDRESS, buf, 1, HAL_MAX_DELAY);
-  73              		.loc 1 19 5 view .LVU10
-  74              		.loc 1 19 11 is_stmt 0 view .LVU11
-  75 000c 4FF0FF33 		mov	r3, #-1
-  76 0010 0093     		str	r3, [sp]
-  77 0012 0123     		movs	r3, #1
-  78 0014 02AA     		add	r2, sp, #8
-  79 0016 9021     		movs	r1, #144
-  80 0018 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
-  81              	.LVL3:
+  48 0008 8DF80830 		strb	r3, [sp, #8]
+  12:Core/Src/TMP102.c ****     HAL_StatusTypeDef ret;
+  49              		.loc 1 12 5 is_stmt 1 view .LVU5
+  13:Core/Src/TMP102.c ****     uint16_t reading = 0x0;
+  50              		.loc 1 13 5 view .LVU6
+  51              	.LVL1:
+  14:Core/Src/TMP102.c ****     float temp = 0.0f;
+  52              		.loc 1 14 5 view .LVU7
+  15:Core/Src/TMP102.c **** 
+  16:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Transmit(i2c, TMP102_ADDRESS, buf, 1, HAL_MAX_DELAY);
+  53              		.loc 1 16 5 view .LVU8
+  54              		.loc 1 16 11 is_stmt 0 view .LVU9
+  55 000c 4FF0FF33 		mov	r3, #-1
+  56 0010 0093     		str	r3, [sp]
+  57 0012 0123     		movs	r3, #1
+  58 0014 02AA     		add	r2, sp, #8
+  59 0016 9021     		movs	r1, #144
+  60 0018 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+  61              	.LVL2:
+  17:Core/Src/TMP102.c **** 
+  18:Core/Src/TMP102.c ****     if (ret != HAL_OK)
+  62              		.loc 1 18 5 is_stmt 1 view .LVU10
+  63              		.loc 1 18 8 is_stmt 0 view .LVU11
+  64 001c 18B1     		cbz	r0, .L2
+  65              	.L4:
+  19:Core/Src/TMP102.c ****         return -1.0f;
+  66              		.loc 1 19 16 view .LVU12
+  67 001e BFEE000A 		vmov.f32	s0, #-1.0e+0
+  68              	.LVL3:
+  69              	.L1:
   20:Core/Src/TMP102.c **** 
-  21:Core/Src/TMP102.c ****     if (ret != HAL_OK)
-  82              		.loc 1 21 5 is_stmt 1 view .LVU12
-  83              		.loc 1 21 8 is_stmt 0 view .LVU13
-  84 001c 18B1     		cbz	r0, .L3
-  85              	.L5:
-  22:Core/Src/TMP102.c ****         return -1.0f;
-  86              		.loc 1 22 16 view .LVU14
-  87 001e BFEE000A 		vmov.f32	s0, #-1.0e+0
-  88              	.LVL4:
-  89              	.L2:
-  23:Core/Src/TMP102.c **** 
-  24:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Receive(i2c, TMP102_ADDRESS, buf, 2, HAL_MAX_DELAY);
-  25:Core/Src/TMP102.c **** 
-  26:Core/Src/TMP102.c ****     if (ret != HAL_OK)
-  27:Core/Src/TMP102.c ****         return -1.0f;
-  28:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
-ARM GAS  /tmp/ccpg6sS4.s 			page 3
-
-
-  29:Core/Src/TMP102.c **** 
-  30:Core/Src/TMP102.c ****     if (reading > 0x7ff) {
-  31:Core/Src/TMP102.c ****         reading |= 0xf000;
-  32:Core/Src/TMP102.c ****     }
+  21:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Receive(i2c, TMP102_ADDRESS, buf, 2, HAL_MAX_DELAY);
+  22:Core/Src/TMP102.c **** 
+  23:Core/Src/TMP102.c ****     if (ret != HAL_OK)
+  24:Core/Src/TMP102.c ****         return -1.0f;
+  25:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
+  26:Core/Src/TMP102.c **** 
+  27:Core/Src/TMP102.c ****     if (reading > 0x7ff) {
+  28:Core/Src/TMP102.c ****         reading |= 0xf000;
+  29:Core/Src/TMP102.c ****     }
+  30:Core/Src/TMP102.c **** 
+  31:Core/Src/TMP102.c ****     temp = reading * 0.0625f;
+  32:Core/Src/TMP102.c **** 
   33:Core/Src/TMP102.c **** 
-  34:Core/Src/TMP102.c ****     temp = reading * 0.0625f;
-  35:Core/Src/TMP102.c **** 
-  36:Core/Src/TMP102.c **** 
-  37:Core/Src/TMP102.c ****     return temp;
-  38:Core/Src/TMP102.c **** }...
-  90              		.loc 1 38 1 view .LVU15
-  91 0022 04B0     		add	sp, sp, #16
-  92              	.LCFI2:
-  93              		.cfi_remember_state
-  94              		.cfi_def_cfa_offset 8
-  95              		@ sp needed
-  96 0024 10BD     		pop	{r4, pc}
-  97              	.LVL5:
-  98              	.L3:
-  99              	.LCFI3:
- 100              		.cfi_restore_state
-  24:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Receive(i2c, TMP102_ADDRESS, buf, 2, HAL_MAX_DELAY);
- 101              		.loc 1 24 5 is_stmt 1 view .LVU16
-  24:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Receive(i2c, TMP102_ADDRESS, buf, 2, HAL_MAX_DELAY);
- 102              		.loc 1 24 11 is_stmt 0 view .LVU17
- 103 0026 4FF0FF33 		mov	r3, #-1
- 104 002a 0093     		str	r3, [sp]
- 105 002c 0223     		movs	r3, #2
- 106 002e 02AA     		add	r2, sp, #8
- 107 0030 9021     		movs	r1, #144
- 108 0032 2046     		mov	r0, r4
- 109              	.LVL6:
-  24:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Receive(i2c, TMP102_ADDRESS, buf, 2, HAL_MAX_DELAY);
- 110              		.loc 1 24 11 view .LVU18
- 111 0034 FFF7FEFF 		bl	HAL_I2C_Master_Receive
- 112              	.LVL7:
-  26:Core/Src/TMP102.c ****     if (ret != HAL_OK)
- 113              		.loc 1 26 5 is_stmt 1 view .LVU19
-  26:Core/Src/TMP102.c ****     if (ret != HAL_OK)
- 114              		.loc 1 26 8 is_stmt 0 view .LVU20
- 115 0038 0028     		cmp	r0, #0
- 116 003a F0D1     		bne	.L5
-  28:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
- 117              		.loc 1 28 5 is_stmt 1 view .LVU21
-  28:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
- 118              		.loc 1 28 29 is_stmt 0 view .LVU22
- 119 003c 9DF80820 		ldrb	r2, [sp, #8]	@ zero_extendqisi2
-  28:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
- 120              		.loc 1 28 44 view .LVU23
- 121 0040 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
-  28:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
- 122              		.loc 1 28 38 view .LVU24
- 123 0044 1B09     		lsrs	r3, r3, #4
- 124 0046 43EA0211 		orr	r1, r3, r2, lsl #4
-  28:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
- 125              		.loc 1 28 13 view .LVU25
- 126 004a 0B46     		mov	r3, r1
-ARM GAS  /tmp/ccpg6sS4.s 			page 4
+  34:Core/Src/TMP102.c ****     return temp;
+  35:Core/Src/TMP102.c **** }...
+  70              		.loc 1 35 1 view .LVU13
+  71 0022 04B0     		add	sp, sp, #16
+  72              	.LCFI2:
+  73              		.cfi_remember_state
+  74              		.cfi_def_cfa_offset 8
+  75              		@ sp needed
+  76 0024 10BD     		pop	{r4, pc}
+  77              	.LVL4:
+  78              	.L2:
+  79              	.LCFI3:
+  80              		.cfi_restore_state
+ARM GAS  /tmp/ccG06IjB.s 			page 3
 
 
- 127              	.LVL8:
-  30:Core/Src/TMP102.c ****     if (reading > 0x7ff) {
- 128              		.loc 1 30 5 is_stmt 1 view .LVU26
-  30:Core/Src/TMP102.c ****     if (reading > 0x7ff) {
- 129              		.loc 1 30 8 is_stmt 0 view .LVU27
- 130 004c B1F5006F 		cmp	r1, #2048
- 131 0050 01D3     		bcc	.L6
-  31:Core/Src/TMP102.c ****         reading |= 0xf000;
- 132              		.loc 1 31 9 is_stmt 1 view .LVU28
-  31:Core/Src/TMP102.c ****         reading |= 0xf000;
- 133              		.loc 1 31 17 is_stmt 0 view .LVU29
- 134 0052 41F47043 		orr	r3, r1, #61440
- 135              	.L6:
- 136              	.LVL9:
-  34:Core/Src/TMP102.c ****     temp = reading * 0.0625f;
- 137              		.loc 1 34 5 is_stmt 1 view .LVU30
-  34:Core/Src/TMP102.c ****     temp = reading * 0.0625f;
- 138              		.loc 1 34 20 is_stmt 0 view .LVU31
- 139 0056 07EE903A 		vmov	s15, r3	@ int
- 140 005a B8EEE70A 		vcvt.f32.s32	s0, s15
-  34:Core/Src/TMP102.c ****     temp = reading * 0.0625f;
- 141              		.loc 1 34 10 view .LVU32
- 142 005e DFED027A 		vldr.32	s15, .L8
- 143 0062 20EE270A 		vmul.f32	s0, s0, s15
- 144              	.LVL10:
-  37:Core/Src/TMP102.c ****     return temp;
- 145              		.loc 1 37 5 is_stmt 1 view .LVU33
-  37:Core/Src/TMP102.c ****     return temp;
- 146              		.loc 1 37 12 is_stmt 0 view .LVU34
- 147 0066 DCE7     		b	.L2
- 148              	.L9:
- 149              		.align	2
- 150              	.L8:
- 151 0068 0000803D 		.word	1031798784
- 152              		.cfi_endproc
- 153              	.LFE330:
- 155              		.text
- 156              	.Letext0:
- 157              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 158              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 159              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h"
- 160              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 161              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
- 162              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h"
-ARM GAS  /tmp/ccpg6sS4.s 			page 5
+  21:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Receive(i2c, TMP102_ADDRESS, buf, 2, HAL_MAX_DELAY);
+  81              		.loc 1 21 5 is_stmt 1 view .LVU14
+  21:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Receive(i2c, TMP102_ADDRESS, buf, 2, HAL_MAX_DELAY);
+  82              		.loc 1 21 11 is_stmt 0 view .LVU15
+  83 0026 4FF0FF33 		mov	r3, #-1
+  84 002a 0093     		str	r3, [sp]
+  85 002c 0223     		movs	r3, #2
+  86 002e 02AA     		add	r2, sp, #8
+  87 0030 9021     		movs	r1, #144
+  88 0032 2046     		mov	r0, r4
+  89              	.LVL5:
+  21:Core/Src/TMP102.c ****     ret = HAL_I2C_Master_Receive(i2c, TMP102_ADDRESS, buf, 2, HAL_MAX_DELAY);
+  90              		.loc 1 21 11 view .LVU16
+  91 0034 FFF7FEFF 		bl	HAL_I2C_Master_Receive
+  92              	.LVL6:
+  23:Core/Src/TMP102.c ****     if (ret != HAL_OK)
+  93              		.loc 1 23 5 is_stmt 1 view .LVU17
+  23:Core/Src/TMP102.c ****     if (ret != HAL_OK)
+  94              		.loc 1 23 8 is_stmt 0 view .LVU18
+  95 0038 0028     		cmp	r0, #0
+  96 003a F0D1     		bne	.L4
+  25:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
+  97              		.loc 1 25 5 is_stmt 1 view .LVU19
+  25:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
+  98              		.loc 1 25 29 is_stmt 0 view .LVU20
+  99 003c 9DF80820 		ldrb	r2, [sp, #8]	@ zero_extendqisi2
+  25:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
+ 100              		.loc 1 25 44 view .LVU21
+ 101 0040 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
+  25:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
+ 102              		.loc 1 25 38 view .LVU22
+ 103 0044 1B09     		lsrs	r3, r3, #4
+ 104 0046 43EA0211 		orr	r1, r3, r2, lsl #4
+  25:Core/Src/TMP102.c ****     reading = ((uint16_t)buf[0] << 4 | (buf[1] >> 4));
+ 105              		.loc 1 25 13 view .LVU23
+ 106 004a 0B46     		mov	r3, r1
+ 107              	.LVL7:
+  27:Core/Src/TMP102.c ****     if (reading > 0x7ff) {
+ 108              		.loc 1 27 5 is_stmt 1 view .LVU24
+  27:Core/Src/TMP102.c ****     if (reading > 0x7ff) {
+ 109              		.loc 1 27 8 is_stmt 0 view .LVU25
+ 110 004c B1F5006F 		cmp	r1, #2048
+ 111 0050 01D3     		bcc	.L5
+  28:Core/Src/TMP102.c ****         reading |= 0xf000;
+ 112              		.loc 1 28 9 is_stmt 1 view .LVU26
+  28:Core/Src/TMP102.c ****         reading |= 0xf000;
+ 113              		.loc 1 28 17 is_stmt 0 view .LVU27
+ 114 0052 41F47043 		orr	r3, r1, #61440
+ 115              	.L5:
+ 116              	.LVL8:
+  31:Core/Src/TMP102.c ****     temp = reading * 0.0625f;
+ 117              		.loc 1 31 5 is_stmt 1 view .LVU28
+  31:Core/Src/TMP102.c ****     temp = reading * 0.0625f;
+ 118              		.loc 1 31 20 is_stmt 0 view .LVU29
+ 119 0056 07EE903A 		vmov	s15, r3	@ int
+ 120 005a B8EEE70A 		vcvt.f32.s32	s0, s15
+  31:Core/Src/TMP102.c ****     temp = reading * 0.0625f;
+ARM GAS  /tmp/ccG06IjB.s 			page 4
+
+
+ 121              		.loc 1 31 10 view .LVU30
+ 122 005e DFED027A 		vldr.32	s15, .L7
+ 123 0062 20EE270A 		vmul.f32	s0, s0, s15
+ 124              	.LVL9:
+  34:Core/Src/TMP102.c ****     return temp;
+ 125              		.loc 1 34 5 is_stmt 1 view .LVU31
+  34:Core/Src/TMP102.c ****     return temp;
+ 126              		.loc 1 34 12 is_stmt 0 view .LVU32
+ 127 0066 DCE7     		b	.L1
+ 128              	.L8:
+ 129              		.align	2
+ 130              	.L7:
+ 131 0068 0000803D 		.word	1031798784
+ 132              		.cfi_endproc
+ 133              	.LFE329:
+ 135              		.text
+ 136              	.Letext0:
+ 137              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 138              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 139              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h"
+ 140              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 141              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 142              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h"
+ARM GAS  /tmp/ccG06IjB.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 TMP102.c
-     /tmp/ccpg6sS4.s:21     .text.TMP102_Init:00000000 $t
-     /tmp/ccpg6sS4.s:27     .text.TMP102_Init:00000000 TMP102_Init
-     /tmp/ccpg6sS4.s:41     .text.TMP102_GetReading:00000000 $t
-     /tmp/ccpg6sS4.s:47     .text.TMP102_GetReading:00000000 TMP102_GetReading
-     /tmp/ccpg6sS4.s:151    .text.TMP102_GetReading:00000068 $d
+     /tmp/ccG06IjB.s:21     .text.TMP102_GetReading:00000000 $t
+     /tmp/ccG06IjB.s:27     .text.TMP102_GetReading:00000000 TMP102_GetReading
+     /tmp/ccG06IjB.s:131    .text.TMP102_GetReading:00000068 $d
 
 UNDEFINED SYMBOLS
 HAL_I2C_Master_Transmit

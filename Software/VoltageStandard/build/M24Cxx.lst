@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccMej7C9.s 			page 1
+ARM GAS  /tmp/ccgGRn4Y.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -20,357 +20,540 @@ ARM GAS  /tmp/ccMej7C9.s 			page 1
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
   19              		.file 1 "Core/Src/M24Cxx.c"
-  20              		.section	.text.M24Cxx_Init,"ax",%progbits
+  20              		.section	.text.is_same_page,"ax",%progbits
   21              		.align	1
-  22              		.global	M24Cxx_Init
+  22              		.global	is_same_page
   23              		.syntax unified
   24              		.thumb
   25              		.thumb_func
-  27              	M24Cxx_Init:
+  27              	is_same_page:
   28              	.LVL0:
   29              	.LFB329:
    1:Core/Src/M24Cxx.c **** #include "M24Cxx.h"
    2:Core/Src/M24Cxx.c **** 
-   3:Core/Src/M24Cxx.c **** M24Cxx M24Cxx_Init(I2C_HandleTypeDef *i2c, uint8_t i2c_address, uint16_t size, uint8_t page_size, u
-   4:Core/Src/M24Cxx.c **** {
-  30              		.loc 1 4 1 view -0
+   3:Core/Src/M24Cxx.c **** #include <math.h>
+   4:Core/Src/M24Cxx.c **** 
+   5:Core/Src/M24Cxx.c **** uint8_t is_same_page(uint16_t a0, uint16_t a1, uint8_t page_address_bits) {
+  30              		.loc 1 5 75 view -0
   31              		.cfi_startproc
-  32              		@ args = 8, pretend = 0, frame = 0
+  32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
-   5:Core/Src/M24Cxx.c ****     M24Cxx res;
-  35              		.loc 1 5 5 view .LVU1
-   6:Core/Src/M24Cxx.c ****     res.i2c = i2c;
-  36              		.loc 1 6 5 view .LVU2
-  37              		.loc 1 6 13 is_stmt 0 view .LVU3
-  38 0000 0160     		str	r1, [r0]
-   7:Core/Src/M24Cxx.c ****     res.address = i2c_address << 1;
-  39              		.loc 1 7 5 is_stmt 1 view .LVU4
-  40              		.loc 1 7 31 is_stmt 0 view .LVU5
-  41 0002 5200     		lsls	r2, r2, #1
-  42              	.LVL1:
-  43              		.loc 1 7 17 view .LVU6
-  44 0004 0271     		strb	r2, [r0, #4]
-   8:Core/Src/M24Cxx.c ****     res.size = size;
-  45              		.loc 1 8 5 is_stmt 1 view .LVU7
-  46              		.loc 1 8 14 is_stmt 0 view .LVU8
-  47 0006 C380     		strh	r3, [r0, #6]	@ movhi
-   9:Core/Src/M24Cxx.c ****     res.page_size = page_size;
-  48              		.loc 1 9 5 is_stmt 1 view .LVU9
-  49              		.loc 1 9 19 is_stmt 0 view .LVU10
-ARM GAS  /tmp/ccMej7C9.s 			page 2
+   6:Core/Src/M24Cxx.c ****     return (a0 >> page_address_bits) == (a1 >> page_address_bits);
+  35              		.loc 1 6 5 view .LVU1
+  36              		.loc 1 6 16 is_stmt 0 view .LVU2
+  37 0000 1041     		asrs	r0, r0, r2
+  38              	.LVL1:
+  39              		.loc 1 6 45 view .LVU3
+  40 0002 1141     		asrs	r1, r1, r2
+  41              	.LVL2:
+   7:Core/Src/M24Cxx.c **** }
+  42              		.loc 1 7 1 view .LVU4
+  43 0004 8842     		cmp	r0, r1
+  44 0006 14BF     		ite	ne
+  45 0008 0020     		movne	r0, #0
+  46 000a 0120     		moveq	r0, #1
+  47 000c 7047     		bx	lr
+  48              		.cfi_endproc
+  49              	.LFE329:
+  51              		.section	.text.M24Cxx_Init,"ax",%progbits
+  52              		.align	1
+ARM GAS  /tmp/ccgGRn4Y.s 			page 2
 
 
-  50 0008 9DF80030 		ldrb	r3, [sp]	@ zero_extendqisi2
-  51              	.LVL2:
-  52              		.loc 1 9 19 view .LVU11
-  53 000c 0372     		strb	r3, [r0, #8]
-  10:Core/Src/M24Cxx.c ****     res.addressing_size = addressing_size;
-  54              		.loc 1 10 5 is_stmt 1 view .LVU12
-  55              		.loc 1 10 25 is_stmt 0 view .LVU13
-  56 000e 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
-  57 0012 4372     		strb	r3, [r0, #9]
-  11:Core/Src/M24Cxx.c ****     return res;
-  58              		.loc 1 11 5 is_stmt 1 view .LVU14
-  12:Core/Src/M24Cxx.c **** }
-  59              		.loc 1 12 1 is_stmt 0 view .LVU15
-  60 0014 7047     		bx	lr
-  61              		.cfi_endproc
-  62              	.LFE329:
-  64              		.section	.text.M24Cxx_Write_Buffer,"ax",%progbits
-  65              		.align	1
-  66              		.global	M24Cxx_Write_Buffer
-  67              		.syntax unified
-  68              		.thumb
-  69              		.thumb_func
-  71              	M24Cxx_Write_Buffer:
-  72              	.LVL3:
-  73              	.LFB330:
-  13:Core/Src/M24Cxx.c **** 
-  14:Core/Src/M24Cxx.c **** void M24Cxx_Write_Buffer(M24Cxx *device, uint16_t address, uint8_t *data, uint16_t len) {
-  74              		.loc 1 14 89 is_stmt 1 view -0
-  75              		.cfi_startproc
-  76              		@ args = 0, pretend = 0, frame = 0
-  77              		@ frame_needed = 0, uses_anonymous_args = 0
-  78              		@ link register save eliminated.
-  15:Core/Src/M24Cxx.c ****     if (len > 32)
-  79              		.loc 1 15 5 view .LVU17
-  16:Core/Src/M24Cxx.c ****         return;
-  80              		.loc 1 16 9 view .LVU18
-  17:Core/Src/M24Cxx.c **** }
-  81              		.loc 1 17 1 is_stmt 0 view .LVU19
-  82 0000 7047     		bx	lr
-  83              		.cfi_endproc
-  84              	.LFE330:
-  86              		.section	.text.M24Cxx_Write_Byte,"ax",%progbits
-  87              		.align	1
-  88              		.global	M24Cxx_Write_Byte
-  89              		.syntax unified
-  90              		.thumb
-  91              		.thumb_func
-  93              	M24Cxx_Write_Byte:
-  94              	.LVL4:
-  95              	.LFB331:
-  18:Core/Src/M24Cxx.c **** 
-  19:Core/Src/M24Cxx.c **** void M24Cxx_Write_Byte(M24Cxx* device, uint16_t address, uint8_t data) {
-  96              		.loc 1 19 72 is_stmt 1 view -0
-  97              		.cfi_startproc
-  98              		@ args = 0, pretend = 0, frame = 8
-  99              		@ frame_needed = 0, uses_anonymous_args = 0
- 100              		.loc 1 19 72 is_stmt 0 view .LVU21
-ARM GAS  /tmp/ccMej7C9.s 			page 3
+  53              		.global	M24Cxx_Init
+  54              		.syntax unified
+  55              		.thumb
+  56              		.thumb_func
+  58              	M24Cxx_Init:
+  59              	.LVL3:
+  60              	.LFB330:
+   8:Core/Src/M24Cxx.c **** 
+   9:Core/Src/M24Cxx.c **** 
+  10:Core/Src/M24Cxx.c **** M24Cxx M24Cxx_Init(I2C_HandleTypeDef *i2c, uint8_t i2c_address, uint16_t size, uint8_t page_size, u
+  11:Core/Src/M24Cxx.c **** {
+  61              		.loc 1 11 1 is_stmt 1 view -0
+  62              		.cfi_startproc
+  63              		@ args = 8, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              		.loc 1 11 1 is_stmt 0 view .LVU6
+  66 0000 10B5     		push	{r4, lr}
+  67              	.LCFI0:
+  68              		.cfi_def_cfa_offset 8
+  69              		.cfi_offset 4, -8
+  70              		.cfi_offset 14, -4
+  71 0002 0446     		mov	r4, r0
+  72 0004 9DF80800 		ldrb	r0, [sp, #8]	@ zero_extendqisi2
+  73              	.LVL4:
+  12:Core/Src/M24Cxx.c ****     M24Cxx res;
+  74              		.loc 1 12 5 is_stmt 1 view .LVU7
+  13:Core/Src/M24Cxx.c ****     res.i2c = i2c;
+  75              		.loc 1 13 5 view .LVU8
+  76              		.loc 1 13 13 is_stmt 0 view .LVU9
+  77 0008 2160     		str	r1, [r4]
+  14:Core/Src/M24Cxx.c ****     res.address = i2c_address << 1;
+  78              		.loc 1 14 5 is_stmt 1 view .LVU10
+  79              		.loc 1 14 31 is_stmt 0 view .LVU11
+  80 000a 5200     		lsls	r2, r2, #1
+  81              	.LVL5:
+  82              		.loc 1 14 17 view .LVU12
+  83 000c 2271     		strb	r2, [r4, #4]
+  15:Core/Src/M24Cxx.c ****     res.size = size;
+  84              		.loc 1 15 5 is_stmt 1 view .LVU13
+  85              		.loc 1 15 14 is_stmt 0 view .LVU14
+  86 000e E380     		strh	r3, [r4, #6]	@ movhi
+  16:Core/Src/M24Cxx.c ****     res.page_size = page_size;
+  87              		.loc 1 16 5 is_stmt 1 view .LVU15
+  88              		.loc 1 16 19 is_stmt 0 view .LVU16
+  89 0010 2072     		strb	r0, [r4, #8]
+  17:Core/Src/M24Cxx.c ****     res.addressing_size = addressing_size;
+  90              		.loc 1 17 5 is_stmt 1 view .LVU17
+  91              		.loc 1 17 25 is_stmt 0 view .LVU18
+  92 0012 9DF80C30 		ldrb	r3, [sp, #12]	@ zero_extendqisi2
+  93              	.LVL6:
+  94              		.loc 1 17 25 view .LVU19
+  95 0016 6372     		strb	r3, [r4, #9]
+  18:Core/Src/M24Cxx.c ****     res.page_address_bits = (uint8_t)log2f(res.page_size);
+  96              		.loc 1 18 5 is_stmt 1 view .LVU20
+  97              		.loc 1 18 38 is_stmt 0 view .LVU21
+  98 0018 07EE900A 		vmov	s15, r0	@ int
+  99 001c B8EE670A 		vcvt.f32.u32	s0, s15
+ARM GAS  /tmp/ccgGRn4Y.s 			page 3
 
 
- 101 0000 30B5     		push	{r4, r5, lr}
- 102              	.LCFI0:
- 103              		.cfi_def_cfa_offset 12
- 104              		.cfi_offset 4, -12
- 105              		.cfi_offset 5, -8
- 106              		.cfi_offset 14, -4
- 107 0002 87B0     		sub	sp, sp, #28
- 108              	.LCFI1:
- 109              		.cfi_def_cfa_offset 40
- 110 0004 0446     		mov	r4, r0
- 111 0006 0D46     		mov	r5, r1
- 112 0008 8DF81720 		strb	r2, [sp, #23]
-  20:Core/Src/M24Cxx.c ****     HAL_I2C_IsDeviceReady(device->i2c, device->address, 1, 15);
- 113              		.loc 1 20 5 is_stmt 1 view .LVU22
- 114 000c 0F23     		movs	r3, #15
- 115 000e 0122     		movs	r2, #1
- 116              	.LVL5:
- 117              		.loc 1 20 5 is_stmt 0 view .LVU23
- 118 0010 0179     		ldrb	r1, [r0, #4]	@ zero_extendqisi2
- 119              	.LVL6:
- 120              		.loc 1 20 5 view .LVU24
- 121 0012 0068     		ldr	r0, [r0]
- 122              	.LVL7:
- 123              		.loc 1 20 5 view .LVU25
- 124 0014 FFF7FEFF 		bl	HAL_I2C_IsDeviceReady
- 125              	.LVL8:
-  21:Core/Src/M24Cxx.c ****     HAL_I2C_Mem_Write(device->i2c, device->address, address, I2C_MEMADD_SIZE_16BIT, &data, 1, 10);
- 126              		.loc 1 21 5 is_stmt 1 view .LVU26
- 127 0018 0A23     		movs	r3, #10
- 128 001a 0293     		str	r3, [sp, #8]
- 129 001c 0123     		movs	r3, #1
- 130 001e 0193     		str	r3, [sp, #4]
- 131 0020 0DF11703 		add	r3, sp, #23
- 132 0024 0093     		str	r3, [sp]
- 133 0026 0223     		movs	r3, #2
- 134 0028 2A46     		mov	r2, r5
- 135 002a 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
- 136 002c 2068     		ldr	r0, [r4]
- 137 002e FFF7FEFF 		bl	HAL_I2C_Mem_Write
- 138              	.LVL9:
-  22:Core/Src/M24Cxx.c **** }
- 139              		.loc 1 22 1 is_stmt 0 view .LVU27
- 140 0032 07B0     		add	sp, sp, #28
- 141              	.LCFI2:
- 142              		.cfi_def_cfa_offset 12
- 143              		@ sp needed
- 144 0034 30BD     		pop	{r4, r5, pc}
- 145              		.loc 1 22 1 view .LVU28
- 146              		.cfi_endproc
- 147              	.LFE331:
- 149              		.section	.text.M24Cxx_Read_Page,"ax",%progbits
- 150              		.align	1
- 151              		.global	M24Cxx_Read_Page
- 152              		.syntax unified
- 153              		.thumb
- 154              		.thumb_func
- 156              	M24Cxx_Read_Page:
-ARM GAS  /tmp/ccMej7C9.s 			page 4
-
-
- 157              	.LVL10:
- 158              	.LFB332:
+ 100 0020 FFF7FEFF 		bl	log2f
+ 101              	.LVL7:
+ 102              		.loc 1 18 29 discriminator 1 view .LVU22
+ 103 0024 FCEEC07A 		vcvt.u32.f32	s15, s0
+ 104 0028 17EE903A 		vmov	r3, s15	@ int
+ 105              		.loc 1 18 27 discriminator 1 view .LVU23
+ 106 002c A372     		strb	r3, [r4, #10]
+  19:Core/Src/M24Cxx.c ****     return res;
+ 107              		.loc 1 19 5 is_stmt 1 view .LVU24
+  20:Core/Src/M24Cxx.c **** }
+ 108              		.loc 1 20 1 is_stmt 0 view .LVU25
+ 109 002e 2046     		mov	r0, r4
+ 110 0030 10BD     		pop	{r4, pc}
+ 111              		.loc 1 20 1 view .LVU26
+ 112              		.cfi_endproc
+ 113              	.LFE330:
+ 115              		.section	.text.M24Cxx_Write_Buffer,"ax",%progbits
+ 116              		.align	1
+ 117              		.global	M24Cxx_Write_Buffer
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 122              	M24Cxx_Write_Buffer:
+ 123              	.LVL8:
+ 124              	.LFB331:
+  21:Core/Src/M24Cxx.c **** 
+  22:Core/Src/M24Cxx.c **** void M24Cxx_Write_Buffer(M24Cxx *device, uint16_t address, uint8_t *data, uint16_t len) {
+ 125              		.loc 1 22 89 is_stmt 1 view -0
+ 126              		.cfi_startproc
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              		.loc 1 22 89 is_stmt 0 view .LVU28
+ 130 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 131              	.LCFI1:
+ 132              		.cfi_def_cfa_offset 32
+ 133              		.cfi_offset 4, -32
+ 134              		.cfi_offset 5, -28
+ 135              		.cfi_offset 6, -24
+ 136              		.cfi_offset 7, -20
+ 137              		.cfi_offset 8, -16
+ 138              		.cfi_offset 9, -12
+ 139              		.cfi_offset 10, -8
+ 140              		.cfi_offset 14, -4
+ 141 0004 84B0     		sub	sp, sp, #16
+ 142              	.LCFI2:
+ 143              		.cfi_def_cfa_offset 48
+ 144 0006 0446     		mov	r4, r0
+ 145 0008 8946     		mov	r9, r1
+ 146 000a 9046     		mov	r8, r2
+ 147 000c 1F46     		mov	r7, r3
   23:Core/Src/M24Cxx.c **** 
-  24:Core/Src/M24Cxx.c **** void M24Cxx_Read_Page(M24Cxx *device, uint16_t address, uint8_t *data) {
- 159              		.loc 1 24 72 is_stmt 1 view -0
- 160              		.cfi_startproc
- 161              		@ args = 0, pretend = 0, frame = 0
- 162              		@ frame_needed = 0, uses_anonymous_args = 0
- 163              		@ link register save eliminated.
-  25:Core/Src/M24Cxx.c ****     
-  26:Core/Src/M24Cxx.c **** }
- 164              		.loc 1 26 1 view .LVU30
- 165 0000 7047     		bx	lr
- 166              		.cfi_endproc
- 167              	.LFE332:
- 169              		.section	.text.M24Cxx_Read_Bytes,"ax",%progbits
- 170              		.align	1
- 171              		.global	M24Cxx_Read_Bytes
- 172              		.syntax unified
- 173              		.thumb
- 174              		.thumb_func
- 176              	M24Cxx_Read_Bytes:
- 177              	.LVL11:
- 178              	.LFB333:
-  27:Core/Src/M24Cxx.c **** 
-  28:Core/Src/M24Cxx.c **** void M24Cxx_Read_Bytes(M24Cxx* device, uint16_t address, uint8_t* data, uint16_t len) {
- 179              		.loc 1 28 87 view -0
- 180              		.cfi_startproc
- 181              		@ args = 0, pretend = 0, frame = 0
- 182              		@ frame_needed = 0, uses_anonymous_args = 0
- 183              		.loc 1 28 87 is_stmt 0 view .LVU32
- 184 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 185              	.LCFI3:
- 186              		.cfi_def_cfa_offset 20
- 187              		.cfi_offset 4, -20
- 188              		.cfi_offset 5, -16
- 189              		.cfi_offset 6, -12
- 190              		.cfi_offset 7, -8
- 191              		.cfi_offset 14, -4
- 192 0002 85B0     		sub	sp, sp, #20
- 193              	.LCFI4:
- 194              		.cfi_def_cfa_offset 40
- 195 0004 0446     		mov	r4, r0
- 196 0006 0F46     		mov	r7, r1
- 197 0008 1646     		mov	r6, r2
- 198 000a 1D46     		mov	r5, r3
-  29:Core/Src/M24Cxx.c ****     HAL_I2C_IsDeviceReady(device->i2c, device->address, 1, 15);
- 199              		.loc 1 29 5 is_stmt 1 view .LVU33
- 200 000c 0F23     		movs	r3, #15
- 201              	.LVL12:
- 202              		.loc 1 29 5 is_stmt 0 view .LVU34
- 203 000e 0122     		movs	r2, #1
- 204              	.LVL13:
- 205              		.loc 1 29 5 view .LVU35
- 206 0010 0179     		ldrb	r1, [r0, #4]	@ zero_extendqisi2
- 207              	.LVL14:
- 208              		.loc 1 29 5 view .LVU36
-ARM GAS  /tmp/ccMej7C9.s 			page 5
+  24:Core/Src/M24Cxx.c ****     uint16_t sent = 0;
+ 148              		.loc 1 24 5 is_stmt 1 view .LVU29
+ 149              	.LVL9:
+  25:Core/Src/M24Cxx.c **** 
+  26:Core/Src/M24Cxx.c ****     while (sent < len) {
+ 150              		.loc 1 26 5 view .LVU30
+ARM GAS  /tmp/ccgGRn4Y.s 			page 4
 
 
- 209 0012 0068     		ldr	r0, [r0]
- 210              	.LVL15:
- 211              		.loc 1 29 5 view .LVU37
- 212 0014 FFF7FEFF 		bl	HAL_I2C_IsDeviceReady
- 213              	.LVL16:
-  30:Core/Src/M24Cxx.c ****     HAL_I2C_Mem_Read(device->i2c, device->address, address, device->addressing_size, data, len, 10)
- 214              		.loc 1 30 5 is_stmt 1 view .LVU38
- 215 0018 0A23     		movs	r3, #10
- 216 001a 0293     		str	r3, [sp, #8]
- 217 001c 0195     		str	r5, [sp, #4]
- 218 001e 0096     		str	r6, [sp]
- 219 0020 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
- 220 0022 3A46     		mov	r2, r7
- 221 0024 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
- 222 0026 2068     		ldr	r0, [r4]
- 223 0028 FFF7FEFF 		bl	HAL_I2C_Mem_Read
- 224              	.LVL17:
-  31:Core/Src/M24Cxx.c **** }
- 225              		.loc 1 31 1 is_stmt 0 view .LVU39
- 226 002c 05B0     		add	sp, sp, #20
- 227              	.LCFI5:
- 228              		.cfi_def_cfa_offset 20
- 229              		@ sp needed
- 230 002e F0BD     		pop	{r4, r5, r6, r7, pc}
- 231              		.loc 1 31 1 view .LVU40
- 232              		.cfi_endproc
- 233              	.LFE333:
- 235              		.section	.text.M24Cxx_Read_Byte,"ax",%progbits
- 236              		.align	1
- 237              		.global	M24Cxx_Read_Byte
- 238              		.syntax unified
- 239              		.thumb
- 240              		.thumb_func
- 242              	M24Cxx_Read_Byte:
- 243              	.LVL18:
- 244              	.LFB334:
+  24:Core/Src/M24Cxx.c **** 
+ 151              		.loc 1 24 14 is_stmt 0 view .LVU31
+ 152 000e 0026     		movs	r6, #0
+ 153              		.loc 1 26 11 view .LVU32
+ 154 0010 29E0     		b	.L5
+ 155              	.LVL10:
+ 156              	.L7:
+ 157              	.LBB2:
+  27:Core/Src/M24Cxx.c ****         uint16_t current_address = address + sent;
+ 158              		.loc 1 27 9 is_stmt 1 view .LVU33
+ 159              		.loc 1 27 18 is_stmt 0 view .LVU34
+ 160 0012 06EB0905 		add	r5, r6, r9
+ 161 0016 ADB2     		uxth	r5, r5
+ 162              	.LVL11:
+  28:Core/Src/M24Cxx.c **** 
+  29:Core/Src/M24Cxx.c ****         uint16_t bytes_left = device->page_size - (current_address % device->page_size);
+ 163              		.loc 1 29 9 is_stmt 1 view .LVU35
+ 164              		.loc 1 29 37 is_stmt 0 view .LVU36
+ 165 0018 207A     		ldrb	r0, [r4, #8]	@ zero_extendqisi2
+ 166              		.loc 1 29 68 view .LVU37
+ 167 001a 95FBF0F3 		sdiv	r3, r5, r0
+ 168 001e 00FB1353 		mls	r3, r0, r3, r5
+ 169              		.loc 1 29 49 view .LVU38
+ 170 0022 9BB2     		uxth	r3, r3
+ 171              		.loc 1 29 18 view .LVU39
+ 172 0024 A0EB030A 		sub	r10, r0, r3
+ 173 0028 1FFA8AFA 		uxth	r10, r10
+ 174              	.LVL12:
+  30:Core/Src/M24Cxx.c **** 
+  31:Core/Src/M24Cxx.c ****         uint16_t chunk_size = (len - sent < bytes_left) ? (len - sent) : bytes_left;
+ 175              		.loc 1 31 9 is_stmt 1 view .LVU40
+ 176              		.loc 1 31 36 is_stmt 0 view .LVU41
+ 177 002c BB1B     		subs	r3, r7, r6
+ 178              		.loc 1 31 72 view .LVU42
+ 179 002e 9A45     		cmp	r10, r3
+ 180 0030 A8BF     		it	ge
+ 181 0032 9A46     		movge	r10, r3
+ 182              	.LVL13:
+ 183              		.loc 1 31 18 view .LVU43
+ 184 0034 1FFA8AFA 		uxth	r10, r10
+ 185              	.LVL14:
   32:Core/Src/M24Cxx.c **** 
-  33:Core/Src/M24Cxx.c **** uint8_t M24Cxx_Read_Byte(M24Cxx *device, uint16_t address) {
- 245              		.loc 1 33 60 is_stmt 1 view -0
- 246              		.cfi_startproc
- 247              		@ args = 0, pretend = 0, frame = 8
- 248              		@ frame_needed = 0, uses_anonymous_args = 0
- 249              		.loc 1 33 60 is_stmt 0 view .LVU42
- 250 0000 30B5     		push	{r4, r5, lr}
- 251              	.LCFI6:
- 252              		.cfi_def_cfa_offset 12
- 253              		.cfi_offset 4, -12
- 254              		.cfi_offset 5, -8
- 255              		.cfi_offset 14, -4
- 256 0002 87B0     		sub	sp, sp, #28
- 257              	.LCFI7:
- 258              		.cfi_def_cfa_offset 40
- 259 0004 0446     		mov	r4, r0
- 260 0006 0D46     		mov	r5, r1
-  34:Core/Src/M24Cxx.c ****     uint8_t res = 0;
- 261              		.loc 1 34 5 is_stmt 1 view .LVU43
- 262              		.loc 1 34 13 is_stmt 0 view .LVU44
-ARM GAS  /tmp/ccMej7C9.s 			page 6
+  33:Core/Src/M24Cxx.c ****         while (HAL_I2C_IsDeviceReady(device->i2c, device->address, 2, 10) != HAL_OK);
+ 186              		.loc 1 33 9 is_stmt 1 view .LVU44
+ 187              	.L6:
+ 188              		.loc 1 33 75 discriminator 1 view .LVU45
+ 189              		.loc 1 33 16 is_stmt 0 discriminator 1 view .LVU46
+ 190 0038 0A23     		movs	r3, #10
+ 191 003a 0222     		movs	r2, #2
+ 192 003c 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+ 193 003e 2068     		ldr	r0, [r4]
+ 194 0040 FFF7FEFF 		bl	HAL_I2C_IsDeviceReady
+ 195              	.LVL15:
+ 196              		.loc 1 33 75 discriminator 2 view .LVU47
+ 197 0044 0028     		cmp	r0, #0
+ 198 0046 F7D1     		bne	.L6
+  34:Core/Src/M24Cxx.c ****         HAL_I2C_Mem_Write(device->i2c, device->address, current_address, device->addressing_size, d
+ARM GAS  /tmp/ccgGRn4Y.s 			page 5
 
 
- 263 0008 0023     		movs	r3, #0
- 264 000a 8DF81730 		strb	r3, [sp, #23]
+ 199              		.loc 1 34 9 is_stmt 1 view .LVU48
+ 200 0048 0A23     		movs	r3, #10
+ 201 004a 0293     		str	r3, [sp, #8]
+ 202 004c CDF804A0 		str	r10, [sp, #4]
+ 203 0050 CDF80080 		str	r8, [sp]
+ 204 0054 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 205 0056 2A46     		mov	r2, r5
+ 206 0058 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+ 207 005a 2068     		ldr	r0, [r4]
+ 208 005c FFF7FEFF 		bl	HAL_I2C_Mem_Write
+ 209              	.LVL16:
   35:Core/Src/M24Cxx.c **** 
-  36:Core/Src/M24Cxx.c ****     HAL_I2C_IsDeviceReady(device->i2c, device->address, 1, 15);
- 265              		.loc 1 36 5 is_stmt 1 view .LVU45
- 266 000e 0F23     		movs	r3, #15
- 267 0010 0122     		movs	r2, #1
- 268 0012 0179     		ldrb	r1, [r0, #4]	@ zero_extendqisi2
- 269              	.LVL19:
- 270              		.loc 1 36 5 is_stmt 0 view .LVU46
- 271 0014 0068     		ldr	r0, [r0]
- 272              	.LVL20:
- 273              		.loc 1 36 5 view .LVU47
- 274 0016 FFF7FEFF 		bl	HAL_I2C_IsDeviceReady
- 275              	.LVL21:
-  37:Core/Src/M24Cxx.c ****     HAL_I2C_Mem_Read(device->i2c, device->address, address, device->addressing_size, &res, 1, 10);
- 276              		.loc 1 37 5 is_stmt 1 view .LVU48
- 277 001a 0A23     		movs	r3, #10
- 278 001c 0293     		str	r3, [sp, #8]
- 279 001e 0123     		movs	r3, #1
- 280 0020 0193     		str	r3, [sp, #4]
- 281 0022 0DF11703 		add	r3, sp, #23
- 282 0026 0093     		str	r3, [sp]
- 283 0028 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
- 284 002a 2A46     		mov	r2, r5
- 285 002c 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
- 286 002e 2068     		ldr	r0, [r4]
- 287 0030 FFF7FEFF 		bl	HAL_I2C_Mem_Read
- 288              	.LVL22:
-  38:Core/Src/M24Cxx.c ****     return res;
- 289              		.loc 1 38 5 view .LVU49
-  39:Core/Src/M24Cxx.c **** }...
- 290              		.loc 1 39 1 is_stmt 0 view .LVU50
- 291 0034 9DF81700 		ldrb	r0, [sp, #23]	@ zero_extendqisi2
- 292 0038 07B0     		add	sp, sp, #28
- 293              	.LCFI8:
- 294              		.cfi_def_cfa_offset 12
- 295              		@ sp needed
- 296 003a 30BD     		pop	{r4, r5, pc}
- 297              		.loc 1 39 1 view .LVU51
- 298              		.cfi_endproc
- 299              	.LFE334:
- 301              		.text
- 302              	.Letext0:
- 303              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 304              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 305              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h"
- 306              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
- 307              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
- 308              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h"
- 309              		.file 8 "Core/Inc/M24Cxx.h"
-ARM GAS  /tmp/ccMej7C9.s 			page 7
+  36:Core/Src/M24Cxx.c ****         sent += chunk_size;
+ 210              		.loc 1 36 9 view .LVU49
+ 211              		.loc 1 36 14 is_stmt 0 view .LVU50
+ 212 0060 B244     		add	r10, r10, r6
+ 213              	.LVL17:
+ 214              		.loc 1 36 14 view .LVU51
+ 215 0062 1FFA8AF6 		uxth	r6, r10
+ 216              	.LVL18:
+ 217              	.L5:
+ 218              		.loc 1 36 14 view .LVU52
+ 219              	.LBE2:
+  26:Core/Src/M24Cxx.c ****         uint16_t current_address = address + sent;
+ 220              		.loc 1 26 17 is_stmt 1 discriminator 1 view .LVU53
+ 221 0066 BE42     		cmp	r6, r7
+ 222 0068 D3D3     		bcc	.L7
+  37:Core/Src/M24Cxx.c ****     }
+  38:Core/Src/M24Cxx.c **** 
+  39:Core/Src/M24Cxx.c ****     
+  40:Core/Src/M24Cxx.c **** }
+ 223              		.loc 1 40 1 is_stmt 0 view .LVU54
+ 224 006a 04B0     		add	sp, sp, #16
+ 225              	.LCFI3:
+ 226              		.cfi_def_cfa_offset 32
+ 227              		@ sp needed
+ 228 006c BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 229              		.loc 1 40 1 view .LVU55
+ 230              		.cfi_endproc
+ 231              	.LFE331:
+ 233              		.section	.text.M24Cxx_Write_Byte,"ax",%progbits
+ 234              		.align	1
+ 235              		.global	M24Cxx_Write_Byte
+ 236              		.syntax unified
+ 237              		.thumb
+ 238              		.thumb_func
+ 240              	M24Cxx_Write_Byte:
+ 241              	.LVL19:
+ 242              	.LFB332:
+  41:Core/Src/M24Cxx.c **** 
+  42:Core/Src/M24Cxx.c **** void M24Cxx_Write_Byte(M24Cxx* device, uint16_t address, uint8_t data) {
+ 243              		.loc 1 42 72 is_stmt 1 view -0
+ 244              		.cfi_startproc
+ 245              		@ args = 0, pretend = 0, frame = 8
+ 246              		@ frame_needed = 0, uses_anonymous_args = 0
+ 247              		.loc 1 42 72 is_stmt 0 view .LVU57
+ 248 0000 30B5     		push	{r4, r5, lr}
+ARM GAS  /tmp/ccgGRn4Y.s 			page 6
+
+
+ 249              	.LCFI4:
+ 250              		.cfi_def_cfa_offset 12
+ 251              		.cfi_offset 4, -12
+ 252              		.cfi_offset 5, -8
+ 253              		.cfi_offset 14, -4
+ 254 0002 87B0     		sub	sp, sp, #28
+ 255              	.LCFI5:
+ 256              		.cfi_def_cfa_offset 40
+ 257 0004 0446     		mov	r4, r0
+ 258 0006 0D46     		mov	r5, r1
+ 259 0008 8DF81720 		strb	r2, [sp, #23]
+  43:Core/Src/M24Cxx.c ****     HAL_I2C_IsDeviceReady(device->i2c, device->address, 2, 15);
+ 260              		.loc 1 43 5 is_stmt 1 view .LVU58
+ 261 000c 0F23     		movs	r3, #15
+ 262 000e 0222     		movs	r2, #2
+ 263              	.LVL20:
+ 264              		.loc 1 43 5 is_stmt 0 view .LVU59
+ 265 0010 0179     		ldrb	r1, [r0, #4]	@ zero_extendqisi2
+ 266              	.LVL21:
+ 267              		.loc 1 43 5 view .LVU60
+ 268 0012 0068     		ldr	r0, [r0]
+ 269              	.LVL22:
+ 270              		.loc 1 43 5 view .LVU61
+ 271 0014 FFF7FEFF 		bl	HAL_I2C_IsDeviceReady
+ 272              	.LVL23:
+  44:Core/Src/M24Cxx.c ****     HAL_I2C_Mem_Write(device->i2c, device->address, address, device->addressing_size, &data, 1, 10)
+ 273              		.loc 1 44 5 is_stmt 1 view .LVU62
+ 274 0018 0A23     		movs	r3, #10
+ 275 001a 0293     		str	r3, [sp, #8]
+ 276 001c 0123     		movs	r3, #1
+ 277 001e 0193     		str	r3, [sp, #4]
+ 278 0020 0DF11703 		add	r3, sp, #23
+ 279 0024 0093     		str	r3, [sp]
+ 280 0026 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 281 0028 2A46     		mov	r2, r5
+ 282 002a 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+ 283 002c 2068     		ldr	r0, [r4]
+ 284 002e FFF7FEFF 		bl	HAL_I2C_Mem_Write
+ 285              	.LVL24:
+  45:Core/Src/M24Cxx.c **** }
+ 286              		.loc 1 45 1 is_stmt 0 view .LVU63
+ 287 0032 07B0     		add	sp, sp, #28
+ 288              	.LCFI6:
+ 289              		.cfi_def_cfa_offset 12
+ 290              		@ sp needed
+ 291 0034 30BD     		pop	{r4, r5, pc}
+ 292              		.loc 1 45 1 view .LVU64
+ 293              		.cfi_endproc
+ 294              	.LFE332:
+ 296              		.section	.text.M24Cxx_Read_Page,"ax",%progbits
+ 297              		.align	1
+ 298              		.global	M24Cxx_Read_Page
+ 299              		.syntax unified
+ 300              		.thumb
+ 301              		.thumb_func
+ 303              	M24Cxx_Read_Page:
+ 304              	.LVL25:
+ARM GAS  /tmp/ccgGRn4Y.s 			page 7
+
+
+ 305              	.LFB333:
+  46:Core/Src/M24Cxx.c **** 
+  47:Core/Src/M24Cxx.c **** void M24Cxx_Read_Page(M24Cxx *device, uint16_t address, uint8_t *data) {
+ 306              		.loc 1 47 72 is_stmt 1 view -0
+ 307              		.cfi_startproc
+ 308              		@ args = 0, pretend = 0, frame = 0
+ 309              		@ frame_needed = 0, uses_anonymous_args = 0
+ 310              		@ link register save eliminated.
+  48:Core/Src/M24Cxx.c ****     
+  49:Core/Src/M24Cxx.c **** }
+ 311              		.loc 1 49 1 view .LVU66
+ 312 0000 7047     		bx	lr
+ 313              		.cfi_endproc
+ 314              	.LFE333:
+ 316              		.section	.text.M24Cxx_Read_Bytes,"ax",%progbits
+ 317              		.align	1
+ 318              		.global	M24Cxx_Read_Bytes
+ 319              		.syntax unified
+ 320              		.thumb
+ 321              		.thumb_func
+ 323              	M24Cxx_Read_Bytes:
+ 324              	.LVL26:
+ 325              	.LFB334:
+  50:Core/Src/M24Cxx.c **** 
+  51:Core/Src/M24Cxx.c **** void M24Cxx_Read_Bytes(M24Cxx* device, uint16_t address, uint8_t* data, uint16_t len) {
+ 326              		.loc 1 51 87 view -0
+ 327              		.cfi_startproc
+ 328              		@ args = 0, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		.loc 1 51 87 is_stmt 0 view .LVU68
+ 331 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 332              	.LCFI7:
+ 333              		.cfi_def_cfa_offset 20
+ 334              		.cfi_offset 4, -20
+ 335              		.cfi_offset 5, -16
+ 336              		.cfi_offset 6, -12
+ 337              		.cfi_offset 7, -8
+ 338              		.cfi_offset 14, -4
+ 339 0002 85B0     		sub	sp, sp, #20
+ 340              	.LCFI8:
+ 341              		.cfi_def_cfa_offset 40
+ 342 0004 0446     		mov	r4, r0
+ 343 0006 0F46     		mov	r7, r1
+ 344 0008 1646     		mov	r6, r2
+ 345 000a 1D46     		mov	r5, r3
+  52:Core/Src/M24Cxx.c ****     HAL_I2C_IsDeviceReady(device->i2c, device->address, 1, 15);
+ 346              		.loc 1 52 5 is_stmt 1 view .LVU69
+ 347 000c 0F23     		movs	r3, #15
+ 348              	.LVL27:
+ 349              		.loc 1 52 5 is_stmt 0 view .LVU70
+ 350 000e 0122     		movs	r2, #1
+ 351              	.LVL28:
+ 352              		.loc 1 52 5 view .LVU71
+ 353 0010 0179     		ldrb	r1, [r0, #4]	@ zero_extendqisi2
+ 354              	.LVL29:
+ 355              		.loc 1 52 5 view .LVU72
+ 356 0012 0068     		ldr	r0, [r0]
+ARM GAS  /tmp/ccgGRn4Y.s 			page 8
+
+
+ 357              	.LVL30:
+ 358              		.loc 1 52 5 view .LVU73
+ 359 0014 FFF7FEFF 		bl	HAL_I2C_IsDeviceReady
+ 360              	.LVL31:
+  53:Core/Src/M24Cxx.c ****     HAL_I2C_Mem_Read(device->i2c, device->address, address, device->addressing_size, data, len, 10)
+ 361              		.loc 1 53 5 is_stmt 1 view .LVU74
+ 362 0018 0A23     		movs	r3, #10
+ 363 001a 0293     		str	r3, [sp, #8]
+ 364 001c 0195     		str	r5, [sp, #4]
+ 365 001e 0096     		str	r6, [sp]
+ 366 0020 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 367 0022 3A46     		mov	r2, r7
+ 368 0024 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+ 369 0026 2068     		ldr	r0, [r4]
+ 370 0028 FFF7FEFF 		bl	HAL_I2C_Mem_Read
+ 371              	.LVL32:
+  54:Core/Src/M24Cxx.c **** }
+ 372              		.loc 1 54 1 is_stmt 0 view .LVU75
+ 373 002c 05B0     		add	sp, sp, #20
+ 374              	.LCFI9:
+ 375              		.cfi_def_cfa_offset 20
+ 376              		@ sp needed
+ 377 002e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 378              		.loc 1 54 1 view .LVU76
+ 379              		.cfi_endproc
+ 380              	.LFE334:
+ 382              		.section	.text.M24Cxx_Read_Byte,"ax",%progbits
+ 383              		.align	1
+ 384              		.global	M24Cxx_Read_Byte
+ 385              		.syntax unified
+ 386              		.thumb
+ 387              		.thumb_func
+ 389              	M24Cxx_Read_Byte:
+ 390              	.LVL33:
+ 391              	.LFB335:
+  55:Core/Src/M24Cxx.c **** 
+  56:Core/Src/M24Cxx.c **** uint8_t M24Cxx_Read_Byte(M24Cxx *device, uint16_t address) {
+ 392              		.loc 1 56 60 is_stmt 1 view -0
+ 393              		.cfi_startproc
+ 394              		@ args = 0, pretend = 0, frame = 8
+ 395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 396              		.loc 1 56 60 is_stmt 0 view .LVU78
+ 397 0000 30B5     		push	{r4, r5, lr}
+ 398              	.LCFI10:
+ 399              		.cfi_def_cfa_offset 12
+ 400              		.cfi_offset 4, -12
+ 401              		.cfi_offset 5, -8
+ 402              		.cfi_offset 14, -4
+ 403 0002 87B0     		sub	sp, sp, #28
+ 404              	.LCFI11:
+ 405              		.cfi_def_cfa_offset 40
+ 406 0004 0446     		mov	r4, r0
+ 407 0006 0D46     		mov	r5, r1
+  57:Core/Src/M24Cxx.c ****     uint8_t res = 0;
+ 408              		.loc 1 57 5 is_stmt 1 view .LVU79
+ 409              		.loc 1 57 13 is_stmt 0 view .LVU80
+ 410 0008 0023     		movs	r3, #0
+ARM GAS  /tmp/ccgGRn4Y.s 			page 9
+
+
+ 411 000a 8DF81730 		strb	r3, [sp, #23]
+  58:Core/Src/M24Cxx.c **** 
+  59:Core/Src/M24Cxx.c ****     HAL_I2C_IsDeviceReady(device->i2c, device->address, 1, 15);
+ 412              		.loc 1 59 5 is_stmt 1 view .LVU81
+ 413 000e 0F23     		movs	r3, #15
+ 414 0010 0122     		movs	r2, #1
+ 415 0012 0179     		ldrb	r1, [r0, #4]	@ zero_extendqisi2
+ 416              	.LVL34:
+ 417              		.loc 1 59 5 is_stmt 0 view .LVU82
+ 418 0014 0068     		ldr	r0, [r0]
+ 419              	.LVL35:
+ 420              		.loc 1 59 5 view .LVU83
+ 421 0016 FFF7FEFF 		bl	HAL_I2C_IsDeviceReady
+ 422              	.LVL36:
+  60:Core/Src/M24Cxx.c ****     HAL_I2C_Mem_Read(device->i2c, device->address, address, device->addressing_size, &res, 1, 10);
+ 423              		.loc 1 60 5 is_stmt 1 view .LVU84
+ 424 001a 0A23     		movs	r3, #10
+ 425 001c 0293     		str	r3, [sp, #8]
+ 426 001e 0123     		movs	r3, #1
+ 427 0020 0193     		str	r3, [sp, #4]
+ 428 0022 0DF11703 		add	r3, sp, #23
+ 429 0026 0093     		str	r3, [sp]
+ 430 0028 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 431 002a 2A46     		mov	r2, r5
+ 432 002c 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+ 433 002e 2068     		ldr	r0, [r4]
+ 434 0030 FFF7FEFF 		bl	HAL_I2C_Mem_Read
+ 435              	.LVL37:
+  61:Core/Src/M24Cxx.c ****     return res;
+ 436              		.loc 1 61 5 view .LVU85
+  62:Core/Src/M24Cxx.c **** }...
+ 437              		.loc 1 62 1 is_stmt 0 view .LVU86
+ 438 0034 9DF81700 		ldrb	r0, [sp, #23]	@ zero_extendqisi2
+ 439 0038 07B0     		add	sp, sp, #28
+ 440              	.LCFI12:
+ 441              		.cfi_def_cfa_offset 12
+ 442              		@ sp needed
+ 443 003a 30BD     		pop	{r4, r5, pc}
+ 444              		.loc 1 62 1 view .LVU87
+ 445              		.cfi_endproc
+ 446              	.LFE335:
+ 448              		.text
+ 449              	.Letext0:
+ 450              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 451              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 452              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h"
+ 453              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 454              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 455              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h"
+ 456              		.file 8 "Core/Inc/M24Cxx.h"
+ 457              		.file 9 "/usr/arm-none-eabi/include/math.h"
+ARM GAS  /tmp/ccgGRn4Y.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 M24Cxx.c
-     /tmp/ccMej7C9.s:21     .text.M24Cxx_Init:00000000 $t
-     /tmp/ccMej7C9.s:27     .text.M24Cxx_Init:00000000 M24Cxx_Init
-     /tmp/ccMej7C9.s:65     .text.M24Cxx_Write_Buffer:00000000 $t
-     /tmp/ccMej7C9.s:71     .text.M24Cxx_Write_Buffer:00000000 M24Cxx_Write_Buffer
-     /tmp/ccMej7C9.s:87     .text.M24Cxx_Write_Byte:00000000 $t
-     /tmp/ccMej7C9.s:93     .text.M24Cxx_Write_Byte:00000000 M24Cxx_Write_Byte
-     /tmp/ccMej7C9.s:150    .text.M24Cxx_Read_Page:00000000 $t
-     /tmp/ccMej7C9.s:156    .text.M24Cxx_Read_Page:00000000 M24Cxx_Read_Page
-     /tmp/ccMej7C9.s:170    .text.M24Cxx_Read_Bytes:00000000 $t
-     /tmp/ccMej7C9.s:176    .text.M24Cxx_Read_Bytes:00000000 M24Cxx_Read_Bytes
-     /tmp/ccMej7C9.s:236    .text.M24Cxx_Read_Byte:00000000 $t
-     /tmp/ccMej7C9.s:242    .text.M24Cxx_Read_Byte:00000000 M24Cxx_Read_Byte
+     /tmp/ccgGRn4Y.s:21     .text.is_same_page:00000000 $t
+     /tmp/ccgGRn4Y.s:27     .text.is_same_page:00000000 is_same_page
+     /tmp/ccgGRn4Y.s:52     .text.M24Cxx_Init:00000000 $t
+     /tmp/ccgGRn4Y.s:58     .text.M24Cxx_Init:00000000 M24Cxx_Init
+     /tmp/ccgGRn4Y.s:116    .text.M24Cxx_Write_Buffer:00000000 $t
+     /tmp/ccgGRn4Y.s:122    .text.M24Cxx_Write_Buffer:00000000 M24Cxx_Write_Buffer
+     /tmp/ccgGRn4Y.s:234    .text.M24Cxx_Write_Byte:00000000 $t
+     /tmp/ccgGRn4Y.s:240    .text.M24Cxx_Write_Byte:00000000 M24Cxx_Write_Byte
+     /tmp/ccgGRn4Y.s:297    .text.M24Cxx_Read_Page:00000000 $t
+     /tmp/ccgGRn4Y.s:303    .text.M24Cxx_Read_Page:00000000 M24Cxx_Read_Page
+     /tmp/ccgGRn4Y.s:317    .text.M24Cxx_Read_Bytes:00000000 $t
+     /tmp/ccgGRn4Y.s:323    .text.M24Cxx_Read_Bytes:00000000 M24Cxx_Read_Bytes
+     /tmp/ccgGRn4Y.s:383    .text.M24Cxx_Read_Byte:00000000 $t
+     /tmp/ccgGRn4Y.s:389    .text.M24Cxx_Read_Byte:00000000 M24Cxx_Read_Byte
 
 UNDEFINED SYMBOLS
+log2f
 HAL_I2C_IsDeviceReady
 HAL_I2C_Mem_Write
 HAL_I2C_Mem_Read

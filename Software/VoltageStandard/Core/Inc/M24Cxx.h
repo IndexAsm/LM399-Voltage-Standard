@@ -10,6 +10,7 @@ typedef struct {
     uint16_t size;              // Memory size in KB
     uint8_t page_size;          // Size of 1 page
     uint8_t addressing_size;
+    uint8_t page_address_bits;
 } M24Cxx;
 
 M24Cxx M24Cxx_Init(I2C_HandleTypeDef* i2c, uint8_t i2c_address, uint16_t size, uint8_t page_size, uint8_t addressing_size);
