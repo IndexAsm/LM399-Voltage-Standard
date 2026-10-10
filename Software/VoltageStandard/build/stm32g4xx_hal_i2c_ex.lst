@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc7Ny83K.s 			page 1
+ARM GAS  /tmp/cc0NjCxf.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** 
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   [..] Comparing to other previous devices, the I2C interface for STM32G4xx
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****        devices contains the following additional features
-ARM GAS  /tmp/cc7Ny83K.s 			page 2
+ARM GAS  /tmp/cc0NjCxf.s 			page 2
 
 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
   84:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** 
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** @endverbatim
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   * @{
-ARM GAS  /tmp/cc7Ny83K.s 			page 3
+ARM GAS  /tmp/cc0NjCxf.s 			page 3
 
 
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
   60              	.LVL1:
   61              		.loc 1 110 5 is_stmt 0 view .LVU14
   62 0020 0268     		ldr	r2, [r0]
-ARM GAS  /tmp/cc7Ny83K.s 			page 4
+ARM GAS  /tmp/cc0NjCxf.s 			page 4
 
 
   63 0022 22F00102 		bic	r2, r2, #1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  130:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   }
  131:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** }
   98              		.loc 1 131 1 is_stmt 0 view .LVU31
-ARM GAS  /tmp/cc7Ny83K.s 			page 5
+ARM GAS  /tmp/cc0NjCxf.s 			page 5
 
 
   99 0050 7047     		bx	lr
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  149:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   {
  150:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****     /* Process Locked */
  151:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****     __HAL_LOCK(hi2c);
-ARM GAS  /tmp/cc7Ny83K.s 			page 6
+ARM GAS  /tmp/cc0NjCxf.s 			page 6
 
 
  136              		.loc 1 151 5 is_stmt 1 view .LVU42
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  169:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** 
  170:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****     __HAL_I2C_ENABLE(hi2c);
  173              		.loc 1 170 5 is_stmt 1 view .LVU59
-ARM GAS  /tmp/cc7Ny83K.s 			page 7
+ARM GAS  /tmp/cc0NjCxf.s 			page 7
 
 
  174 0036 1968     		ldr	r1, [r3]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  184:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** /**
  185:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   * @}
  186:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   */
-ARM GAS  /tmp/cc7Ny83K.s 			page 8
+ARM GAS  /tmp/cc0NjCxf.s 			page 8
 
 
  187:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  218:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_BUSY;
  238              		.loc 1 218 5 view .LVU81
  239              		.loc 1 218 17 is_stmt 0 view .LVU82
-ARM GAS  /tmp/cc7Ny83K.s 			page 9
+ARM GAS  /tmp/cc0NjCxf.s 			page 9
 
 
  240 0018 2422     		movs	r2, #36
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  273 0048 7047     		bx	lr
  274              	.LVL17:
  275              	.L10:
-ARM GAS  /tmp/cc7Ny83K.s 			page 10
+ARM GAS  /tmp/cc0NjCxf.s 			page 10
 
 
  216:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  314 0012 0122     		movs	r2, #1
  315 0014 80F84020 		strb	r2, [r0, #64]
  316              		.loc 1 255 5 discriminator 2 view .LVU108
-ARM GAS  /tmp/cc7Ny83K.s 			page 11
+ARM GAS  /tmp/cc0NjCxf.s 			page 11
 
 
  256:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  276:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****     return HAL_BUSY;
  277:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   }
  278:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** }
-ARM GAS  /tmp/cc7Ny83K.s 			page 12
+ARM GAS  /tmp/cc0NjCxf.s 			page 12
 
 
  351              		.loc 1 278 1 is_stmt 0 view .LVU124
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  311:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   *        only by using I2C_FASTMODEPLUS_I2C4 parameter.
  312:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   * @retval None
  313:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c ****   */
-ARM GAS  /tmp/cc7Ny83K.s 			page 13
+ARM GAS  /tmp/cc0NjCxf.s 			page 13
 
 
  314:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c **** void HAL_I2CEx_EnableFastModePlus(uint32_t ConfigFastModePlus)
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  416              	.LFE333:
  418              		.section	.text.HAL_I2CEx_DisableFastModePlus,"ax",%progbits
  419              		.align	1
-ARM GAS  /tmp/cc7Ny83K.s 			page 14
+ARM GAS  /tmp/cc0NjCxf.s 			page 14
 
 
  420              		.global	HAL_I2CEx_DisableFastModePlus
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  450              		.loc 1 349 3 view .LVU145
  451 0014 019B     		ldr	r3, [sp, #4]
  452              	.LBE3:
-ARM GAS  /tmp/cc7Ny83K.s 			page 15
+ARM GAS  /tmp/cc0NjCxf.s 			page 15
 
 
  453              		.loc 1 349 3 view .LVU146
@@ -872,24 +872,24 @@ ARM GAS  /tmp/cc7Ny83K.s 			page 1
  478              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
  479              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
  480              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h"
-ARM GAS  /tmp/cc7Ny83K.s 			page 16
+ARM GAS  /tmp/cc0NjCxf.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_i2c_ex.c
-     /tmp/cc7Ny83K.s:21     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
-     /tmp/cc7Ny83K.s:27     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
-     /tmp/cc7Ny83K.s:111    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
-     /tmp/cc7Ny83K.s:117    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
-     /tmp/cc7Ny83K.s:206    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
-     /tmp/cc7Ny83K.s:212    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
-     /tmp/cc7Ny83K.s:285    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
-     /tmp/cc7Ny83K.s:291    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
-     /tmp/cc7Ny83K.s:364    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
-     /tmp/cc7Ny83K.s:370    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
-     /tmp/cc7Ny83K.s:413    .text.HAL_I2CEx_EnableFastModePlus:00000024 $d
-     /tmp/cc7Ny83K.s:419    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
-     /tmp/cc7Ny83K.s:425    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
-     /tmp/cc7Ny83K.s:468    .text.HAL_I2CEx_DisableFastModePlus:00000024 $d
+     /tmp/cc0NjCxf.s:21     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
+     /tmp/cc0NjCxf.s:27     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
+     /tmp/cc0NjCxf.s:111    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
+     /tmp/cc0NjCxf.s:117    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
+     /tmp/cc0NjCxf.s:206    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
+     /tmp/cc0NjCxf.s:212    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
+     /tmp/cc0NjCxf.s:285    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
+     /tmp/cc0NjCxf.s:291    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
+     /tmp/cc0NjCxf.s:364    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
+     /tmp/cc0NjCxf.s:370    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
+     /tmp/cc0NjCxf.s:413    .text.HAL_I2CEx_EnableFastModePlus:00000024 $d
+     /tmp/cc0NjCxf.s:419    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
+     /tmp/cc0NjCxf.s:425    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
+     /tmp/cc0NjCxf.s:468    .text.HAL_I2CEx_DisableFastModePlus:00000024 $d
 
 NO UNDEFINED SYMBOLS

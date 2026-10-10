@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZui67l.s 			page 1
+ARM GAS  /tmp/cc4aaQ8M.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****                     ##### How to use this driver #####
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   ==============================================================================
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     [..]
-ARM GAS  /tmp/ccZui67l.s 			page 2
+ARM GAS  /tmp/cc4aaQ8M.s 			page 2
 
 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       (#) Fill parameters of Init structure in USB_CfgTypeDef structure.
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
   42              		.loc 1 71 3 view .LVU3
   72:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
   73:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   /* NOTE : - This function is not required by USB Device FS peripheral, it is used
-ARM GAS  /tmp/ccZui67l.s 			page 3
+ARM GAS  /tmp/cc4aaQ8M.s 			page 3
 
 
   74:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****               only by USB OTG FS peripheral.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
   93:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
   94:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   /* Set winterruptmask variable */
   95:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   winterruptmask = USB_CNTR_CTRM  | USB_CNTR_WKUPM |
-ARM GAS  /tmp/ccZui67l.s 			page 4
+ARM GAS  /tmp/cc4aaQ8M.s 			page 4
 
 
   80              		.loc 1 95 3 is_stmt 1 view .LVU13
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  123:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   USBx->CNTR &= (uint16_t)(~winterruptmask);
  109              		.loc 1 123 3 view .LVU21
  110              		.loc 1 123 7 is_stmt 0 view .LVU22
-ARM GAS  /tmp/ccZui67l.s 			page 5
+ARM GAS  /tmp/cc4aaQ8M.s 			page 5
 
 
  111 0000 B0F84030 		ldrh	r3, [r0, #64]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  147:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** }
  144              		.loc 1 147 1 is_stmt 0 view .LVU31
  145 0000 0020     		movs	r0, #0
-ARM GAS  /tmp/ccZui67l.s 			page 6
+ARM GAS  /tmp/cc4aaQ8M.s 			page 6
 
 
  146              	.LVL8:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  182              		.loc 1 167 14 is_stmt 0 view .LVU40
  183 0010 0020     		movs	r0, #0
  184 0012 A3F84000 		strh	r0, [r3, #64]	@ movhi
-ARM GAS  /tmp/ccZui67l.s 			page 7
+ARM GAS  /tmp/cc4aaQ8M.s 			page 7
 
 
  168:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  191:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
  192:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   /* NOTE : - This function is not required by USB Device FS peripheral, it is used
  193:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****               only by USB OTG FS peripheral.
-ARM GAS  /tmp/ccZui67l.s 			page 8
+ARM GAS  /tmp/cc4aaQ8M.s 			page 8
 
 
  194:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             - This function is added to ensure compatibility across platforms.
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  252              		.section	.text.USB_ActivateEndpoint,"ax",%progbits
  253              		.align	1
  254              		.global	USB_ActivateEndpoint
-ARM GAS  /tmp/ccZui67l.s 			page 9
+ARM GAS  /tmp/cc4aaQ8M.s 			page 9
 
 
  255              		.syntax unified
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  292 001c DFE800F0 		tbb	[pc, r0]
  293              	.L13:
  294 0020 53       		.byte	(.L16-.L13)/2
-ARM GAS  /tmp/ccZui67l.s 			page 10
+ARM GAS  /tmp/cc4aaQ8M.s 			page 10
 
 
  295 0021 5A       		.byte	(.L15-.L13)/2
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  324              	.LBE2:
  325              		.loc 1 259 3 is_stmt 1 view .LVU76
  260:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
-ARM GAS  /tmp/ccZui67l.s 			page 11
+ARM GAS  /tmp/cc4aaQ8M.s 			page 11
 
 
  261:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   if (ep->doublebuffer == 0U)
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  373 0088 33F82C20 		ldrh	r2, [r3, ip, lsl #2]
  374              	.LVL27:
  375              		.loc 1 267 7 is_stmt 0 discriminator 1 view .LVU98
-ARM GAS  /tmp/ccZui67l.s 			page 12
+ARM GAS  /tmp/cc4aaQ8M.s 			page 12
 
 
  376 008c 22F4E042 		bic	r2, r2, #28672
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  237:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       break;
  425              		.loc 1 237 7 view .LVU117
  237:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       break;
-ARM GAS  /tmp/ccZui67l.s 			page 13
+ARM GAS  /tmp/cc4aaQ8M.s 			page 13
 
 
  426              		.loc 1 237 17 is_stmt 0 view .LVU118
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  463              		.loc 1 277 9 is_stmt 0 view .LVU134
  464 00e2 33F82120 		ldrh	r2, [r3, r1, lsl #2]
  465 00e6 22F4E042 		bic	r2, r2, #28672
-ARM GAS  /tmp/ccZui67l.s 			page 14
+ARM GAS  /tmp/cc4aaQ8M.s 			page 14
 
 
  466 00ea 22F04002 		bic	r2, r2, #64
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  511              	.LVL48:
  512              		.loc 1 286 7 is_stmt 1 view .LVU153
  513 0120 91F800C0 		ldrb	ip, [r1]	@ zero_extendqisi2
-ARM GAS  /tmp/ccZui67l.s 			page 15
+ARM GAS  /tmp/cc4aaQ8M.s 			page 15
 
 
  514 0124 02EBCC02 		add	r2, r2, ip, lsl #3
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  567              		.loc 1 287 7 is_stmt 1 discriminator 2 view .LVU173
  568              	.LBE12:
  569              		.loc 1 287 7 discriminator 2 view .LVU174
-ARM GAS  /tmp/ccZui67l.s 			page 16
+ARM GAS  /tmp/cc4aaQ8M.s 			page 16
 
 
  288:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  614 01a2 0EF1010E 		add	lr, lr, #1
  615              	.LVL61:
  616              	.L25:
-ARM GAS  /tmp/ccZui67l.s 			page 17
+ARM GAS  /tmp/cc4aaQ8M.s 			page 17
 
 
  286:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_CLEAR_RX_DTOG(USBx, ep->num);
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  656              	.LBB16:
  657              		.loc 1 297 9 view .LVU204
  658              		.loc 1 297 9 view .LVU205
-ARM GAS  /tmp/ccZui67l.s 			page 18
+ARM GAS  /tmp/cc4aaQ8M.s 			page 18
 
 
  659 01e4 33F82120 		ldrh	r2, [r3, r1, lsl #2]
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  697              	.LVL73:
  698              		.loc 1 313 7 is_stmt 0 view .LVU220
  699 021c 42F08002 		orr	r2, r2, #128
-ARM GAS  /tmp/ccZui67l.s 			page 19
+ARM GAS  /tmp/cc4aaQ8M.s 			page 19
 
 
  700 0220 23F82C20 		strh	r2, [r3, ip, lsl #2]	@ movhi
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  750              		.loc 1 317 5 view .LVU241
  751              		.loc 1 317 5 view .LVU242
  752              		.loc 1 317 5 view .LVU243
-ARM GAS  /tmp/ccZui67l.s 			page 20
+ARM GAS  /tmp/cc4aaQ8M.s 			page 20
 
 
  318:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  801 0296 12F0400F 		tst	r2, #64
  802 029a 0BD0     		beq	.L33
  803              		.loc 1 323 7 discriminator 1 view .LVU264
-ARM GAS  /tmp/ccZui67l.s 			page 21
+ARM GAS  /tmp/cc4aaQ8M.s 			page 21
 
 
  804              	.LBB23:
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  855 02dc 15D1     		bne	.L35
  856              		.loc 1 326 7 discriminator 2 view .LVU285
  857 02de B2F802C4 		ldrh	ip, [r2, #1026]
-ARM GAS  /tmp/ccZui67l.s 			page 22
+ARM GAS  /tmp/cc4aaQ8M.s 			page 22
 
 
  858 02e2 4CF4004C 		orr	ip, ip, #32768
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  905 0322 4FEA8E2E 		lsl	lr, lr, #10
  906              	.LVL101:
  907              		.loc 1 326 7 is_stmt 0 discriminator 6 view .LVU300
-ARM GAS  /tmp/ccZui67l.s 			page 23
+ARM GAS  /tmp/cc4aaQ8M.s 			page 23
 
 
  908 0326 1FFA8EFE 		uxth	lr, lr
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  962 0366 B3F85020 		ldrh	r2, [r3, #80]
  963 036a 1A44     		add	r2, r2, r3
  964              	.LVL109:
-ARM GAS  /tmp/ccZui67l.s 			page 24
+ARM GAS  /tmp/cc4aaQ8M.s 			page 24
 
 
  965              		.loc 1 326 7 discriminator 14 view .LVU320
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1019 03b6 4FEA5C0E 		lsr	lr, ip, #1
  1020              	.LVL115:
  1021              		.loc 1 326 7 discriminator 17 view .LVU337
-ARM GAS  /tmp/ccZui67l.s 			page 25
+ARM GAS  /tmp/cc4aaQ8M.s 			page 25
 
 
  1022 03ba 1CF0010F 		tst	ip, #1
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  328:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       /* Set endpoint RX to valid state */
  329:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_SET_EP_RX_STATUS(USBx, ep->num, USB_EP_RX_VALID);
  1075              		.loc 1 329 7 view .LVU353
-ARM GAS  /tmp/ccZui67l.s 			page 26
+ARM GAS  /tmp/cc4aaQ8M.s 			page 26
 
 
  1076              	.LBB36:
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  340:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****         /* Configure NAK status for the Endpoint */
  341:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****         PCD_SET_EP_TX_STATUS(USBx, ep->num, USB_EP_TX_NAK);
  342:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       }
-ARM GAS  /tmp/ccZui67l.s 			page 27
+ARM GAS  /tmp/cc4aaQ8M.s 			page 27
 
 
  343:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       else
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  335:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_CLEAR_TX_DTOG(USBx, ep->num);
  1153              		.loc 1 335 7 discriminator 1 view .LVU383
  1154              	.LBB40:
-ARM GAS  /tmp/ccZui67l.s 			page 28
+ARM GAS  /tmp/cc4aaQ8M.s 			page 28
 
 
  335:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_CLEAR_TX_DTOG(USBx, ep->num);
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1193 048e 22F4E042 		bic	r2, r2, #28672
  1194 0492 22F07002 		bic	r2, r2, #112
  1195              	.LVL142:
-ARM GAS  /tmp/ccZui67l.s 			page 29
+ARM GAS  /tmp/cc4aaQ8M.s 			page 29
 
 
  336:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1234 04c4 23F82C20 		strh	r2, [r3, ip, lsl #2]	@ movhi
  1235              	.LBE43:
  341:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       }
-ARM GAS  /tmp/ccZui67l.s 			page 30
+ARM GAS  /tmp/cc4aaQ8M.s 			page 30
 
 
  1236              		.loc 1 341 9 is_stmt 1 discriminator 4 view .LVU416
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  346:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       }
  1275              		.loc 1 346 9 discriminator 4 view .LVU432
  1276 04f4 42F40042 		orr	r2, r2, #32768
-ARM GAS  /tmp/ccZui67l.s 			page 31
+ARM GAS  /tmp/cc4aaQ8M.s 			page 31
 
 
  1277              	.LVL154:
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1318              	.LVL156:
  1319              		.loc 1 369 7 view .LVU444
  1320 0010 13F0400F 		tst	r3, #64
-ARM GAS  /tmp/ccZui67l.s 			page 32
+ARM GAS  /tmp/cc4aaQ8M.s 			page 32
 
 
  1321 0014 0BD0     		beq	.L58
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  379:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       /* Configure DISABLE status for the Endpoint */
  380:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_SET_EP_RX_STATUS(USBx, ep->num, USB_EP_RX_DIS);
  381:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     }
-ARM GAS  /tmp/ccZui67l.s 			page 33
+ARM GAS  /tmp/cc4aaQ8M.s 			page 33
 
 
  382:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   }
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1383 0052 13F4804F 		tst	r3, #16384
  1384 0056 0BD0     		beq	.L60
  377:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
-ARM GAS  /tmp/ccZui67l.s 			page 34
+ARM GAS  /tmp/cc4aaQ8M.s 			page 34
 
 
  1385              		.loc 1 377 7 discriminator 1 view .LVU470
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1424 0086 20F82230 		strh	r3, [r0, r2, lsl #2]	@ movhi
  1425 008a DDE7     		b	.L59
  1426              	.LVL173:
-ARM GAS  /tmp/ccZui67l.s 			page 35
+ARM GAS  /tmp/cc4aaQ8M.s 			page 35
 
 
  1427              	.L56:
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  390:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_CLEAR_TX_DTOG(USBx, ep->num);
  1466              		.loc 1 390 7 is_stmt 1 discriminator 2 view .LVU501
  1467              	.LBE52:
-ARM GAS  /tmp/ccZui67l.s 			page 36
+ARM GAS  /tmp/cc4aaQ8M.s 			page 36
 
 
  390:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_CLEAR_TX_DTOG(USBx, ep->num);
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1505              		.loc 1 394 7 view .LVU518
  1506 00da 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
  1507 00dc 30F82230 		ldrh	r3, [r0, r2, lsl #2]
-ARM GAS  /tmp/ccZui67l.s 			page 37
+ARM GAS  /tmp/cc4aaQ8M.s 			page 37
 
 
  1508 00e0 23F4E043 		bic	r3, r3, #28672
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1547              		.loc 1 397 7 view .LVU533
  397:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     }
  1548              		.loc 1 397 7 discriminator 2 view .LVU534
-ARM GAS  /tmp/ccZui67l.s 			page 38
+ARM GAS  /tmp/cc4aaQ8M.s 			page 38
 
 
  397:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     }
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  402:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_CLEAR_TX_DTOG(USBx, ep->num);
  1589              		.loc 1 402 7 is_stmt 1 discriminator 2 view .LVU549
  1590              	.LBE59:
-ARM GAS  /tmp/ccZui67l.s 			page 39
+ARM GAS  /tmp/cc4aaQ8M.s 			page 39
 
 
  402:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       PCD_CLEAR_TX_DTOG(USBx, ep->num);
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1628              		.loc 1 404 7 view .LVU566
  1629 016e 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
  1630 0170 30F82230 		ldrh	r3, [r0, r2, lsl #2]
-ARM GAS  /tmp/ccZui67l.s 			page 40
+ARM GAS  /tmp/cc4aaQ8M.s 			page 40
 
 
  1631 0174 23F4E043 		bic	r3, r3, #28672
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1670              		.loc 1 408 7 view .LVU581
  408:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     }
  1671              		.loc 1 408 7 discriminator 2 view .LVU582
-ARM GAS  /tmp/ccZui67l.s 			page 41
+ARM GAS  /tmp/cc4aaQ8M.s 			page 41
 
 
  408:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     }
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  449:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** #if (USE_USB_DOUBLE_BUFFER == 1U)
  450:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     else
  451:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     {
-ARM GAS  /tmp/ccZui67l.s 			page 42
+ARM GAS  /tmp/cc4aaQ8M.s 			page 42
 
 
  452:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       /* double buffer bulk management */
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  506:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             {
  507:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****               len = ep->xfer_len_db;
  508:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****               ep->xfer_len_db = 0U;
-ARM GAS  /tmp/ccZui67l.s 			page 43
+ARM GAS  /tmp/cc4aaQ8M.s 			page 43
 
 
  509:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             }
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  563:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     PCD_SET_EP_TX_STATUS(USBx, ep->num, USB_EP_TX_VALID);
  564:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   }
  565:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   else /* OUT endpoint */
-ARM GAS  /tmp/ccZui67l.s 			page 44
+ARM GAS  /tmp/cc4aaQ8M.s 			page 44
 
 
  566:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   {
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  620:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     }
  621:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** #endif /* (USE_USB_DOUBLE_BUFFER == 1U) */
  622:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
-ARM GAS  /tmp/ccZui67l.s 			page 45
+ARM GAS  /tmp/cc4aaQ8M.s 			page 45
 
 
  623:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     PCD_SET_EP_RX_STATUS(USBx, ep->num, USB_EP_RX_VALID);
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  643:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   {
  644:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     PCD_SET_EP_RX_STATUS(USBx, ep->num, USB_EP_RX_STALL);
  1726              		.loc 1 644 5 discriminator 5 view .LVU598
-ARM GAS  /tmp/ccZui67l.s 			page 46
+ARM GAS  /tmp/cc4aaQ8M.s 			page 46
 
 
  645:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   }
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  650:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** /**
  651:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   * @brief  USB_EPClearStall Clear a stall condition over an EP
  652:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   * @param  USBx Selected device
-ARM GAS  /tmp/ccZui67l.s 			page 47
+ARM GAS  /tmp/cc4aaQ8M.s 			page 47
 
 
  653:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   * @param  ep pointer to endpoint structure
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1814              		.loc 1 662 11 is_stmt 0 view .LVU628
  1815 0028 CB78     		ldrb	r3, [r1, #3]	@ zero_extendqisi2
  1816              		.loc 1 662 8 view .LVU629
-ARM GAS  /tmp/ccZui67l.s 			page 48
+ARM GAS  /tmp/cc4aaQ8M.s 			page 48
 
 
  1817 002a 012B     		cmp	r3, #1
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1863              	.LVL229:
  1864              		.loc 1 670 5 is_stmt 1 discriminator 1 view .LVU647
  1865 0066 43F44043 		orr	r3, r3, #49152
-ARM GAS  /tmp/ccZui67l.s 			page 49
+ARM GAS  /tmp/cc4aaQ8M.s 			page 49
 
 
  1866              	.LVL230:
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1914              		.global	USB_EPStopXfer
  1915              		.syntax unified
  1916              		.thumb
-ARM GAS  /tmp/ccZui67l.s 			page 50
+ARM GAS  /tmp/cc4aaQ8M.s 			page 50
 
 
  1917              		.thumb_func
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1941              		.loc 1 708 10 view .LVU675
  1942 000c 012B     		cmp	r3, #1
  1943 000e 34D0     		beq	.L78
-ARM GAS  /tmp/ccZui67l.s 			page 51
+ARM GAS  /tmp/cc4aaQ8M.s 			page 51
 
 
  709:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       {
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  1981 0034 002B     		cmp	r3, #0
  1982 0036 FAD1     		bne	.L76
  692:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       {
-ARM GAS  /tmp/ccZui67l.s 			page 52
+ARM GAS  /tmp/cc4aaQ8M.s 			page 52
 
 
  1983              		.loc 1 692 7 is_stmt 1 view .LVU692
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  700:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       }
  2023              		.loc 1 700 9 view .LVU707
  700:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       }
-ARM GAS  /tmp/ccZui67l.s 			page 53
+ARM GAS  /tmp/cc4aaQ8M.s 			page 53
 
 
  2024              		.loc 1 700 9 discriminator 2 view .LVU708
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  725:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** /**
  726:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   * @brief  USB_StopDevice Stop the usb device mode
  727:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   * @param  USBx Selected device
-ARM GAS  /tmp/ccZui67l.s 			page 54
+ARM GAS  /tmp/cc4aaQ8M.s 			page 54
 
 
  728:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   * @retval HAL status
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  747:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   * @param  address new device address to be assigned
  748:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   *          This parameter can be a value from 0 to 255
  749:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   * @retval HAL status
-ARM GAS  /tmp/ccZui67l.s 			page 55
+ARM GAS  /tmp/cc4aaQ8M.s 			page 55
 
 
  750:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   */
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  769:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   /* Enabling DP Pull-UP bit to Connect internal PU resistor on USB DP line */
  770:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   USBx->BCDR |= (uint16_t)USB_BCDR_DPPU;
  2142              		.loc 1 770 3 view .LVU739
-ARM GAS  /tmp/ccZui67l.s 			page 56
+ARM GAS  /tmp/cc4aaQ8M.s 			page 56
 
 
  2143              		.loc 1 770 7 is_stmt 0 view .LVU740
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2183 000e 7047     		bx	lr
  2184              		.cfi_endproc
  2185              	.LFE345:
-ARM GAS  /tmp/ccZui67l.s 			page 57
+ARM GAS  /tmp/cc4aaQ8M.s 			page 57
 
 
  2187              		.section	.text.USB_ReadInterrupts,"ax",%progbits
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2223              		.loc 1 807 1 is_stmt 1 view -0
  2224              		.cfi_startproc
  2225              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccZui67l.s 			page 58
+ARM GAS  /tmp/cc4aaQ8M.s 			page 58
 
 
  2226              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2266 000c 0020     		movs	r0, #0
  2267              	.LVL266:
  2268              		.loc 1 823 1 view .LVU771
-ARM GAS  /tmp/ccZui67l.s 			page 59
+ARM GAS  /tmp/cc4aaQ8M.s 			page 59
 
 
  2269 000e 7047     		bx	lr
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2306              	.LVL271:
  843:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
  844:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   for (count = n; count != 0U; count--)
-ARM GAS  /tmp/ccZui67l.s 			page 60
+ARM GAS  /tmp/cc4aaQ8M.s 			page 60
 
 
  2307              		.loc 1 844 3 is_stmt 1 view .LVU784
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2346              		.global	USB_EPStartXfer
  2347              		.syntax unified
  2348              		.thumb
-ARM GAS  /tmp/ccZui67l.s 			page 61
+ARM GAS  /tmp/cc4aaQ8M.s 			page 61
 
 
  2349              		.thumb_func
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2389              		.loc 1 569 38 discriminator 1 view .LVU814
  2390 001c CB78     		ldrb	r3, [r1, #3]	@ zero_extendqisi2
  569:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       {
-ARM GAS  /tmp/ccZui67l.s 			page 62
+ARM GAS  /tmp/cc4aaQ8M.s 			page 62
 
 
  2391              		.loc 1 569 32 discriminator 1 view .LVU815
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2431              		.loc 1 444 11 is_stmt 0 view .LVU829
  2432 004e 217B     		ldrb	r1, [r4, #12]	@ zero_extendqisi2
  444:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     {
-ARM GAS  /tmp/ccZui67l.s 			page 63
+ARM GAS  /tmp/cc4aaQ8M.s 			page 63
 
 
  2433              		.loc 1 444 8 view .LVU830
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2470              	.LVL286:
  544:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****           pmabuffer = ep->pmaaddr1;
  2471              		.loc 1 544 11 discriminator 1 view .LVU848
-ARM GAS  /tmp/ccZui67l.s 			page 64
+ARM GAS  /tmp/cc4aaQ8M.s 			page 64
 
 
  2472 0078 03EBC202 		add	r2, r3, r2, lsl #3
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  447:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****     }
  2513              		.loc 1 447 7 view .LVU862
  2514 00aa B5F85030 		ldrh	r3, [r5, #80]
-ARM GAS  /tmp/ccZui67l.s 			page 65
+ARM GAS  /tmp/cc4aaQ8M.s 			page 65
 
 
  2515 00ae 2B44     		add	r3, r3, r5
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2554              		.loc 1 455 15 is_stmt 0 view .LVU877
  2555 00da 236A     		ldr	r3, [r4, #32]
  455:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****         {
-ARM GAS  /tmp/ccZui67l.s 			page 66
+ARM GAS  /tmp/cc4aaQ8M.s 			page 66
 
 
  2556              		.loc 1 455 12 view .LVU878
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2594              		.loc 1 467 13 view .LVU894
  2595 0110 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
  2596 0112 82BB     		cbnz	r2, .L99
-ARM GAS  /tmp/ccZui67l.s 			page 67
+ARM GAS  /tmp/cc4aaQ8M.s 			page 67
 
 
  467:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  467:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
  2636              		.loc 1 467 13 discriminator 5 view .LVU910
  2637 0146 0132     		adds	r2, r2, #1
-ARM GAS  /tmp/ccZui67l.s 			page 68
+ARM GAS  /tmp/cc4aaQ8M.s 			page 68
 
 
  2638              	.LVL308:
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2681              	.LVL315:
  2682              	.L101:
  467:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
-ARM GAS  /tmp/ccZui67l.s 			page 69
+ARM GAS  /tmp/cc4aaQ8M.s 			page 69
 
 
  2683              		.loc 1 467 13 is_stmt 0 discriminator 11 view .LVU922
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2721              	.LBB90:
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
  2722              		.loc 1 485 13 discriminator 1 view .LVU939
-ARM GAS  /tmp/ccZui67l.s 			page 70
+ARM GAS  /tmp/cc4aaQ8M.s 			page 70
 
 
  2723              	.LVL318:
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  467:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
  2765              		.loc 1 467 13 is_stmt 0 discriminator 12 view .LVU952
  2766              	.LBE93:
-ARM GAS  /tmp/ccZui67l.s 			page 71
+ARM GAS  /tmp/cc4aaQ8M.s 			page 71
 
 
  480:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****               ep->xfer_len_db = 0U;
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2807 01fc 7209     		lsrs	r2, r6, #5
  2808              	.LVL330:
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
-ARM GAS  /tmp/ccZui67l.s 			page 72
+ARM GAS  /tmp/cc4aaQ8M.s 			page 72
 
 
  2809              		.loc 1 485 13 discriminator 7 view .LVU967
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2851              		.loc 1 485 13 discriminator 12 view .LVU979
  2852              	.LVL336:
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
-ARM GAS  /tmp/ccZui67l.s 			page 73
+ARM GAS  /tmp/cc4aaQ8M.s 			page 73
 
 
  2853              		.loc 1 485 13 discriminator 12 view .LVU980
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2892 0250 C2F30902 		ubfx	r2, r2, #0, #10
  2893 0254 A3F80224 		strh	r2, [r3, #1026]	@ movhi
  494:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr0;
-ARM GAS  /tmp/ccZui67l.s 			page 74
+ARM GAS  /tmp/cc4aaQ8M.s 			page 74
 
 
  2894              		.loc 1 494 13 is_stmt 1 discriminator 1 view .LVU996
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2935              		.loc 1 494 13 discriminator 8 view .LVU1009
  2936 028e 013A     		subs	r2, r2, #1
  2937              	.LVL349:
-ARM GAS  /tmp/ccZui67l.s 			page 75
+ARM GAS  /tmp/cc4aaQ8M.s 			page 75
 
 
  2938              	.L118:
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  2978              		.loc 1 501 19 is_stmt 0 view .LVU1023
  2979 02ba 236A     		ldr	r3, [r4, #32]
  501:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             {
-ARM GAS  /tmp/ccZui67l.s 			page 76
+ARM GAS  /tmp/cc4aaQ8M.s 			page 76
 
 
  2980              		.loc 1 501 37 view .LVU1024
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  512:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
  3019              		.loc 1 512 13 discriminator 1 view .LVU1040
  3020 02e4 96B9     		cbnz	r6, .L122
-ARM GAS  /tmp/ccZui67l.s 			page 77
+ARM GAS  /tmp/cc4aaQ8M.s 			page 77
 
 
  512:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3062              	.LBB101:
  512:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****             pmabuffer = ep->pmaaddr1;
  3063              		.loc 1 512 13 is_stmt 1 discriminator 3 view .LVU1054
-ARM GAS  /tmp/ccZui67l.s 			page 78
+ARM GAS  /tmp/cc4aaQ8M.s 			page 78
 
 
  3064 030c 3E2E     		cmp	r6, #62
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3105 033a 92B2     		uxth	r2, r2
  3106 033c 0A43     		orrs	r2, r2, r1
  3107 033e 42F40042 		orr	r2, r2, #32768
-ARM GAS  /tmp/ccZui67l.s 			page 79
+ARM GAS  /tmp/cc4aaQ8M.s 			page 79
 
 
  3108 0342 A3F80624 		strh	r2, [r3, #1030]	@ movhi
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  522:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
  3151              		.loc 1 522 11 is_stmt 1 view .LVU1079
  525:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c **** 
-ARM GAS  /tmp/ccZui67l.s 			page 80
+ARM GAS  /tmp/cc4aaQ8M.s 			page 80
 
 
  3152              		.loc 1 525 11 view .LVU1080
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3191              		.loc 1 532 11 view .LVU1095
  3192 0398 2289     		ldrh	r2, [r4, #8]
  3193              	.LVL385:
-ARM GAS  /tmp/ccZui67l.s 			page 81
+ARM GAS  /tmp/cc4aaQ8M.s 			page 81
 
 
  532:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****         }
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3235              		.loc 1 544 11 discriminator 7 view .LVU1108
  544:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****           pmabuffer = ep->pmaaddr1;
  3236              		.loc 1 544 11 discriminator 7 view .LVU1109
-ARM GAS  /tmp/ccZui67l.s 			page 82
+ARM GAS  /tmp/cc4aaQ8M.s 			page 82
 
 
  3237 03c2 7309     		lsrs	r3, r6, #5
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3278 03ee B3B2     		uxth	r3, r6
  3279 03f0 6289     		ldrh	r2, [r4, #10]
  3280 03f2 6169     		ldr	r1, [r4, #20]
-ARM GAS  /tmp/ccZui67l.s 			page 83
+ARM GAS  /tmp/cc4aaQ8M.s 			page 83
 
 
  3281 03f4 2846     		mov	r0, r5
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3320 0422 24E0     		b	.L136
  3321              	.L135:
  553:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****           pmabuffer = ep->pmaaddr0;
-ARM GAS  /tmp/ccZui67l.s 			page 84
+ARM GAS  /tmp/cc4aaQ8M.s 			page 84
 
 
  3322              		.loc 1 553 11 discriminator 3 view .LVU1138
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3363              		.loc 1 553 11 is_stmt 0 discriminator 9 view .LVU1151
  3364 0452 9BB2     		uxth	r3, r3
  3365 0454 0B43     		orrs	r3, r3, r1
-ARM GAS  /tmp/ccZui67l.s 			page 85
+ARM GAS  /tmp/cc4aaQ8M.s 			page 85
 
 
  3366 0456 43F40043 		orr	r3, r3, #32768
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3405 047a 1EE6     		b	.L95
  3406              	.LVL420:
  3407              	.L142:
-ARM GAS  /tmp/ccZui67l.s 			page 86
+ARM GAS  /tmp/cc4aaQ8M.s 			page 86
 
 
  576:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       }
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3446 04a4 35F82230 		ldrh	r3, [r5, r2, lsl #2]
  3447 04a8 23F48043 		bic	r3, r3, #16384
  3448 04ac 23F07003 		bic	r3, r3, #112
-ARM GAS  /tmp/ccZui67l.s 			page 87
+ARM GAS  /tmp/cc4aaQ8M.s 			page 87
 
 
  623:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   }
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3487 04d0 012B     		cmp	r3, #1
  3488 04d2 1FD1     		bne	.L150
  614:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****       }
-ARM GAS  /tmp/ccZui67l.s 			page 88
+ARM GAS  /tmp/cc4aaQ8M.s 			page 88
 
 
  3489              		.loc 1 614 9 is_stmt 1 view .LVU1199
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  606:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****           }
  3527              		.loc 1 606 13 is_stmt 1 discriminator 1 view .LVU1216
  3528 04fe 43F40043 		orr	r3, r3, #32768
-ARM GAS  /tmp/ccZui67l.s 			page 89
+ARM GAS  /tmp/cc4aaQ8M.s 			page 89
 
 
  3529              	.LVL432:
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  870:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   uint32_t n = (uint32_t)wNBytes >> 1;
  3569              		.loc 1 870 3 is_stmt 1 view .LVU1224
  3570              		.loc 1 870 34 is_stmt 0 view .LVU1225
-ARM GAS  /tmp/ccZui67l.s 			page 90
+ARM GAS  /tmp/cc4aaQ8M.s 			page 90
 
 
  3571 0002 5B08     		lsrs	r3, r3, #1
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3609              	.LVL444:
  879:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c ****   {
  3610              		.loc 1 879 37 is_stmt 1 discriminator 1 view .LVU1247
-ARM GAS  /tmp/ccZui67l.s 			page 91
+ARM GAS  /tmp/cc4aaQ8M.s 			page 91
 
 
  3611 0018 013B     		subs	r3, r3, #1
@@ -5444,56 +5444,56 @@ ARM GAS  /tmp/ccZui67l.s 			page 1
  3639              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h"
  3640              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
  3641              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usb.h"
-ARM GAS  /tmp/ccZui67l.s 			page 92
+ARM GAS  /tmp/cc4aaQ8M.s 			page 92
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_ll_usb.c
-     /tmp/ccZui67l.s:21     .text.USB_CoreInit:00000000 $t
-     /tmp/ccZui67l.s:27     .text.USB_CoreInit:00000000 USB_CoreInit
-     /tmp/ccZui67l.s:57     .text.USB_EnableGlobalInt:00000000 $t
-     /tmp/ccZui67l.s:63     .text.USB_EnableGlobalInt:00000000 USB_EnableGlobalInt
-     /tmp/ccZui67l.s:93     .text.USB_DisableGlobalInt:00000000 $t
-     /tmp/ccZui67l.s:99     .text.USB_DisableGlobalInt:00000000 USB_DisableGlobalInt
-     /tmp/ccZui67l.s:127    .text.USB_SetCurrentMode:00000000 $t
-     /tmp/ccZui67l.s:133    .text.USB_SetCurrentMode:00000000 USB_SetCurrentMode
-     /tmp/ccZui67l.s:153    .text.USB_DevInit:00000000 $t
-     /tmp/ccZui67l.s:159    .text.USB_DevInit:00000000 USB_DevInit
-     /tmp/ccZui67l.s:202    .text.USB_FlushTxFifo:00000000 $t
-     /tmp/ccZui67l.s:208    .text.USB_FlushTxFifo:00000000 USB_FlushTxFifo
-     /tmp/ccZui67l.s:228    .text.USB_FlushRxFifo:00000000 $t
-     /tmp/ccZui67l.s:234    .text.USB_FlushRxFifo:00000000 USB_FlushRxFifo
-     /tmp/ccZui67l.s:253    .text.USB_ActivateEndpoint:00000000 $t
-     /tmp/ccZui67l.s:259    .text.USB_ActivateEndpoint:00000000 USB_ActivateEndpoint
-     /tmp/ccZui67l.s:294    .text.USB_ActivateEndpoint:00000020 $d
-     /tmp/ccZui67l.s:298    .text.USB_ActivateEndpoint:00000024 $t
-     /tmp/ccZui67l.s:1287   .text.USB_DeactivateEndpoint:00000000 $t
-     /tmp/ccZui67l.s:1293   .text.USB_DeactivateEndpoint:00000000 USB_DeactivateEndpoint
-     /tmp/ccZui67l.s:1683   .text.USB_EPSetStall:00000000 $t
-     /tmp/ccZui67l.s:1689   .text.USB_EPSetStall:00000000 USB_EPSetStall
-     /tmp/ccZui67l.s:1761   .text.USB_EPClearStall:00000000 $t
-     /tmp/ccZui67l.s:1767   .text.USB_EPClearStall:00000000 USB_EPClearStall
-     /tmp/ccZui67l.s:1913   .text.USB_EPStopXfer:00000000 $t
-     /tmp/ccZui67l.s:1919   .text.USB_EPStopXfer:00000000 USB_EPStopXfer
-     /tmp/ccZui67l.s:2059   .text.USB_StopDevice:00000000 $t
-     /tmp/ccZui67l.s:2065   .text.USB_StopDevice:00000000 USB_StopDevice
-     /tmp/ccZui67l.s:2096   .text.USB_SetDevAddress:00000000 $t
-     /tmp/ccZui67l.s:2102   .text.USB_SetDevAddress:00000000 USB_SetDevAddress
-     /tmp/ccZui67l.s:2128   .text.USB_DevConnect:00000000 $t
-     /tmp/ccZui67l.s:2134   .text.USB_DevConnect:00000000 USB_DevConnect
-     /tmp/ccZui67l.s:2158   .text.USB_DevDisconnect:00000000 $t
-     /tmp/ccZui67l.s:2164   .text.USB_DevDisconnect:00000000 USB_DevDisconnect
-     /tmp/ccZui67l.s:2188   .text.USB_ReadInterrupts:00000000 $t
-     /tmp/ccZui67l.s:2194   .text.USB_ReadInterrupts:00000000 USB_ReadInterrupts
-     /tmp/ccZui67l.s:2214   .text.USB_ActivateRemoteWakeup:00000000 $t
-     /tmp/ccZui67l.s:2220   .text.USB_ActivateRemoteWakeup:00000000 USB_ActivateRemoteWakeup
-     /tmp/ccZui67l.s:2244   .text.USB_DeActivateRemoteWakeup:00000000 $t
-     /tmp/ccZui67l.s:2250   .text.USB_DeActivateRemoteWakeup:00000000 USB_DeActivateRemoteWakeup
-     /tmp/ccZui67l.s:2274   .text.USB_WritePMA:00000000 $t
-     /tmp/ccZui67l.s:2280   .text.USB_WritePMA:00000000 USB_WritePMA
-     /tmp/ccZui67l.s:2345   .text.USB_EPStartXfer:00000000 $t
-     /tmp/ccZui67l.s:2351   .text.USB_EPStartXfer:00000000 USB_EPStartXfer
-     /tmp/ccZui67l.s:3553   .text.USB_ReadPMA:00000000 $t
-     /tmp/ccZui67l.s:3559   .text.USB_ReadPMA:00000000 USB_ReadPMA
+     /tmp/cc4aaQ8M.s:21     .text.USB_CoreInit:00000000 $t
+     /tmp/cc4aaQ8M.s:27     .text.USB_CoreInit:00000000 USB_CoreInit
+     /tmp/cc4aaQ8M.s:57     .text.USB_EnableGlobalInt:00000000 $t
+     /tmp/cc4aaQ8M.s:63     .text.USB_EnableGlobalInt:00000000 USB_EnableGlobalInt
+     /tmp/cc4aaQ8M.s:93     .text.USB_DisableGlobalInt:00000000 $t
+     /tmp/cc4aaQ8M.s:99     .text.USB_DisableGlobalInt:00000000 USB_DisableGlobalInt
+     /tmp/cc4aaQ8M.s:127    .text.USB_SetCurrentMode:00000000 $t
+     /tmp/cc4aaQ8M.s:133    .text.USB_SetCurrentMode:00000000 USB_SetCurrentMode
+     /tmp/cc4aaQ8M.s:153    .text.USB_DevInit:00000000 $t
+     /tmp/cc4aaQ8M.s:159    .text.USB_DevInit:00000000 USB_DevInit
+     /tmp/cc4aaQ8M.s:202    .text.USB_FlushTxFifo:00000000 $t
+     /tmp/cc4aaQ8M.s:208    .text.USB_FlushTxFifo:00000000 USB_FlushTxFifo
+     /tmp/cc4aaQ8M.s:228    .text.USB_FlushRxFifo:00000000 $t
+     /tmp/cc4aaQ8M.s:234    .text.USB_FlushRxFifo:00000000 USB_FlushRxFifo
+     /tmp/cc4aaQ8M.s:253    .text.USB_ActivateEndpoint:00000000 $t
+     /tmp/cc4aaQ8M.s:259    .text.USB_ActivateEndpoint:00000000 USB_ActivateEndpoint
+     /tmp/cc4aaQ8M.s:294    .text.USB_ActivateEndpoint:00000020 $d
+     /tmp/cc4aaQ8M.s:298    .text.USB_ActivateEndpoint:00000024 $t
+     /tmp/cc4aaQ8M.s:1287   .text.USB_DeactivateEndpoint:00000000 $t
+     /tmp/cc4aaQ8M.s:1293   .text.USB_DeactivateEndpoint:00000000 USB_DeactivateEndpoint
+     /tmp/cc4aaQ8M.s:1683   .text.USB_EPSetStall:00000000 $t
+     /tmp/cc4aaQ8M.s:1689   .text.USB_EPSetStall:00000000 USB_EPSetStall
+     /tmp/cc4aaQ8M.s:1761   .text.USB_EPClearStall:00000000 $t
+     /tmp/cc4aaQ8M.s:1767   .text.USB_EPClearStall:00000000 USB_EPClearStall
+     /tmp/cc4aaQ8M.s:1913   .text.USB_EPStopXfer:00000000 $t
+     /tmp/cc4aaQ8M.s:1919   .text.USB_EPStopXfer:00000000 USB_EPStopXfer
+     /tmp/cc4aaQ8M.s:2059   .text.USB_StopDevice:00000000 $t
+     /tmp/cc4aaQ8M.s:2065   .text.USB_StopDevice:00000000 USB_StopDevice
+     /tmp/cc4aaQ8M.s:2096   .text.USB_SetDevAddress:00000000 $t
+     /tmp/cc4aaQ8M.s:2102   .text.USB_SetDevAddress:00000000 USB_SetDevAddress
+     /tmp/cc4aaQ8M.s:2128   .text.USB_DevConnect:00000000 $t
+     /tmp/cc4aaQ8M.s:2134   .text.USB_DevConnect:00000000 USB_DevConnect
+     /tmp/cc4aaQ8M.s:2158   .text.USB_DevDisconnect:00000000 $t
+     /tmp/cc4aaQ8M.s:2164   .text.USB_DevDisconnect:00000000 USB_DevDisconnect
+     /tmp/cc4aaQ8M.s:2188   .text.USB_ReadInterrupts:00000000 $t
+     /tmp/cc4aaQ8M.s:2194   .text.USB_ReadInterrupts:00000000 USB_ReadInterrupts
+     /tmp/cc4aaQ8M.s:2214   .text.USB_ActivateRemoteWakeup:00000000 $t
+     /tmp/cc4aaQ8M.s:2220   .text.USB_ActivateRemoteWakeup:00000000 USB_ActivateRemoteWakeup
+     /tmp/cc4aaQ8M.s:2244   .text.USB_DeActivateRemoteWakeup:00000000 $t
+     /tmp/cc4aaQ8M.s:2250   .text.USB_DeActivateRemoteWakeup:00000000 USB_DeActivateRemoteWakeup
+     /tmp/cc4aaQ8M.s:2274   .text.USB_WritePMA:00000000 $t
+     /tmp/cc4aaQ8M.s:2280   .text.USB_WritePMA:00000000 USB_WritePMA
+     /tmp/cc4aaQ8M.s:2345   .text.USB_EPStartXfer:00000000 $t
+     /tmp/cc4aaQ8M.s:2351   .text.USB_EPStartXfer:00000000 USB_EPStartXfer
+     /tmp/cc4aaQ8M.s:3553   .text.USB_ReadPMA:00000000 $t
+     /tmp/cc4aaQ8M.s:3559   .text.USB_ReadPMA:00000000 USB_ReadPMA
 
 NO UNDEFINED SYMBOLS

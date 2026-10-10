@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define REFERENCE_V_SENSE_Pin GPIO_PIN_3
+#define REFERENCE_V_SENSE_GPIO_Port GPIOA
 #define CAL_EN_Pin GPIO_PIN_4
 #define CAL_EN_GPIO_Port GPIOA
 #define LED_R_Pin GPIO_PIN_5

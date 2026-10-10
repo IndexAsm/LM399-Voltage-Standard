@@ -15,6 +15,19 @@
   *
   ******************************************************************************
   */
+
+
+
+    /*
+        TODO:
+            WriteCalibrationData()
+            ReadCalibrationData()
+
+
+            Create a system to read from USB and calibrate
+
+    */
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -31,6 +44,7 @@
 #include <TMP102.h>
 #include <M24Cxx.h>
 #include <CalibrationData.h>
+#include <Log.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,6 +63,7 @@
 #define EEPROM_ADDR_OPERATING_TIME 0x2
 #define EEPROM_ADDR_CAL_DATA_STRUC 0xf
 
+#define ADC_BUFFER_SIZE 4096
 
 /* USER CODE END PD */
 
@@ -67,6 +82,9 @@ TIM_HandleTypeDef htim16;
 /* USER CODE BEGIN PV */
 uint8_t usbTxBuffer[USB_BUFLEN];
 uint16_t usbTxBufferLen;
+
+//volatile uint16_t adcBuffer[ADC_BUFFER_SIZE];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -116,7 +134,7 @@ void WriteInitialCalibration(
         return;
     CalibrationDataInfo calInfo;
     calInfo.entry_addr = 0x20 + sizeof(CalibrationDataInfo);
-    calInfo.entry_size = 0xf;
+    calInfo.entry_size = sizeof(CalibrationData);
     calInfo.len = 0;
     strcpy(calInfo.LM399_serial_number, LM399_serial_number);
     strcpy(calInfo.initial_cal_date, initial_cal_date);
@@ -124,8 +142,42 @@ void WriteInitialCalibration(
     calInfo.initial_cal_temperature = initial_cal_temperature;
     M24Cxx_Write_Buffer(eeprom, EEPROM_ADDR_OPERATING_TIME, (uint8_t*)&calInfo, sizeof(CalibrationDataInfo));
 
-    M24Cxx_Write_Byte(&eeprom, EEPROM_ADDR_INIT_CAL_DONE, 1);
+    M24Cxx_Write_Byte(eeprom, EEPROM_ADDR_INIT_CAL_DONE, 1);
 }
+
+/// @brief Reads Initial Cal Data from eeprom
+/// @param eeprom - pointer to M24Cxx struct to rea from
+/// @param info - pointer to CalibrationDataInfo to write to
+/// @return 0 - fail 
+/// @return 1 - success
+uint8_t ReadInitialCalibration(
+    M24Cxx* eeprom,
+    CalibrationDataInfo* info
+) {
+
+    CalibrationDataInfo info;
+    if (!M24Cxx_Read_Byte(eeprom, EEPROM_ADDR_INIT_CAL_DONE))
+        return 0;
+    
+    M24Cxx_Read_Bytes(eeprom, EEPROM_ADDR_CAL_DATA_STRUC, (uint8_t*)info, sizeof(CalibrationDataInfo));
+
+    return 1;
+}
+
+
+uint8_t WriteCalibrationData(M24Cxx* eeprom, CalibrationData* data) {
+    CalibrationDataInfo info;
+    if (!ReadInitialCalibration(eeprom, &info)) {
+        return 0;
+    }
+
+
+    uint16_t addr = info.entry_addr + info.entry_size * info.len;
+    M24Cxx_Write_Buffer(eeprom, addr, (uint8_t*)&info, sizeof(CalibrationData));
+    return 1;
+}   
+
+
 
 /* USER CODE END 0 */
 
@@ -153,7 +205,8 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
+    HAL_Delay(500);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -212,7 +265,10 @@ int main(void)
                 HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, 1);
             }
         }
+        if (__HAL_ADC_GET_FLAG(&hadc1, ADC_FLAG_OVR)) {
 
+            HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, 1);
+        }
         
 
 
@@ -226,20 +282,79 @@ int main(void)
                 uptime_h++;
                 WriteHourStats(&eeprom, uptime_h);
             }
-            usbTxBufferLen = snprintf((char*)usbTxBuffer, USB_BUFLEN, "Uptime: %uh %us\r\n",uptime_h, uptime_s);
-            while(CDC_Transmit_FS(usbTxBuffer, usbTxBufferLen) == USBD_BUSY) {}
+
+            USB_printf("\r\nBEGIN\r\n");
+
+            // Uptime
+            USB_printf("Uptime: %uh %umin %us\r\n",uptime_h, uptime_s / 60, uptime_s % 60);
 
 
-            float temp = TMP102_GetReading(&hi2c1);
-            uint32_t integer_part = (int)temp;                             // 12
-            uint32_t fractional_part = (int)((temp - integer_part) * 100);
-            usbTxBufferLen = snprintf((char*)usbTxBuffer, USB_BUFLEN, "Temperature: %lu.%lu°C\r\n", integer_part, fractional_part);
-            while(CDC_Transmit_FS(usbTxBuffer, usbTxBufferLen) == USBD_BUSY) {}
+            // Temperature external
+            float temp_ex = TMP102_GetReading(&hi2c1);
+            uint32_t integer_part = (int)temp_ex;
+            uint32_t fractional_part = (int)((temp_ex - integer_part) * 100);
+            USB_printf("Temperature External: %lu.%lu°C\r\n", integer_part, fractional_part);
 
-            uint8_t byte_res = M24Cxx_Read_Byte(&eeprom, 0x0);
 
-            usbTxBufferLen = snprintf((char*)usbTxBuffer, USB_BUFLEN, "EEPROM: %u\r\n", (uint16_t) byte_res);
-            while(CDC_Transmit_FS(usbTxBuffer, usbTxBufferLen) == USBD_BUSY) {}
+            // Reference Voltage
+            HAL_ADC_Start(&hadc1);
+            HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+            uint16_t reference_voltage_raw = HAL_ADC_GetValue(&hadc1);
+            float reference_voltage = reference_voltage_raw * 18.5f;
+            reference_voltage /= 4095.0f;
+            const float offset_reference_voltage = 0.0f;
+            reference_voltage += offset_reference_voltage;
+            integer_part = (int)reference_voltage;
+            reference_voltage = (int)((reference_voltage - integer_part) * 100);
+            USB_printf("Reference Voltage: %lu.%luV\r\n", integer_part, fractional_part);
+            
+            HAL_ADC_Start(&hadc1);
+            HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+            uint16_t heater_voltage_raw = HAL_ADC_GetValue(&hadc1);
+            float heater_voltage = heater_voltage_raw * 18.5f;
+            heater_voltage /= 4095.0f;
+            const float offset_heater_voltage = 0.0f;
+            heater_voltage += offset_heater_voltage;
+            integer_part = (int)heater_voltage;
+            fractional_part = (int)((heater_voltage - integer_part) * 100);
+            USB_printf("Heater Voltage: %lu.%luV\r\n", integer_part, fractional_part);
+
+            // Heater current
+            HAL_ADC_Start(&hadc1);
+            HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+            uint16_t heater_current_raw = HAL_ADC_GetValue(&hadc1);
+            double heater_current = heater_current_raw * 3.3f;
+            heater_current /= 4095.0f;
+            heater_current *= 100.0f;
+            const double offset_heater_current = 0.0f;
+            heater_current += offset_heater_current;
+            integer_part = (int)heater_current;
+            fractional_part = (int)((heater_current - integer_part) * 100);
+            USB_printf("Heater Current: %lu.%lumA\r\n", integer_part, fractional_part);
+
+
+            HAL_ADC_Stop(&hadc1);
+
+            /*
+            uint32_t heater_voltage_raw;
+            HAL_ADC_Start(&hadc1);
+
+            HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+            heater_voltage_raw = HAL_ADC_GetValue(&hadc1);
+            HAL_ADC_Stop(&hadc1);
+            // 4095 - 18.5
+            // raw - x
+            float heater_voltage = heater_voltage_raw * 18.5f;
+            heater_voltage /= 4095.0f;
+            const float offset = 0.0f;
+            heater_voltage += offset;
+            integer_part = (int)heater_voltage;
+            fractional_part = (int)((heater_voltage - integer_part) * 100);
+            USB_printf("Heater Voltage: %lu.%luV\r\n", integer_part, fractional_part);
+            */
+            USB_printf("END\r\n");
+
+            
         }
 
 
@@ -321,12 +436,13 @@ static void MX_ADC1_Init(void)
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.GainCompensation = 0;
-  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
-  hadc1.Init.NbrOfConversion = 1;
-  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.NbrOfConversion = 3;
+  hadc1.Init.DiscontinuousConvMode = ENABLE;
+  hadc1.Init.NbrOfDiscConversion = 1;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.DMAContinuousRequests = DISABLE;
@@ -347,12 +463,30 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_15;
+  sConfig.Channel = ADC_CHANNEL_4;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_24CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_12;
+  sConfig.Rank = ADC_REGULAR_RANK_2;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_15;
+  sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();

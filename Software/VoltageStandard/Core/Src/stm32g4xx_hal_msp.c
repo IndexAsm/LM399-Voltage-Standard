@@ -108,12 +108,19 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     /* Peripheral clock enable */
     __HAL_RCC_ADC12_CLK_ENABLE();
 
+    __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
     /**ADC1 GPIO Configuration
+    PA3     ------> ADC1_IN4
     PB0     ------> ADC1_IN15
     PB1     ------> ADC1_IN12
     PB12     ------> ADC1_IN11
     */
+    GPIO_InitStruct.Pin = REFERENCE_V_SENSE_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(REFERENCE_V_SENSE_GPIO_Port, &GPIO_InitStruct);
+
     GPIO_InitStruct.Pin = HEATER_I_SENSE_Pin|HEATER_V_SENSE_Pin|TEMP_SENSE_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -144,10 +151,13 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
     __HAL_RCC_ADC12_CLK_DISABLE();
 
     /**ADC1 GPIO Configuration
+    PA3     ------> ADC1_IN4
     PB0     ------> ADC1_IN15
     PB1     ------> ADC1_IN12
     PB12     ------> ADC1_IN11
     */
+    HAL_GPIO_DeInit(REFERENCE_V_SENSE_GPIO_Port, REFERENCE_V_SENSE_Pin);
+
     HAL_GPIO_DeInit(GPIOB, HEATER_I_SENSE_Pin|HEATER_V_SENSE_Pin|TEMP_SENSE_Pin);
 
     /* USER CODE BEGIN ADC1_MspDeInit 1 */

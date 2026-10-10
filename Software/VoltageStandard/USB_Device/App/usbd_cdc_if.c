@@ -242,8 +242,7 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
         break;
     }
     case CDC_SET_CONTROL_LINE_STATE: {
-        USBD_SetupReqTypedef *req = (USBD_SetupReqTypedef*) pbuf;
-        uint16_t wValue = req->wValue;
+        uint16_t wValue = hUsbDeviceFS.request.wValue;
 
         if (wValue & 0x0001) {
             HAL_GPIO_WritePin(((GPIO_TypeDef *) (((0x40000000UL) + 0x08000000UL) + 0x0000UL)), ((uint16_t)0x0080), 1);

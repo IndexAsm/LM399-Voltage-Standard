@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccMARigi.s 			page 1
+ARM GAS  /tmp/ccFXN3fh.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
   27:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
   28:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** /** @defgroup USBD_CORE
   29:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @brief usbd core module
-ARM GAS  /tmp/ccMARigi.s 			page 2
+ARM GAS  /tmp/ccFXN3fh.s 			page 2
 
 
   30:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
   84:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @param  pdev: device instance
   85:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @param  pdesc: Descriptor structure address
   86:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @param  id: Low level core index
-ARM GAS  /tmp/ccMARigi.s 			page 3
+ARM GAS  /tmp/ccFXN3fh.s 			page 3
 
 
   87:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @retval None
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  110:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   {
  111:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     pdev->pDesc = pdesc;
   60              		.loc 1 111 5 is_stmt 1 view .LVU14
-ARM GAS  /tmp/ccMARigi.s 			page 4
+ARM GAS  /tmp/ccFXN3fh.s 			page 4
 
 
   61              		.loc 1 111 17 is_stmt 0 view .LVU15
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  123:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
  124:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** /**
  125:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @brief  USBD_DeInit
-ARM GAS  /tmp/ccMARigi.s 			page 5
+ARM GAS  /tmp/ccFXN3fh.s 			page 5
 
 
  126:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   *         Re-Initialize the device library
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  140 001c 0023     		movs	r3, #0
  141 001e C4F8B832 		str	r3, [r4, #696]
  145:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     pdev->pUserData = NULL;
-ARM GAS  /tmp/ccMARigi.s 			page 6
+ARM GAS  /tmp/ccFXN3fh.s 			page 6
 
 
  142              		.loc 1 145 5 is_stmt 1 view .LVU42
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  177              		@ args = 0, pretend = 0, frame = 8
  178              		@ frame_needed = 0, uses_anonymous_args = 0
  179              		.loc 1 166 1 is_stmt 0 view .LVU54
-ARM GAS  /tmp/ccMARigi.s 			page 7
+ARM GAS  /tmp/ccFXN3fh.s 			page 7
 
 
  180 0000 10B5     		push	{r4, lr}
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  211              		.loc 1 189 21 discriminator 1 view .LVU67
  212 001c C4F8CC02 		str	r0, [r4, #716]
  213              	.L14:
-ARM GAS  /tmp/ccMARigi.s 			page 8
+ARM GAS  /tmp/ccFXN3fh.s 			page 8
 
 
  190:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   }
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  254              		.cfi_def_cfa_offset 8
  255              		.cfi_offset 3, -8
  256              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccMARigi.s 			page 9
+ARM GAS  /tmp/ccFXN3fh.s 			page 9
 
 
  204:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   /* Start the low level driver  */
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  221:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   {
  222:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     (void)pdev->pClass->DeInit(pdev, (uint8_t)pdev->dev_config);
  296              		.loc 1 222 5 is_stmt 1 view .LVU84
-ARM GAS  /tmp/ccMARigi.s 			page 10
+ARM GAS  /tmp/ccFXN3fh.s 			page 10
 
 
  297              		.loc 1 222 23 is_stmt 0 view .LVU85
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  335              		.cfi_endproc
  336              	.LFE338:
  338              		.section	.text.USBD_SetClassConfig,"ax",%progbits
-ARM GAS  /tmp/ccMARigi.s 			page 11
+ARM GAS  /tmp/ccFXN3fh.s 			page 11
 
 
  339              		.align	1
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  373              		.loc 1 261 1 is_stmt 0 view .LVU105
  374 000c 08BD     		pop	{r3, pc}
  375              	.LVL26:
-ARM GAS  /tmp/ccMARigi.s 			page 12
+ARM GAS  /tmp/ccFXN3fh.s 			page 12
 
 
  376              	.L25:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  416              	.L28:
  276:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   }
  277:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
-ARM GAS  /tmp/ccMARigi.s 			page 13
+ARM GAS  /tmp/ccFXN3fh.s 			page 13
 
 
  278:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   return USBD_OK;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  456              		.loc 1 294 19 is_stmt 0 view .LVU124
  457 000e 0123     		movs	r3, #1
  458 0010 C4F89432 		str	r3, [r4, #660]
-ARM GAS  /tmp/ccMARigi.s 			page 14
+ARM GAS  /tmp/ccFXN3fh.s 			page 14
 
 
  295:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  305:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****       break;
  488              		.loc 1 305 13 is_stmt 0 view .LVU137
  489 0038 2946     		mov	r1, r5
-ARM GAS  /tmp/ccMARigi.s 			page 15
+ARM GAS  /tmp/ccFXN3fh.s 			page 15
 
 
  490 003a 2046     		mov	r0, r4
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  330:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** {
  528              		.loc 1 330 1 view -0
  529              		.cfi_startproc
-ARM GAS  /tmp/ccMARigi.s 			page 16
+ARM GAS  /tmp/ccFXN3fh.s 			page 16
 
 
  530              		@ args = 0, pretend = 0, frame = 0
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  356:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****         (void)USBD_CtlSendStatus(pdev);
  357:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****       }
  358:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     }
-ARM GAS  /tmp/ccMARigi.s 			page 17
+ARM GAS  /tmp/ccFXN3fh.s 			page 17
 
 
  359:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     else
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  576              		.loc 1 348 9 is_stmt 1 view .LVU161
  348:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****         {
  577              		.loc 1 348 17 is_stmt 0 view .LVU162
-ARM GAS  /tmp/ccMARigi.s 			page 18
+ARM GAS  /tmp/ccFXN3fh.s 			page 18
 
 
  578 0022 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  619              	.LVL53:
  352:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****           }
  620              		.loc 1 352 13 is_stmt 0 view .LVU176
-ARM GAS  /tmp/ccMARigi.s 			page 19
+ARM GAS  /tmp/ccFXN3fh.s 			page 19
 
 
  621 0052 EAE7     		b	.L40
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  391:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
  392:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** /**
  393:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @brief  USBD_LL_DataInStage
-ARM GAS  /tmp/ccMARigi.s 			page 20
+ARM GAS  /tmp/ccFXN3fh.s 			page 20
 
 
  394:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   *         Handle data in stage
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  416:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
  417:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****         /* Prepare endpoint for premature end of transfer */
  418:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****         (void)USBD_LL_PrepareReceive(pdev, 0U, NULL, 0U);
-ARM GAS  /tmp/ccMARigi.s 			page 21
+ARM GAS  /tmp/ccFXN3fh.s 			page 21
 
 
  419:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****       }
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  465:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   {
  466:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     if (pdev->dev_state == USBD_STATE_CONFIGURED)
  467:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     {
-ARM GAS  /tmp/ccMARigi.s 			page 22
+ARM GAS  /tmp/ccFXN3fh.s 			page 22
 
 
  468:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****       if (pdev->pClass->DataIn != NULL)
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  735              		.loc 1 442 11 is_stmt 1 view .LVU214
  442:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****           (void)USBD_CtlReceiveStatus(pdev);
  736              		.loc 1 442 17 is_stmt 0 view .LVU215
-ARM GAS  /tmp/ccMARigi.s 			page 23
+ARM GAS  /tmp/ccFXN3fh.s 			page 23
 
 
  737 0032 8021     		movs	r1, #128
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  779 0066 E0D2     		bcs	.L52
  427:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****           pdev->ep0_data_len = 0U;
  780              		.loc 1 427 11 is_stmt 1 view .LVU228
-ARM GAS  /tmp/ccMARigi.s 			page 24
+ARM GAS  /tmp/ccFXN3fh.s 			page 24
 
 
  427:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****           pdev->ep0_data_len = 0U;
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  820 0092 0023     		movs	r3, #0
  821 0094 84F8A032 		strb	r3, [r4, #672]
  822 0098 C0E7     		b	.L54
-ARM GAS  /tmp/ccMARigi.s 			page 25
+ARM GAS  /tmp/ccFXN3fh.s 			page 25
 
 
  823              	.LVL79:
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  483:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** /**
  484:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @brief  USBD_LL_Reset
  485:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   *         Handle Reset event
-ARM GAS  /tmp/ccMARigi.s 			page 26
+ARM GAS  /tmp/ccFXN3fh.s 			page 26
 
 
  486:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @param  pdev: device instance
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  901              		.loc 1 503 6 view .LVU271
  902 0020 1AB1     		cbz	r2, .L66
  504:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   {
-ARM GAS  /tmp/ccMARigi.s 			page 27
+ARM GAS  /tmp/ccFXN3fh.s 			page 27
 
 
  505:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     if (pdev->pClass->DeInit != NULL)
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  521:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   pdev->ep_in[0].maxpacket = USB_MAX_EP0_SIZE;
  941              		.loc 1 521 3 is_stmt 1 view .LVU287
  942              		.loc 1 521 28 is_stmt 0 view .LVU288
-ARM GAS  /tmp/ccMARigi.s 			page 28
+ARM GAS  /tmp/ccFXN3fh.s 			page 28
 
 
  943 0050 2562     		str	r5, [r4, #32]
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  537:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   return USBD_OK;
  983              		.loc 1 537 3 is_stmt 1 view .LVU297
  538:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** }
-ARM GAS  /tmp/ccMARigi.s 			page 29
+ARM GAS  /tmp/ccFXN3fh.s 			page 29
 
 
  984              		.loc 1 538 1 is_stmt 0 view .LVU298
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  1026              		.align	1
  1027              		.global	USBD_LL_Resume
  1028              		.syntax unified
-ARM GAS  /tmp/ccMARigi.s 			page 30
+ARM GAS  /tmp/ccFXN3fh.s 			page 30
 
 
  1029              		.thumb
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  1065              		.align	1
  1066              		.global	USBD_LL_SOF
  1067              		.syntax unified
-ARM GAS  /tmp/ccMARigi.s 			page 31
+ARM GAS  /tmp/ccFXN3fh.s 			page 31
 
 
  1068              		.thumb
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  1099              	.L78:
  595:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** }
  1100              		.loc 1 595 1 view .LVU328
-ARM GAS  /tmp/ccMARigi.s 			page 32
+ARM GAS  /tmp/ccFXN3fh.s 			page 32
 
 
  1101 0012 08BD     		pop	{r3, pc}
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  1139              		@ frame_needed = 0, uses_anonymous_args = 0
  1140              		.loc 1 605 1 is_stmt 0 view .LVU338
  1141 0000 08B5     		push	{r3, lr}
-ARM GAS  /tmp/ccMARigi.s 			page 33
+ARM GAS  /tmp/ccFXN3fh.s 			page 33
 
 
  1142              	.LCFI17:
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  615:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     }
  1176              		.loc 1 615 13 view .LVU352
  1177 001c F8E7     		b	.L86
-ARM GAS  /tmp/ccMARigi.s 			page 34
+ARM GAS  /tmp/ccFXN3fh.s 			page 34
 
 
  1178              	.LVL106:
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  1216              		.loc 1 636 6 view .LVU362
  1217 000c 032A     		cmp	r2, #3
  1218 000e 01D0     		beq	.L97
-ARM GAS  /tmp/ccMARigi.s 			page 35
+ARM GAS  /tmp/ccFXN3fh.s 			page 35
 
 
  1219              	.LVL109:
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  1258              	.LVL114:
  1259              	.LFB351:
  646:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
-ARM GAS  /tmp/ccMARigi.s 			page 36
+ARM GAS  /tmp/ccFXN3fh.s 			page 36
 
 
  647:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** /**
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  1294              		.cfi_offset 14, -4
  669:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   /* Free Class Resources */
  670:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   pdev->dev_state = USBD_STATE_DEFAULT;
-ARM GAS  /tmp/ccMARigi.s 			page 37
+ARM GAS  /tmp/ccFXN3fh.s 			page 37
 
 
  1295              		.loc 1 670 3 is_stmt 1 view .LVU380
@@ -2200,51 +2200,51 @@ ARM GAS  /tmp/ccMARigi.s 			page 1
  1324              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
  1325              		.file 6 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h"
  1326              		.file 7 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h"
-ARM GAS  /tmp/ccMARigi.s 			page 38
+ARM GAS  /tmp/ccFXN3fh.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_core.c
-     /tmp/ccMARigi.s:21     .text.USBD_Init:00000000 $t
-     /tmp/ccMARigi.s:27     .text.USBD_Init:00000000 USBD_Init
-     /tmp/ccMARigi.s:96     .text.USBD_DeInit:00000000 $t
-     /tmp/ccMARigi.s:102    .text.USBD_DeInit:00000000 USBD_DeInit
-     /tmp/ccMARigi.s:166    .text.USBD_RegisterClass:00000000 $t
-     /tmp/ccMARigi.s:172    .text.USBD_RegisterClass:00000000 USBD_RegisterClass
-     /tmp/ccMARigi.s:238    .text.USBD_Start:00000000 $t
-     /tmp/ccMARigi.s:244    .text.USBD_Start:00000000 USBD_Start
-     /tmp/ccMARigi.s:267    .text.USBD_Stop:00000000 $t
-     /tmp/ccMARigi.s:273    .text.USBD_Stop:00000000 USBD_Stop
-     /tmp/ccMARigi.s:314    .text.USBD_RunTestMode:00000000 $t
-     /tmp/ccMARigi.s:320    .text.USBD_RunTestMode:00000000 USBD_RunTestMode
-     /tmp/ccMARigi.s:339    .text.USBD_SetClassConfig:00000000 $t
-     /tmp/ccMARigi.s:345    .text.USBD_SetClassConfig:00000000 USBD_SetClassConfig
-     /tmp/ccMARigi.s:386    .text.USBD_ClrClassConfig:00000000 $t
-     /tmp/ccMARigi.s:392    .text.USBD_ClrClassConfig:00000000 USBD_ClrClassConfig
-     /tmp/ccMARigi.s:425    .text.USBD_LL_SetupStage:00000000 $t
-     /tmp/ccMARigi.s:431    .text.USBD_LL_SetupStage:00000000 USBD_LL_SetupStage
-     /tmp/ccMARigi.s:519    .text.USBD_LL_DataOutStage:00000000 $t
-     /tmp/ccMARigi.s:525    .text.USBD_LL_DataOutStage:00000000 USBD_LL_DataOutStage
-     /tmp/ccMARigi.s:656    .text.USBD_LL_DataInStage:00000000 $t
-     /tmp/ccMARigi.s:662    .text.USBD_LL_DataInStage:00000000 USBD_LL_DataInStage
-     /tmp/ccMARigi.s:857    .text.USBD_LL_Reset:00000000 $t
-     /tmp/ccMARigi.s:863    .text.USBD_LL_Reset:00000000 USBD_LL_Reset
-     /tmp/ccMARigi.s:966    .text.USBD_LL_SetSpeed:00000000 $t
-     /tmp/ccMARigi.s:972    .text.USBD_LL_SetSpeed:00000000 USBD_LL_SetSpeed
-     /tmp/ccMARigi.s:993    .text.USBD_LL_Suspend:00000000 $t
-     /tmp/ccMARigi.s:999    .text.USBD_LL_Suspend:00000000 USBD_LL_Suspend
-     /tmp/ccMARigi.s:1026   .text.USBD_LL_Resume:00000000 $t
-     /tmp/ccMARigi.s:1032   .text.USBD_LL_Resume:00000000 USBD_LL_Resume
-     /tmp/ccMARigi.s:1065   .text.USBD_LL_SOF:00000000 $t
-     /tmp/ccMARigi.s:1071   .text.USBD_LL_SOF:00000000 USBD_LL_SOF
-     /tmp/ccMARigi.s:1127   .text.USBD_LL_IsoINIncomplete:00000000 $t
-     /tmp/ccMARigi.s:1133   .text.USBD_LL_IsoINIncomplete:00000000 USBD_LL_IsoINIncomplete
-     /tmp/ccMARigi.s:1189   .text.USBD_LL_IsoOUTIncomplete:00000000 $t
-     /tmp/ccMARigi.s:1195   .text.USBD_LL_IsoOUTIncomplete:00000000 USBD_LL_IsoOUTIncomplete
-     /tmp/ccMARigi.s:1251   .text.USBD_LL_DevConnected:00000000 $t
-     /tmp/ccMARigi.s:1257   .text.USBD_LL_DevConnected:00000000 USBD_LL_DevConnected
-     /tmp/ccMARigi.s:1276   .text.USBD_LL_DevDisconnected:00000000 $t
-     /tmp/ccMARigi.s:1282   .text.USBD_LL_DevDisconnected:00000000 USBD_LL_DevDisconnected
+     /tmp/ccFXN3fh.s:21     .text.USBD_Init:00000000 $t
+     /tmp/ccFXN3fh.s:27     .text.USBD_Init:00000000 USBD_Init
+     /tmp/ccFXN3fh.s:96     .text.USBD_DeInit:00000000 $t
+     /tmp/ccFXN3fh.s:102    .text.USBD_DeInit:00000000 USBD_DeInit
+     /tmp/ccFXN3fh.s:166    .text.USBD_RegisterClass:00000000 $t
+     /tmp/ccFXN3fh.s:172    .text.USBD_RegisterClass:00000000 USBD_RegisterClass
+     /tmp/ccFXN3fh.s:238    .text.USBD_Start:00000000 $t
+     /tmp/ccFXN3fh.s:244    .text.USBD_Start:00000000 USBD_Start
+     /tmp/ccFXN3fh.s:267    .text.USBD_Stop:00000000 $t
+     /tmp/ccFXN3fh.s:273    .text.USBD_Stop:00000000 USBD_Stop
+     /tmp/ccFXN3fh.s:314    .text.USBD_RunTestMode:00000000 $t
+     /tmp/ccFXN3fh.s:320    .text.USBD_RunTestMode:00000000 USBD_RunTestMode
+     /tmp/ccFXN3fh.s:339    .text.USBD_SetClassConfig:00000000 $t
+     /tmp/ccFXN3fh.s:345    .text.USBD_SetClassConfig:00000000 USBD_SetClassConfig
+     /tmp/ccFXN3fh.s:386    .text.USBD_ClrClassConfig:00000000 $t
+     /tmp/ccFXN3fh.s:392    .text.USBD_ClrClassConfig:00000000 USBD_ClrClassConfig
+     /tmp/ccFXN3fh.s:425    .text.USBD_LL_SetupStage:00000000 $t
+     /tmp/ccFXN3fh.s:431    .text.USBD_LL_SetupStage:00000000 USBD_LL_SetupStage
+     /tmp/ccFXN3fh.s:519    .text.USBD_LL_DataOutStage:00000000 $t
+     /tmp/ccFXN3fh.s:525    .text.USBD_LL_DataOutStage:00000000 USBD_LL_DataOutStage
+     /tmp/ccFXN3fh.s:656    .text.USBD_LL_DataInStage:00000000 $t
+     /tmp/ccFXN3fh.s:662    .text.USBD_LL_DataInStage:00000000 USBD_LL_DataInStage
+     /tmp/ccFXN3fh.s:857    .text.USBD_LL_Reset:00000000 $t
+     /tmp/ccFXN3fh.s:863    .text.USBD_LL_Reset:00000000 USBD_LL_Reset
+     /tmp/ccFXN3fh.s:966    .text.USBD_LL_SetSpeed:00000000 $t
+     /tmp/ccFXN3fh.s:972    .text.USBD_LL_SetSpeed:00000000 USBD_LL_SetSpeed
+     /tmp/ccFXN3fh.s:993    .text.USBD_LL_Suspend:00000000 $t
+     /tmp/ccFXN3fh.s:999    .text.USBD_LL_Suspend:00000000 USBD_LL_Suspend
+     /tmp/ccFXN3fh.s:1026   .text.USBD_LL_Resume:00000000 $t
+     /tmp/ccFXN3fh.s:1032   .text.USBD_LL_Resume:00000000 USBD_LL_Resume
+     /tmp/ccFXN3fh.s:1065   .text.USBD_LL_SOF:00000000 $t
+     /tmp/ccFXN3fh.s:1071   .text.USBD_LL_SOF:00000000 USBD_LL_SOF
+     /tmp/ccFXN3fh.s:1127   .text.USBD_LL_IsoINIncomplete:00000000 $t
+     /tmp/ccFXN3fh.s:1133   .text.USBD_LL_IsoINIncomplete:00000000 USBD_LL_IsoINIncomplete
+     /tmp/ccFXN3fh.s:1189   .text.USBD_LL_IsoOUTIncomplete:00000000 $t
+     /tmp/ccFXN3fh.s:1195   .text.USBD_LL_IsoOUTIncomplete:00000000 USBD_LL_IsoOUTIncomplete
+     /tmp/ccFXN3fh.s:1251   .text.USBD_LL_DevConnected:00000000 $t
+     /tmp/ccFXN3fh.s:1257   .text.USBD_LL_DevConnected:00000000 USBD_LL_DevConnected
+     /tmp/ccFXN3fh.s:1276   .text.USBD_LL_DevDisconnected:00000000 $t
+     /tmp/ccFXN3fh.s:1282   .text.USBD_LL_DevDisconnected:00000000 USBD_LL_DevDisconnected
 
 UNDEFINED SYMBOLS
 USBD_LL_Init
@@ -2260,7 +2260,7 @@ USBD_CtlSendStatus
 USBD_CtlContinueRx
 USBD_CtlReceiveStatus
 USBD_CtlContinueSendData
-ARM GAS  /tmp/ccMARigi.s 			page 39
+ARM GAS  /tmp/ccFXN3fh.s 			page 39
 
 
 USBD_LL_PrepareReceive
