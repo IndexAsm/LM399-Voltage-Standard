@@ -2,13 +2,15 @@
 
 #include <math.h>
 
-uint8_t is_same_page(uint16_t a0, uint16_t a1, uint8_t page_address_bits) {
+
+static uint8_t is_same_page(uint16_t a0, uint16_t a1, uint8_t page_address_bits) {
     return (a0 >> page_address_bits) == (a1 >> page_address_bits);
 }
 
 
 M24Cxx M24Cxx_Init(I2C_HandleTypeDef *i2c, uint8_t i2c_address, uint16_t size, uint8_t page_size, uint8_t addressing_size)
 {
+    
     M24Cxx res;
     res.i2c = i2c;
     res.address = i2c_address << 1;
@@ -19,23 +21,35 @@ M24Cxx M24Cxx_Init(I2C_HandleTypeDef *i2c, uint8_t i2c_address, uint16_t size, u
     return res;
 }
 
-void M24Cxx_Write_Buffer(M24Cxx *device, uint16_t address, uint8_t *data, uint16_t len) {
+uint8_t M24Cxx_Write_Buffer(M24Cxx *device, uint16_t addr, const uint8_t *data, uint16_t len) {
+
+    // Basic error checks
+    if (!device || !data || addr + len > device->size)
+        return 0;
 
     uint16_t sent = 0;
 
+
     while (sent < len) {
-        uint16_t current_address = address + sent;
+        uint32_t cur = addr + sent;
+        uint16_t room = device->page_size - (cur % device->page_size);
+        uint16_t chunk = (len - sent < room) ? (len - sent) : room;
 
-        uint16_t bytes_left = device->page_size - (current_address % device->page_size);
+        HAL_StatusTypeDef ret = HAL_I2C_Mem_Write(device->i2c, device->address, cur, device->addressing_size, (uint8_t*)(data + sent), chunk, 100);
 
-        uint16_t chunk_size = (len - sent < bytes_left) ? (len - sent) : bytes_left;
+        if (ret != HAL_OK)
+            return 0;
 
-        while (HAL_I2C_IsDeviceReady(device->i2c, device->address, 2, 10) != HAL_OK);
-        HAL_I2C_Mem_Write(device->i2c, device->address, current_address, device->addressing_size, data, chunk_size, 10);
+        uint32_t start = HAL_GetTick();
 
-        sent += chunk_size;
+        while(HAL_I2C_IsDeviceReady(device->i2c, device->address, 1, 2) != HAL_OK) {
+            if (HAL_GetTick() - start > 20)
+                return 0;
+        }
+        sent += chunk;
+
     }
-
+    return 1;
     
 }
 
@@ -44,9 +58,6 @@ void M24Cxx_Write_Byte(M24Cxx* device, uint16_t address, uint8_t data) {
     HAL_I2C_Mem_Write(device->i2c, device->address, address, device->addressing_size, &data, 1, 10);
 }
 
-void M24Cxx_Read_Page(M24Cxx *device, uint16_t address, uint8_t *data) {
-    
-}
 
 void M24Cxx_Read_Bytes(M24Cxx* device, uint16_t address, uint8_t* data, uint16_t len) {
     HAL_I2C_IsDeviceReady(device->i2c, device->address, 1, 15);

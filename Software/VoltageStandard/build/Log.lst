@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc3M1IkZ.s 			page 1
+ARM GAS  /tmp/cc422BG4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -12,232 +12,85 @@ ARM GAS  /tmp/cc3M1IkZ.s 			page 1
    9              		.eabi_attribute 24, 1
   10              		.eabi_attribute 25, 1
   11              		.eabi_attribute 26, 1
-  12              		.eabi_attribute 30, 1
+  12              		.eabi_attribute 30, 4
   13              		.eabi_attribute 34, 1
   14              		.eabi_attribute 18, 4
   15              		.file	"Log.c"
   16              		.text
-  17              	.Ltext0:
-  18              		.cfi_sections	.debug_frame
-  19              		.file 1 "Core/Src/Log.c"
-  20              		.section	.text.USB_printf,"ax",%progbits
-  21              		.align	1
-  22              		.global	USB_printf
-  23              		.syntax unified
-  24              		.thumb
-  25              		.thumb_func
-  27              	USB_printf:
-  28              	.LVL0:
-  29              	.LFB333:
-   1:Core/Src/Log.c **** #include "Log.h"
-   2:Core/Src/Log.c **** #include <stdarg.h>
-   3:Core/Src/Log.c **** #include <stdio.h>
-   4:Core/Src/Log.c **** #include "usb_device.h"
-   5:Core/Src/Log.c **** #include <stdint.h>
-   6:Core/Src/Log.c **** #include "usbd_cdc_if.h"
-   7:Core/Src/Log.c **** #define BUF_LEN 256
-   8:Core/Src/Log.c **** #define USB_TIMEOUT 10
-   9:Core/Src/Log.c **** 
-  10:Core/Src/Log.c **** 
-  11:Core/Src/Log.c **** uint8_t USB_printf(const char *fmt, ...) {
-  30              		.loc 1 11 42 view -0
-  31              		.cfi_startproc
-  32              		@ args = 4, pretend = 16, frame = 264
-  33              		@ frame_needed = 0, uses_anonymous_args = 1
-  34              		.loc 1 11 42 is_stmt 0 view .LVU1
-  35 0000 0FB4     		push	{r0, r1, r2, r3}
-  36              	.LCFI0:
-  37              		.cfi_def_cfa_offset 16
-  38              		.cfi_offset 0, -16
-  39              		.cfi_offset 1, -12
-  40              		.cfi_offset 2, -8
-  41              		.cfi_offset 3, -4
-  42 0002 30B5     		push	{r4, r5, lr}
-  43              	.LCFI1:
-  44              		.cfi_def_cfa_offset 28
-  45              		.cfi_offset 4, -28
-  46              		.cfi_offset 5, -24
-  47              		.cfi_offset 14, -20
-ARM GAS  /tmp/cc3M1IkZ.s 			page 2
+  17              		.section	.text.USB_printf,"ax",%progbits
+  18              		.align	1
+  19              		.global	USB_printf
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	USB_printf:
+  25              		@ args = 4, pretend = 16, frame = 136
+  26              		@ frame_needed = 0, uses_anonymous_args = 1
+  27 0000 0FB4     		push	{r0, r1, r2, r3}
+  28 0002 70B5     		push	{r4, r5, r6, lr}
+  29 0004 144B     		ldr	r3, .L10
+  30 0006 93F89C32 		ldrb	r3, [r3, #668]	@ zero_extendqisi2
+  31 000a 032B     		cmp	r3, #3
+  32 000c A2B0     		sub	sp, sp, #136
+  33 000e 05D0     		beq	.L2
+  34              	.L4:
+  35 0010 0020     		movs	r0, #0
+  36              	.L3:
+  37 0012 22B0     		add	sp, sp, #136
+  38              		@ sp needed
+  39 0014 BDE87040 		pop	{r4, r5, r6, lr}
+  40 0018 04B0     		add	sp, sp, #16
+  41 001a 7047     		bx	lr
+  42              	.L2:
+  43 001c 0F4B     		ldr	r3, .L10+4
+  44 001e 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  45 0020 0028     		cmp	r0, #0
+  46 0022 F6D0     		beq	.L3
+  47 0024 27AB     		add	r3, sp, #156
+  48 0026 269A     		ldr	r2, [sp, #152]
+  49 0028 0193     		str	r3, [sp, #4]
+  50 002a 8021     		movs	r1, #128
+  51 002c 02A8     		add	r0, sp, #8
+  52 002e FFF7FEFF 		bl	vsnprintf
+  53 0032 041E     		subs	r4, r0, #0
+  54 0034 ECDD     		ble	.L4
+  55 0036 FFF7FEFF 		bl	HAL_GetTick
+  56 003a 0646     		mov	r6, r0
+  57              	.L5:
+  58 003c A1B2     		uxth	r1, r4
+ARM GAS  /tmp/cc422BG4.s 			page 2
 
 
-  48 0004 C3B0     		sub	sp, sp, #268
-  49              	.LCFI2:
-  50              		.cfi_def_cfa_offset 296
-  12:Core/Src/Log.c **** 
-  13:Core/Src/Log.c ****     extern USBD_HandleTypeDef hUsbDeviceFS;
-  51              		.loc 1 13 5 is_stmt 1 view .LVU2
-  14:Core/Src/Log.c ****     if (hUsbDeviceFS.dev_state != USBD_STATE_CONFIGURED) {
-  52              		.loc 1 14 5 view .LVU3
-  53              		.loc 1 14 21 is_stmt 0 view .LVU4
-  54 0006 134B     		ldr	r3, .L9
-  55 0008 93F89C32 		ldrb	r3, [r3, #668]	@ zero_extendqisi2
-  56              		.loc 1 14 8 view .LVU5
-  57 000c 032B     		cmp	r3, #3
-  58 000e 05D0     		beq	.L2
-  59              	.L4:
-  15:Core/Src/Log.c ****         return 0;
-  60              		.loc 1 15 16 view .LVU6
-  61 0010 0020     		movs	r0, #0
-  62              	.L3:
-  16:Core/Src/Log.c ****     }
-  17:Core/Src/Log.c **** 
-  18:Core/Src/Log.c ****     
-  19:Core/Src/Log.c **** 
-  20:Core/Src/Log.c **** 
-  21:Core/Src/Log.c ****     // Prepare buffer
-  22:Core/Src/Log.c ****     char TxBuffer[BUF_LEN];
-  23:Core/Src/Log.c **** 
-  24:Core/Src/Log.c ****     va_list args;
-  25:Core/Src/Log.c ****     va_start(args, fmt);
-  26:Core/Src/Log.c **** 
-  27:Core/Src/Log.c ****     int TxBufferLen = vsnprintf((char*)TxBuffer, BUF_LEN, fmt, args);
-  28:Core/Src/Log.c ****     va_end(args);
-  29:Core/Src/Log.c **** 
-  30:Core/Src/Log.c ****     if (TxBufferLen <= 0) {
-  31:Core/Src/Log.c ****         return 0;
-  32:Core/Src/Log.c ****     }
-  33:Core/Src/Log.c **** 
-  34:Core/Src/Log.c **** 
-  35:Core/Src/Log.c ****     // Transmit
-  36:Core/Src/Log.c **** 
-  37:Core/Src/Log.c ****     uint32_t TickStart = HAL_GetTick();
-  38:Core/Src/Log.c **** 
-  39:Core/Src/Log.c ****     while(CDC_Transmit_FS(TxBuffer, TxBufferLen) == USBD_BUSY) {
-  40:Core/Src/Log.c ****         if ((HAL_GetTick() - TickStart) > USB_TIMEOUT) {
-  41:Core/Src/Log.c ****             return 0;
-  42:Core/Src/Log.c ****         }
-  43:Core/Src/Log.c ****     }
-  44:Core/Src/Log.c ****     return TxBufferLen;
-  45:Core/Src/Log.c **** }...
-  63              		.loc 1 45 1 view .LVU7
-  64 0012 43B0     		add	sp, sp, #268
-  65              	.LCFI3:
-  66              		.cfi_remember_state
-  67              		.cfi_def_cfa_offset 28
-  68              		@ sp needed
-  69 0014 BDE83040 		pop	{r4, r5, lr}
-  70              	.LCFI4:
-ARM GAS  /tmp/cc3M1IkZ.s 			page 3
-
-
-  71              		.cfi_restore 14
-  72              		.cfi_restore 5
-  73              		.cfi_restore 4
-  74              		.cfi_def_cfa_offset 16
-  75 0018 04B0     		add	sp, sp, #16
-  76              	.LCFI5:
-  77              		.cfi_restore 3
-  78              		.cfi_restore 2
-  79              		.cfi_restore 1
-  80              		.cfi_restore 0
-  81              		.cfi_def_cfa_offset 0
-  82 001a 7047     		bx	lr
-  83              	.L2:
-  84              	.LCFI6:
-  85              		.cfi_restore_state
-  22:Core/Src/Log.c ****     char TxBuffer[BUF_LEN];
-  86              		.loc 1 22 5 is_stmt 1 view .LVU8
-  24:Core/Src/Log.c ****     va_list args;
-  87              		.loc 1 24 5 view .LVU9
-  25:Core/Src/Log.c ****     va_start(args, fmt);
-  88              		.loc 1 25 5 view .LVU10
-  89 001c 47AB     		add	r3, sp, #284
-  90 001e 0193     		str	r3, [sp, #4]
-  27:Core/Src/Log.c ****     int TxBufferLen = vsnprintf((char*)TxBuffer, BUF_LEN, fmt, args);
-  91              		.loc 1 27 5 view .LVU11
-  27:Core/Src/Log.c ****     int TxBufferLen = vsnprintf((char*)TxBuffer, BUF_LEN, fmt, args);
-  92              		.loc 1 27 23 is_stmt 0 view .LVU12
-  93 0020 469A     		ldr	r2, [sp, #280]
-  94 0022 4FF48071 		mov	r1, #256
-  95 0026 02A8     		add	r0, sp, #8
-  96 0028 FFF7FEFF 		bl	vsnprintf
-  97              	.LVL1:
-  28:Core/Src/Log.c ****     va_end(args);
-  98              		.loc 1 28 5 is_stmt 1 view .LVU13
-  30:Core/Src/Log.c ****     if (TxBufferLen <= 0) {
-  99              		.loc 1 30 5 view .LVU14
-  30:Core/Src/Log.c ****     if (TxBufferLen <= 0) {
- 100              		.loc 1 30 8 is_stmt 0 view .LVU15
- 101 002c 031E     		subs	r3, r0, #0
- 102 002e 1C46     		mov	r4, r3
- 103 0030 EEDD     		ble	.L4
-  37:Core/Src/Log.c ****     uint32_t TickStart = HAL_GetTick();
- 104              		.loc 1 37 5 is_stmt 1 view .LVU16
-  37:Core/Src/Log.c ****     uint32_t TickStart = HAL_GetTick();
- 105              		.loc 1 37 26 is_stmt 0 view .LVU17
- 106 0032 FFF7FEFF 		bl	HAL_GetTick
- 107              	.LVL2:
-  37:Core/Src/Log.c ****     uint32_t TickStart = HAL_GetTick();
- 108              		.loc 1 37 26 view .LVU18
- 109 0036 0546     		mov	r5, r0
- 110              	.LVL3:
-  39:Core/Src/Log.c ****     while(CDC_Transmit_FS(TxBuffer, TxBufferLen) == USBD_BUSY) {
- 111              		.loc 1 39 5 is_stmt 1 view .LVU19
- 112              	.L5:
-  39:Core/Src/Log.c ****     while(CDC_Transmit_FS(TxBuffer, TxBufferLen) == USBD_BUSY) {
- 113              		.loc 1 39 50 discriminator 1 view .LVU20
-  39:Core/Src/Log.c ****     while(CDC_Transmit_FS(TxBuffer, TxBufferLen) == USBD_BUSY) {
-ARM GAS  /tmp/cc3M1IkZ.s 			page 4
-
-
- 114              		.loc 1 39 11 is_stmt 0 discriminator 1 view .LVU21
- 115 0038 A1B2     		uxth	r1, r4
- 116 003a 02A8     		add	r0, sp, #8
- 117 003c FFF7FEFF 		bl	CDC_Transmit_FS
- 118              	.LVL4:
-  39:Core/Src/Log.c ****     while(CDC_Transmit_FS(TxBuffer, TxBufferLen) == USBD_BUSY) {
- 119              		.loc 1 39 50 discriminator 2 view .LVU22
- 120 0040 0128     		cmp	r0, #1
- 121 0042 05D1     		bne	.L8
-  40:Core/Src/Log.c ****         if ((HAL_GetTick() - TickStart) > USB_TIMEOUT) {
- 122              		.loc 1 40 9 is_stmt 1 view .LVU23
-  40:Core/Src/Log.c ****         if ((HAL_GetTick() - TickStart) > USB_TIMEOUT) {
- 123              		.loc 1 40 14 is_stmt 0 view .LVU24
- 124 0044 FFF7FEFF 		bl	HAL_GetTick
- 125              	.LVL5:
-  40:Core/Src/Log.c ****         if ((HAL_GetTick() - TickStart) > USB_TIMEOUT) {
- 126              		.loc 1 40 28 discriminator 1 view .LVU25
- 127 0048 401B     		subs	r0, r0, r5
-  40:Core/Src/Log.c ****         if ((HAL_GetTick() - TickStart) > USB_TIMEOUT) {
- 128              		.loc 1 40 12 discriminator 1 view .LVU26
- 129 004a 0A28     		cmp	r0, #10
- 130 004c F4D9     		bls	.L5
- 131 004e DFE7     		b	.L4
- 132              	.L8:
-  44:Core/Src/Log.c ****     return TxBufferLen;
- 133              		.loc 1 44 5 is_stmt 1 view .LVU27
-  44:Core/Src/Log.c ****     return TxBufferLen;
- 134              		.loc 1 44 12 is_stmt 0 view .LVU28
- 135 0050 E0B2     		uxtb	r0, r4
- 136 0052 DEE7     		b	.L3
- 137              	.L10:
- 138              		.align	2
- 139              	.L9:
- 140 0054 00000000 		.word	hUsbDeviceFS
- 141              		.cfi_endproc
- 142              	.LFE333:
- 144              		.text
- 145              	.Letext0:
- 146              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 147              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 148              		.file 4 "/usr/lib/gcc/arm-none-eabi/16.2.0/include/stdarg.h"
- 149              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 150              		.file 6 "USB_Device/App/usbd_cdc_if.h"
- 151              		.file 7 "/usr/arm-none-eabi/include/stdio.h"
- 152              		.file 8 "<built-in>"
- 153              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
-ARM GAS  /tmp/cc3M1IkZ.s 			page 5
+  59 003e 02A8     		add	r0, sp, #8
+  60 0040 FFF7FEFF 		bl	CDC_Transmit_FS
+  61 0044 0128     		cmp	r0, #1
+  62 0046 01D0     		beq	.L6
+  63 0048 E0B2     		uxtb	r0, r4
+  64 004a E2E7     		b	.L3
+  65              	.L6:
+  66 004c FFF7FEFF 		bl	HAL_GetTick
+  67 0050 801B     		subs	r0, r0, r6
+  68 0052 0A28     		cmp	r0, #10
+  69 0054 F2D9     		bls	.L5
+  70 0056 DBE7     		b	.L4
+  71              	.L11:
+  72              		.align	2
+  73              	.L10:
+  74 0058 00000000 		.word	hUsbDeviceFS
+  75 005c 00000000 		.word	usb_Connected
+  77              		.ident	"GCC: (Arch Repository) 16.2.0"
+ARM GAS  /tmp/cc422BG4.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Log.c
-     /tmp/cc3M1IkZ.s:21     .text.USB_printf:00000000 $t
-     /tmp/cc3M1IkZ.s:27     .text.USB_printf:00000000 USB_printf
-     /tmp/cc3M1IkZ.s:140    .text.USB_printf:00000054 $d
+     /tmp/cc422BG4.s:18     .text.USB_printf:00000000 $t
+     /tmp/cc422BG4.s:24     .text.USB_printf:00000000 USB_printf
+     /tmp/cc422BG4.s:74     .text.USB_printf:00000058 $d
 
 UNDEFINED SYMBOLS
 vsnprintf
 HAL_GetTick
 CDC_Transmit_FS
 hUsbDeviceFS
+usb_Connected

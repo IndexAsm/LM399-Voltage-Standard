@@ -63,8 +63,6 @@
 #define EEPROM_ADDR_OPERATING_TIME 0x2
 #define EEPROM_ADDR_CAL_DATA_STRUC 0xf
 
-#define ADC_BUFFER_SIZE 4096
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -80,10 +78,12 @@ I2C_HandleTypeDef hi2c1;
 TIM_HandleTypeDef htim16;
 
 /* USER CODE BEGIN PV */
-uint8_t usbTxBuffer[USB_BUFLEN];
-uint16_t usbTxBufferLen;
-
-//volatile uint16_t adcBuffer[ADC_BUFFER_SIZE];
+uint8_t usbRxBuffer[USB_BUFLEN];
+uint16_t usbRxBufferLen;
+uint8_t usbRxFlag = 0;
+M24Cxx eeprom;
+uint32_t uptime_s = 0;
+uint16_t uptime_h;
 
 /* USER CODE END PV */
 
@@ -99,6 +99,17 @@ static void MX_TIM16_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+
+
+/*
+    EEPROM STRUCTURE
+0x2     2 bytes         Uptime
+0xf     10 bytes        CalibrationHeader
+...     ...             InitialCal
+...     ...             Calibrations
+
+*/
 
 uint16_t ReadHourStats(M24Cxx* eeprom) {
     union HourBuffer {
@@ -122,27 +133,56 @@ void WriteHourStats(M24Cxx* eeprom, uint16_t val) {
 }
 
 
+
+CalibrationHeader ReadCalHeader(M24Cxx* eeprom) {
+    CalibrationHeader header;
+    
+    M24Cxx_Read_Bytes(eeprom, EEPROM_ADDR_CAL_DATA_STRUC, (uint8_t*)&header, sizeof(CalibrationHeader));
+
+    return header;
+}
+
+    
+void WriteCalHeader(M24Cxx* eeprom, CalibrationHeader* header) {
+    
+    M24Cxx_Write_Buffer(eeprom, EEPROM_ADDR_CAL_DATA_STRUC, (uint8_t*)header, sizeof(CalibrationHeader));
+
+}
+
+void InitCalHeader(M24Cxx* eeprom) {
+    CalibrationHeader header;
+    header.initial_addr = EEPROM_ADDR_CAL_DATA_STRUC + 0x8 + sizeof(CalibrationHeader);
+    header.initial_done = 0;
+    header.entry_addr = header.initial_addr + 0x8 + sizeof(CalibrationDataInfo);
+    header.entry_size = sizeof(CalibrationData);
+    header.len = 0;
+
+    WriteCalHeader(eeprom, &header);
+}
+
+
 void WriteInitialCalibration(
     M24Cxx* eeprom, 
-    const char* LM399_serial_number, 
-    const char* initial_cal_date,
-    const char* initial_cal_voltage,
-    float initial_cal_temperature
+    CalibrationDataInfo* calInfo
 ) {
 
-    if (M24Cxx_Read_Byte(eeprom, EEPROM_ADDR_INIT_CAL_DONE))
-        return;
-    CalibrationDataInfo calInfo;
-    calInfo.entry_addr = 0x20 + sizeof(CalibrationDataInfo);
-    calInfo.entry_size = sizeof(CalibrationData);
-    calInfo.len = 0;
-    strcpy(calInfo.LM399_serial_number, LM399_serial_number);
-    strcpy(calInfo.initial_cal_date, initial_cal_date);
-    strcpy(calInfo.initial_cal_voltage, initial_cal_voltage);
-    calInfo.initial_cal_temperature = initial_cal_temperature;
-    M24Cxx_Write_Buffer(eeprom, EEPROM_ADDR_OPERATING_TIME, (uint8_t*)&calInfo, sizeof(CalibrationDataInfo));
+    // Get Calibration Header
+    CalibrationHeader header = ReadCalHeader(eeprom);
 
-    M24Cxx_Write_Byte(eeprom, EEPROM_ADDR_INIT_CAL_DONE, 1);
+    // Check if calibration has been done already
+    if (header.initial_done)
+        return; // Return if true
+
+
+
+    
+
+    // Write to memory
+
+    M24Cxx_Write_Buffer(eeprom, header.initial_addr, (uint8_t*)calInfo, sizeof(CalibrationDataInfo));
+
+    header.initial_done = 1;
+    WriteCalHeader(eeprom, &header);
 }
 
 /// @brief Reads Initial Cal Data from eeprom
@@ -155,27 +195,232 @@ uint8_t ReadInitialCalibration(
     CalibrationDataInfo* info
 ) {
 
-    CalibrationDataInfo info;
-    if (!M24Cxx_Read_Byte(eeprom, EEPROM_ADDR_INIT_CAL_DONE))
-        return 0;
+    // Get Calibration Header
+    CalibrationHeader header = ReadCalHeader(eeprom);
+
+    // Check if calibration has been done already
+    if (!header.initial_done)
+        return 0; // Return if false
     
-    M24Cxx_Read_Bytes(eeprom, EEPROM_ADDR_CAL_DATA_STRUC, (uint8_t*)info, sizeof(CalibrationDataInfo));
+    // Read calibration
+    M24Cxx_Read_Bytes(eeprom, header.initial_addr, (uint8_t*)info, sizeof(CalibrationDataInfo));
 
     return 1;
 }
 
 
 uint8_t WriteCalibrationData(M24Cxx* eeprom, CalibrationData* data) {
-    CalibrationDataInfo info;
-    if (!ReadInitialCalibration(eeprom, &info)) {
-        return 0;
-    }
+    // Get Calibration Header
+    CalibrationHeader header = ReadCalHeader(eeprom);
 
 
-    uint16_t addr = info.entry_addr + info.entry_size * info.len;
-    M24Cxx_Write_Buffer(eeprom, addr, (uint8_t*)&info, sizeof(CalibrationData));
+    // Get Addr
+    uint16_t addr = header.entry_addr + header.entry_size * header.len;
+
+    // Write data
+    M24Cxx_Write_Buffer(eeprom, addr, (uint8_t*)data, sizeof(CalibrationData));
+
+    // Increment lengh and write it back
+    header.len++;
+    WriteCalHeader(eeprom, &header);
     return 1;
 }   
+
+uint8_t ReadCalibrationData(M24Cxx* eeprom, CalibrationData* data, uint16_t index) {
+    // Get Calibration Header
+    CalibrationHeader header = ReadCalHeader(eeprom);
+
+
+    // Get Addr
+    uint16_t addr = header.entry_addr + header.entry_size * index;
+    // Read
+    M24Cxx_Read_Bytes(eeprom, addr, (uint8_t*)data, sizeof(CalibrationData));
+
+    return 1;
+}   
+
+
+
+
+CalibrationData USB_CalData;
+CalibrationDataInfo USB_InitialCal;
+uint8_t USB_CalDataPos = 0;
+uint16_t USB_Cal_Index = 0;
+uint8_t USB_GET_Data_Flag = 0;
+
+#define USB_CALDATA_POS_NONE 0
+#define USB_CALDATA_POS_CAL_MASK 1
+#define USB_CALDATA_POS_CAL_VOLTAGE 12
+#define USB_CALDATA_POS_CAL_DATE 2
+#define USB_CALDATA_POS_CAL_END 3
+#define USB_CALDATA_POS_CAL_GET_INDEX 4
+#define USB_CALDATA_POS_CAL_GET_END 5
+#define USB_CALDATA_POS_CAL_GET_INFO 6
+#define USB_CALDATA_POS_CAL_GET_INFO_END 7
+#define USB_CALDATA_POS_CAL_INIT_SERIAL 8
+#define USB_CALDATA_POS_CAL_INIT_DATE 9
+#define USB_CALDATA_POS_CAL_INIT_VOLTAGE 10
+#define USB_CALDATA_POS_CAL_INIT_END 11
+
+void USB_RXCallback(uint8_t* buf, uint32_t* len) {
+    memcpy(usbRxBuffer, buf, *len);
+    usbRxBufferLen = *len;
+    usbRxBuffer[usbRxBufferLen] = 0;
+    usbRxFlag = 1;
+
+    
+    switch (USB_CalDataPos)
+    {
+    case 1: {
+        USB_CalDataPos = USB_CALDATA_POS_CAL_VOLTAGE;
+        USB_CalData.mask = (uint8_t)strtoul((char*)usbRxBuffer, NULL, 16);
+        break;
+    }
+    case USB_CALDATA_POS_CAL_VOLTAGE: {
+        //USB_printf("Date: %s\r\n", usbRxBuffer);
+        uint16_t len = strlen((char*)usbRxBuffer);
+        if (len >= 12)
+            USB_printf("ERR: Invalid Voltage. Too long. Len = %u\r\n", len);
+        strcpy(USB_CalData.voltage, (char*)usbRxBuffer);
+        USB_CalDataPos = USB_CALDATA_POS_CAL_DATE;
+        break;
+    }
+    case USB_CALDATA_POS_CAL_DATE: {
+        //USB_printf("Date: %s\r\n", usbRxBuffer);
+        uint16_t len = strlen((char*)usbRxBuffer);
+        if (len >= 12)
+            USB_printf("ERR: Invalid date. Too long. Len = %u\r\n", len);
+        strcpy(USB_CalData.date, (char*)usbRxBuffer);
+        USB_CalDataPos = USB_CALDATA_POS_CAL_END;
+        break;
+    }
+    case USB_CALDATA_POS_CAL_END: {
+        if(!strcmp((char*)usbRxBuffer, "END")) {
+            USB_CalData.uptime = uptime_h;
+            USB_CalData.temp = TMP102_GetReading(&hi2c1);
+            WriteCalibrationData(&eeprom, &USB_CalData);
+            USB_CalDataPos = 0;
+            USB_printf("CAL DONE\r\n");
+        } else
+            USB_printf("ERROR\r\n");
+
+        break;
+    }
+    case USB_CALDATA_POS_CAL_GET_INDEX: {
+        USB_CalDataPos = USB_CALDATA_POS_CAL_GET_END;
+        USB_Cal_Index = (uint8_t)strtoul((char*)usbRxBuffer, NULL, 16);
+        break;
+    }
+    case USB_CALDATA_POS_CAL_GET_END: {
+        CalibrationData data;
+        ReadCalibrationData(&eeprom, &data, USB_Cal_Index);
+
+        uint16_t integer_part = (int)data.temp;
+        uint16_t fractional_part = (int)((data.temp - integer_part) * 100);
+
+        USB_printf(
+            "BEGIN\r\n"
+            "0x%x\r\n"
+            "%s\r\n"
+            "%s\r\n"
+            "%u.%u\r\n"
+            "%u\r\n"
+            "END\r\n",
+            data.mask,
+            data.voltage,
+            data.date,
+            integer_part, fractional_part,
+            data.uptime
+        );
+        USB_CalDataPos = USB_CALDATA_POS_NONE;
+        break;
+    }
+    case USB_CALDATA_POS_CAL_INIT_SERIAL: {
+        strcpy(USB_InitialCal.LM399_serial_number, usbRxBuffer);
+        USB_CalDataPos = USB_CALDATA_POS_CAL_INIT_DATE;
+        break;
+    }
+    case USB_CALDATA_POS_CAL_INIT_DATE: {
+        strcpy(USB_InitialCal.initial_cal_date, usbRxBuffer);
+        USB_CalDataPos = USB_CALDATA_POS_CAL_INIT_VOLTAGE;
+        break;
+    }
+    case USB_CALDATA_POS_CAL_INIT_VOLTAGE: {
+        strcpy(USB_InitialCal.initial_cal_voltage, usbRxBuffer);
+        USB_CalDataPos = USB_CALDATA_POS_CAL_INIT_END;
+        break;
+    }
+    case USB_CALDATA_POS_CAL_INIT_END: {
+
+        USB_InitialCal.initial_cal_temperature = TMP102_GetReading(&hi2c1);
+        WriteInitialCalibration(&eeprom, &USB_InitialCal);
+        USB_CalDataPos = USB_CALDATA_POS_NONE;
+        USB_printf("DONE\r\n");
+        break;
+    }
+    default:
+        break;
+    }
+
+    if(!strcmp(usbRxBuffer, "BEGIN CAL"))
+        USB_CalDataPos = USB_CALDATA_POS_CAL_MASK;
+    else if(!strcmp(usbRxBuffer, "BEGIN GET_CAL")) {
+        USB_CalDataPos = 4;
+    } else if(!strcmp(usbRxBuffer, "GET_INFO")) {
+    
+        CalibrationHeader header = ReadCalHeader(&eeprom);
+        USB_printf(
+            "BEGIN\r\n"
+            "%u\r\n"
+            "%u\r\n"
+            "%u\r\n"
+            "END\r\n",
+            header.entry_addr,
+            header.entry_size,
+            header.len
+        );
+
+
+    } else if(!strcmp(usbRxBuffer, "GET_INIT_CAL")) {
+    
+        CalibrationDataInfo initCal;
+        if (ReadInitialCalibration(&eeprom, &initCal)) {
+            uint16_t integer_part = (int)initCal.initial_cal_temperature;
+            uint16_t fractional_part = (int)((initCal.initial_cal_temperature - integer_part) * 100);
+            USB_printf(
+                "BEGIN\r\n"
+                "%s\r\n"
+                "%s\r\n"
+                "%s\r\n"
+                "%u.%u\r\n"
+                "END\r\n",
+                initCal.LM399_serial_number,
+                initCal.initial_cal_date,
+                initCal.initial_cal_voltage,
+                integer_part,
+                fractional_part
+            );
+        } else {
+            USB_printf("NO INIT CAL\r\n");
+        }
+
+        
+
+
+    } else if(!strcmp(usbRxBuffer, "RESET")) {
+        NVIC_SystemReset();
+    } else if(!strcmp(usbRxBuffer, "INIT_FULL")) {
+        InitCalHeader(&eeprom);
+        USB_printf("DONE\r\n");
+    } else if(!strcmp(usbRxBuffer, "CLEAR_STATS")) {
+        WriteHourStats(&eeprom, 0);
+        USB_printf("DONE\r\n");
+    } else if(!strcmp(usbRxBuffer, "GET")) {
+        USB_GET_Data_Flag = 1;
+    } else if(!strcmp(usbRxBuffer, "BEGIN INIT_CAL")) {
+        USB_CalDataPos = USB_CALDATA_POS_CAL_INIT_SERIAL;
+    }
+}
 
 
 
@@ -233,17 +478,16 @@ int main(void)
 
     HAL_TIM_Base_Start(&htim16);
     uint32_t uptime_start = HAL_GetTick();
-    uint32_t uptime_s = 0;
 
-    M24Cxx eeprom = M24Cxx_Init(
+    eeprom = M24Cxx_Init(
         &hi2c1, 
         0b1010000, 
-        8, 
+        8192, 
         32, 
         I2C_MEMADD_SIZE_16BIT
     );
 
-    uint16_t uptime_h = ReadHourStats(&eeprom);
+    uptime_h = ReadHourStats(&eeprom);
 
 
 
@@ -265,11 +509,7 @@ int main(void)
                 HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, 1);
             }
         }
-        if (__HAL_ADC_GET_FLAG(&hadc1, ADC_FLAG_OVR)) {
 
-            HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, 1);
-        }
-        
 
 
         // Get counter value
@@ -283,18 +523,23 @@ int main(void)
                 WriteHourStats(&eeprom, uptime_h);
             }
 
-            USB_printf("\r\nBEGIN\r\n");
+        }
+        if (USB_GET_Data_Flag) {
 
+            USB_GET_Data_Flag = 0;
+            
+            USB_printf("BEGIN\r\n");
             // Uptime
             USB_printf("Uptime: %uh %umin %us\r\n",uptime_h, uptime_s / 60, uptime_s % 60);
+
+
 
 
             // Temperature external
             float temp_ex = TMP102_GetReading(&hi2c1);
             uint32_t integer_part = (int)temp_ex;
             uint32_t fractional_part = (int)((temp_ex - integer_part) * 100);
-            USB_printf("Temperature External: %lu.%lu°C\r\n", integer_part, fractional_part);
-
+            USB_printf("Temperature External: %lu.%02lu°C\r\n", integer_part, fractional_part);
 
             // Reference Voltage
             HAL_ADC_Start(&hadc1);
@@ -305,8 +550,8 @@ int main(void)
             const float offset_reference_voltage = 0.0f;
             reference_voltage += offset_reference_voltage;
             integer_part = (int)reference_voltage;
-            reference_voltage = (int)((reference_voltage - integer_part) * 100);
-            USB_printf("Reference Voltage: %lu.%luV\r\n", integer_part, fractional_part);
+            fractional_part = (int)((reference_voltage - integer_part) * 100);
+            USB_printf("Reference Voltage: %lu.%02luV\r\n", integer_part, fractional_part);
             
             HAL_ADC_Start(&hadc1);
             HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
@@ -317,7 +562,7 @@ int main(void)
             heater_voltage += offset_heater_voltage;
             integer_part = (int)heater_voltage;
             fractional_part = (int)((heater_voltage - integer_part) * 100);
-            USB_printf("Heater Voltage: %lu.%luV\r\n", integer_part, fractional_part);
+            USB_printf("Heater Voltage: %lu.%02luV\r\n", integer_part, fractional_part);
 
             // Heater current
             HAL_ADC_Start(&hadc1);
@@ -330,8 +575,7 @@ int main(void)
             heater_current += offset_heater_current;
             integer_part = (int)heater_current;
             fractional_part = (int)((heater_current - integer_part) * 100);
-            USB_printf("Heater Current: %lu.%lumA\r\n", integer_part, fractional_part);
-
+            USB_printf("Heater Current: %lu.%02lumA\r\n", integer_part, fractional_part);
 
             HAL_ADC_Stop(&hadc1);
 
@@ -356,6 +600,21 @@ int main(void)
 
             
         }
+
+
+        /*
+        if (usbRxFlag && usbRxBufferLen) {
+            USB_printf(usbRxBuffer);
+
+            
+
+
+
+
+            usbRxBuffer[0] = 0;
+            usbRxFlag = 0;
+            usbRxBufferLen = 0;
+        }*/
 
 
     /* USER CODE END WHILE */

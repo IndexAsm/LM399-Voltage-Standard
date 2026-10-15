@@ -4,14 +4,14 @@
 #include "usb_device.h"
 #include <stdint.h>
 #include "usbd_cdc_if.h"
-#define BUF_LEN 256
+#define BUF_LEN 128
 #define USB_TIMEOUT 10
-
+extern USBD_HandleTypeDef hUsbDeviceFS;
+extern volatile uint8_t usb_Connected;
 
 uint8_t USB_printf(const char *fmt, ...) {
 
-    extern USBD_HandleTypeDef hUsbDeviceFS;
-    if (hUsbDeviceFS.dev_state != USBD_STATE_CONFIGURED) {
+    if (hUsbDeviceFS.dev_state != USBD_STATE_CONFIGURED || !usb_Connected) {
         return 0;
     }
 
@@ -36,7 +36,7 @@ uint8_t USB_printf(const char *fmt, ...) {
 
     uint32_t TickStart = HAL_GetTick();
 
-    while(CDC_Transmit_FS(TxBuffer, TxBufferLen) == USBD_BUSY) {
+    while(CDC_Transmit_FS((uint8_t*)TxBuffer, TxBufferLen) == USBD_BUSY) {
         if ((HAL_GetTick() - TickStart) > USB_TIMEOUT) {
             return 0;
         }

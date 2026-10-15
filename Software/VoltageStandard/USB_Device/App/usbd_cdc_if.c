@@ -112,6 +112,7 @@ USBD_CDC_LineCodingTypeDef LineCoding = {
   */
 
 extern USBD_HandleTypeDef hUsbDeviceFS;
+volatile uint8_t usb_Connected = 0;
 
 /* USER CODE BEGIN EXPORTED_VARIABLES */
 
@@ -133,7 +134,7 @@ static int8_t CDC_Receive_FS(uint8_t* pbuf, uint32_t *Len);
 static int8_t CDC_TransmitCplt_FS(uint8_t *pbuf, uint32_t *Len, uint8_t epnum);
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_DECLARATION */
-
+extern void USB_RXCallback(uint8_t* buf, uint32_t* len);
 /* USER CODE END PRIVATE_FUNCTIONS_DECLARATION */
 
 /**
@@ -245,8 +246,10 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
         uint16_t wValue = hUsbDeviceFS.request.wValue;
 
         if (wValue & 0x0001) {
+            usb_Connected = 1;
             HAL_GPIO_WritePin(((GPIO_TypeDef *) (((0x40000000UL) + 0x08000000UL) + 0x0000UL)), ((uint16_t)0x0080), 1);
         } else {
+            usb_Connected = 0;
             HAL_GPIO_WritePin(((GPIO_TypeDef *) (((0x40000000UL) + 0x08000000UL) + 0x0000UL)), ((uint16_t)0x0080), 0);
         }
         break;
@@ -281,6 +284,9 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
 static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 {
   /* USER CODE BEGIN 6 */
+
+  USB_RXCallback(Buf, Len);
+
   USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceFS);
   return (USBD_OK);
