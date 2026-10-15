@@ -463,9 +463,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
     // Debug
-    #define HEATUP_TIME 2000
+    //#define HEATUP_TIME 2000
     // Final
-    //#define HEATUP_TIME 600000
+    #define HEATUP_TIME 600000
 
 
     uint32_t time_setup_start = HAL_GetTick();
