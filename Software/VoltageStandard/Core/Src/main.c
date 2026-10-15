@@ -362,9 +362,12 @@ void USB_RXCallback(uint8_t* buf, uint32_t* len) {
         break;
     }
 
-    if(!strcmp(usbRxBuffer, "BEGIN CAL"))
-        USB_CalDataPos = USB_CALDATA_POS_CAL_MASK;
-    else if(!strcmp(usbRxBuffer, "BEGIN GET_CAL")) {
+    if(!strcmp(usbRxBuffer, "BEGIN CAL")){
+        if (!HAL_GPIO_ReadPin(CAL_EN_GPIO_Port, CAL_EN_Pin))
+            USB_CalDataPos = USB_CALDATA_POS_CAL_MASK;
+        else
+            USB_printf("ERROR: Function Disabled\r\n");
+    } else if(!strcmp(usbRxBuffer, "BEGIN GET_CAL")) {
         USB_CalDataPos = 4;
     } else if(!strcmp(usbRxBuffer, "GET_INFO")) {
     
@@ -410,15 +413,32 @@ void USB_RXCallback(uint8_t* buf, uint32_t* len) {
     } else if(!strcmp(usbRxBuffer, "RESET")) {
         NVIC_SystemReset();
     } else if(!strcmp(usbRxBuffer, "INIT_FULL")) {
-        InitCalHeader(&eeprom);
-        USB_printf("DONE\r\n");
+        if (!HAL_GPIO_ReadPin(CAL_EN_GPIO_Port, CAL_EN_Pin)) {
+            InitCalHeader(&eeprom);
+            USB_printf("DONE\r\n");
+        } else {
+            USB_printf("ERROR: Function Disabled\r\n");
+        }
     } else if(!strcmp(usbRxBuffer, "CLEAR_STATS")) {
-        WriteHourStats(&eeprom, 0);
-        USB_printf("DONE\r\n");
+        if (!HAL_GPIO_ReadPin(CAL_EN_GPIO_Port, CAL_EN_Pin)) {
+            WriteHourStats(&eeprom, 0);
+            USB_printf("DONE\r\n");
+        } else {
+            USB_printf("ERROR: Function Disabled\r\n");
+        }
+        
     } else if(!strcmp(usbRxBuffer, "GET")) {
         USB_GET_Data_Flag = 1;
     } else if(!strcmp(usbRxBuffer, "BEGIN INIT_CAL")) {
-        USB_CalDataPos = USB_CALDATA_POS_CAL_INIT_SERIAL;
+        if (!HAL_GPIO_ReadPin(CAL_EN_GPIO_Port, CAL_EN_Pin)) {
+            CalibrationHeader header = ReadCalHeader(&eeprom);
+            if (header.initial_done)
+                USB_printf("ERROR: Calibration has already been done\r\n");
+            else
+                USB_CalDataPos = USB_CALDATA_POS_CAL_INIT_SERIAL;
+        } else {
+            USB_printf("ERROR: Function Disabled\r\n");
+        }
     }
 }
 

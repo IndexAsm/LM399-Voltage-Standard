@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccFlSigC.s 			page 1
+ARM GAS  /tmp/ccY4VdjR.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccFlSigC.s 			page 1
   59              		.global	ReadCalHeader
   60              		.syntax unified
   61              		.thumb
-ARM GAS  /tmp/ccFlSigC.s 			page 2
+ARM GAS  /tmp/ccY4VdjR.s 			page 2
 
 
   62              		.thumb_func
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccFlSigC.s 			page 1
  121 001a 00BD     		pop	{pc}
  122              	.L7:
  123              		.align	2
-ARM GAS  /tmp/ccFlSigC.s 			page 3
+ARM GAS  /tmp/ccY4VdjR.s 			page 3
 
 
  124              	.L6:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccFlSigC.s 			page 1
  182 001c 3023     		movs	r3, #48
  183 001e 2A46     		mov	r2, r5
  184 0020 FFF7FEFF 		bl	M24Cxx_Read_Bytes
-ARM GAS  /tmp/ccFlSigC.s 			page 4
+ARM GAS  /tmp/ccY4VdjR.s 			page 4
 
 
  185 0024 0120     		movs	r0, #1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccFlSigC.s 			page 1
  243 000a 1646     		mov	r6, r2
  244 000c FFF7FEFF 		bl	ReadCalHeader
  245 0010 BDF80830 		ldrh	r3, [sp, #8]
-ARM GAS  /tmp/ccFlSigC.s 			page 5
+ARM GAS  /tmp/ccY4VdjR.s 			page 5
 
 
  246 0014 BDF80610 		ldrh	r1, [sp, #6]
@@ -291,1230 +291,1287 @@ ARM GAS  /tmp/ccFlSigC.s 			page 1
  275      4E204341 
  275      4C00
  276              	.LC8:
- 277 00a1 42454749 		.ascii	"BEGIN GET_CAL\000"
- 277      4E204745 
- 277      545F4341 
- 277      4C00
+ 277 00a1 4552524F 		.ascii	"ERROR: Function Disabled\015\012\000"
+ 277      523A2046 
+ 277      756E6374 
+ 277      696F6E20 
+ 277      44697361 
  278              	.LC9:
- 279 00af 4745545F 		.ascii	"GET_INFO\000"
- 279      494E464F 
-ARM GAS  /tmp/ccFlSigC.s 			page 6
+ 279 00bc 42454749 		.ascii	"BEGIN GET_CAL\000"
+ARM GAS  /tmp/ccY4VdjR.s 			page 6
 
 
- 279      00
+ 279      4E204745 
+ 279      545F4341 
+ 279      4C00
  280              	.LC10:
- 281 00b8 42454749 		.ascii	"BEGIN\015\012%u\015\012%u\015\012%u\015\012END\015\012"
- 281      4E0D0A25 
- 281      750D0A25 
- 281      750D0A25 
- 281      750D0A45 
- 282 00d0 00       		.ascii	"\000"
- 283              	.LC11:
- 284 00d1 4745545F 		.ascii	"GET_INIT_CAL\000"
- 284      494E4954 
- 284      5F43414C 
- 284      00
+ 281 00ca 4745545F 		.ascii	"GET_INFO\000"
+ 281      494E464F 
+ 281      00
+ 282              	.LC11:
+ 283 00d3 42454749 		.ascii	"BEGIN\015\012%u\015\012%u\015\012%u\015\012END\015\012"
+ 283      4E0D0A25 
+ 283      750D0A25 
+ 283      750D0A25 
+ 283      750D0A45 
+ 284 00eb 00       		.ascii	"\000"
  285              	.LC12:
- 286 00de 42454749 		.ascii	"BEGIN\015\012%s\015\012%s\015\012%s\015\012%u.%u\015"
- 286      4E0D0A25 
- 286      730D0A25 
- 286      730D0A25 
- 286      730D0A25 
- 287 00f7 0A454E44 		.ascii	"\012END\015\012\000"
- 287      0D0A00
- 288              	.LC13:
- 289 00fe 4E4F2049 		.ascii	"NO INIT CAL\015\012\000"
- 289      4E495420 
- 289      43414C0D 
- 289      0A00
+ 286 00ec 4745545F 		.ascii	"GET_INIT_CAL\000"
+ 286      494E4954 
+ 286      5F43414C 
+ 286      00
+ 287              	.LC13:
+ 288 00f9 42454749 		.ascii	"BEGIN\015\012%s\015\012%s\015\012%s\015\012%u.%u\015"
+ 288      4E0D0A25 
+ 288      730D0A25 
+ 288      730D0A25 
+ 288      730D0A25 
+ 289 0112 0A454E44 		.ascii	"\012END\015\012\000"
+ 289      0D0A00
  290              	.LC14:
- 291 010c 52455345 		.ascii	"RESET\000"
- 291      5400
+ 291 0119 4E4F2049 		.ascii	"NO INIT CAL\015\012\000"
+ 291      4E495420 
+ 291      43414C0D 
+ 291      0A00
  292              	.LC15:
- 293 0112 494E4954 		.ascii	"INIT_FULL\000"
- 293      5F46554C 
- 293      4C00
+ 293 0127 52455345 		.ascii	"RESET\000"
+ 293      5400
  294              	.LC16:
- 295 011c 434C4541 		.ascii	"CLEAR_STATS\000"
- 295      525F5354 
- 295      41545300 
+ 295 012d 494E4954 		.ascii	"INIT_FULL\000"
+ 295      5F46554C 
+ 295      4C00
  296              	.LC17:
- 297 0128 47455400 		.ascii	"GET\000"
+ 297 0137 434C4541 		.ascii	"CLEAR_STATS\000"
+ 297      525F5354 
+ 297      41545300 
  298              	.LC18:
- 299 012c 42454749 		.ascii	"BEGIN INIT_CAL\000"
- 299      4E20494E 
- 299      49545F43 
- 299      414C00
- 300              		.section	.text.USB_RXCallback,"ax",%progbits
- 301              		.align	1
- 302              		.global	USB_RXCallback
- 303              		.syntax unified
- 304              		.thumb
- 305              		.thumb_func
- 307              	USB_RXCallback:
- 308              		@ args = 0, pretend = 0, frame = 48
- 309              		@ frame_needed = 0, uses_anonymous_args = 0
- 310 0000 70B5     		push	{r4, r5, r6, lr}
- 311 0002 0C46     		mov	r4, r1
- 312 0004 0A68     		ldr	r2, [r1]
- 313 0006 90B0     		sub	sp, sp, #64
-ARM GAS  /tmp/ccFlSigC.s 			page 7
+ 299 0143 47455400 		.ascii	"GET\000"
+ 300              	.LC19:
+ 301 0147 42454749 		.ascii	"BEGIN INIT_CAL\000"
+ 301      4E20494E 
+ 301      49545F43 
+ 301      414C00
+ 302              	.LC20:
+ 303 0156 4552524F 		.ascii	"ERROR: Calibration has already been done\015\012\000"
+ 303      523A2043 
+ 303      616C6962 
+ 303      72617469 
+ 303      6F6E2068 
+ 304              		.section	.text.USB_RXCallback,"ax",%progbits
+ARM GAS  /tmp/ccY4VdjR.s 			page 7
 
 
- 314 0008 0146     		mov	r1, r0
- 315 000a A048     		ldr	r0, .L48
- 316 000c FFF7FEFF 		bl	memcpy
- 317 0010 2368     		ldr	r3, [r4]
- 318 0012 9F4A     		ldr	r2, .L48+4
- 319 0014 9D49     		ldr	r1, .L48
- 320 0016 1380     		strh	r3, [r2]	@ movhi
- 321 0018 9BB2     		uxth	r3, r3
- 322 001a 0022     		movs	r2, #0
- 323 001c CA54     		strb	r2, [r1, r3]
- 324 001e 9D4C     		ldr	r4, .L48+8
- 325 0020 9D4B     		ldr	r3, .L48+12
- 326 0022 0122     		movs	r2, #1
- 327 0024 1A70     		strb	r2, [r3]
- 328 0026 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
- 329 0028 013B     		subs	r3, r3, #1
- 330 002a 0B2B     		cmp	r3, #11
- 331 002c 10D8     		bhi	.L16
- 332 002e DFE803F0 		tbb	[pc, r3]
- 333              	.L18:
- 334 0032 06       		.byte	(.L27-.L18)/2
- 335 0033 29       		.byte	(.L26-.L18)/2
- 336 0034 38       		.byte	(.L25-.L18)/2
- 337 0035 52       		.byte	(.L24-.L18)/2
- 338 0036 5D       		.byte	(.L23-.L18)/2
- 339 0037 0F       		.byte	(.L16-.L18)/2
- 340 0038 0F       		.byte	(.L16-.L18)/2
- 341 0039 89       		.byte	(.L22-.L18)/2
- 342 003a 8F       		.byte	(.L21-.L18)/2
- 343 003b 95       		.byte	(.L20-.L18)/2
- 344 003c 9B       		.byte	(.L19-.L18)/2
- 345 003d 19       		.byte	(.L17-.L18)/2
- 346              		.p2align 1
- 347              	.L27:
- 348 003e 0C23     		movs	r3, #12
- 349 0040 9248     		ldr	r0, .L48
- 350 0042 2370     		strb	r3, [r4]
- 351 0044 1022     		movs	r2, #16
- 352 0046 0021     		movs	r1, #0
- 353 0048 FFF7FEFF 		bl	strtoul
- 354 004c 934B     		ldr	r3, .L48+16
- 355 004e 1870     		strb	r0, [r3]
- 356              	.L16:
- 357 0050 9349     		ldr	r1, .L48+20
- 358 0052 8E48     		ldr	r0, .L48
- 359 0054 FFF7FEFF 		bl	strcmp
- 360 0058 0028     		cmp	r0, #0
- 361 005a 40F09280 		bne	.L31
- 362 005e 0123     		movs	r3, #1
- 363              	.L46:
- 364 0060 2370     		strb	r3, [r4]
- 365 0062 D2E0     		b	.L15
- 366              	.L17:
- 367 0064 8948     		ldr	r0, .L48
- 368 0066 FFF7FEFF 		bl	strlen
- 369 006a 0B28     		cmp	r0, #11
- 370 006c 0146     		mov	r1, r0
-ARM GAS  /tmp/ccFlSigC.s 			page 8
+ 305              		.align	1
+ 306              		.global	USB_RXCallback
+ 307              		.syntax unified
+ 308              		.thumb
+ 309              		.thumb_func
+ 311              	USB_RXCallback:
+ 312              		@ args = 0, pretend = 0, frame = 48
+ 313              		@ frame_needed = 0, uses_anonymous_args = 0
+ 314 0000 70B5     		push	{r4, r5, r6, lr}
+ 315 0002 0C46     		mov	r4, r1
+ 316 0004 0A68     		ldr	r2, [r1]
+ 317 0006 90B0     		sub	sp, sp, #64
+ 318 0008 0146     		mov	r1, r0
+ 319 000a A548     		ldr	r0, .L51
+ 320 000c FFF7FEFF 		bl	memcpy
+ 321 0010 2368     		ldr	r3, [r4]
+ 322 0012 A44A     		ldr	r2, .L51+4
+ 323 0014 A249     		ldr	r1, .L51
+ 324 0016 1380     		strh	r3, [r2]	@ movhi
+ 325 0018 9BB2     		uxth	r3, r3
+ 326 001a 0022     		movs	r2, #0
+ 327 001c CA54     		strb	r2, [r1, r3]
+ 328 001e A24C     		ldr	r4, .L51+8
+ 329 0020 A24B     		ldr	r3, .L51+12
+ 330 0022 0122     		movs	r2, #1
+ 331 0024 1A70     		strb	r2, [r3]
+ 332 0026 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 333 0028 013B     		subs	r3, r3, #1
+ 334 002a 0B2B     		cmp	r3, #11
+ 335 002c 10D8     		bhi	.L16
+ 336 002e DFE803F0 		tbb	[pc, r3]
+ 337              	.L18:
+ 338 0032 06       		.byte	(.L27-.L18)/2
+ 339 0033 31       		.byte	(.L26-.L18)/2
+ 340 0034 40       		.byte	(.L25-.L18)/2
+ 341 0035 5A       		.byte	(.L24-.L18)/2
+ 342 0036 65       		.byte	(.L23-.L18)/2
+ 343 0037 0F       		.byte	(.L16-.L18)/2
+ 344 0038 0F       		.byte	(.L16-.L18)/2
+ 345 0039 91       		.byte	(.L22-.L18)/2
+ 346 003a 97       		.byte	(.L21-.L18)/2
+ 347 003b 9D       		.byte	(.L20-.L18)/2
+ 348 003c A3       		.byte	(.L19-.L18)/2
+ 349 003d 21       		.byte	(.L17-.L18)/2
+ 350              		.p2align 1
+ 351              	.L27:
+ 352 003e 0C23     		movs	r3, #12
+ 353 0040 9748     		ldr	r0, .L51
+ 354 0042 2370     		strb	r3, [r4]
+ 355 0044 1022     		movs	r2, #16
+ 356 0046 0021     		movs	r1, #0
+ 357 0048 FFF7FEFF 		bl	strtoul
+ 358 004c 984B     		ldr	r3, .L51+16
+ 359 004e 1870     		strb	r0, [r3]
+ 360              	.L16:
+ 361 0050 9849     		ldr	r1, .L51+20
+ 362 0052 9348     		ldr	r0, .L51
+ARM GAS  /tmp/ccY4VdjR.s 			page 8
 
 
- 371 006e 02D9     		bls	.L28
- 372 0070 8C48     		ldr	r0, .L48+24
- 373 0072 FFF7FEFF 		bl	USB_printf
- 374              	.L28:
- 375 0076 8549     		ldr	r1, .L48
- 376 0078 8B48     		ldr	r0, .L48+28
- 377 007a FFF7FEFF 		bl	strcpy
- 378 007e 0223     		movs	r3, #2
- 379              	.L44:
- 380 0080 2370     		strb	r3, [r4]
- 381 0082 E5E7     		b	.L16
- 382              	.L26:
- 383 0084 8148     		ldr	r0, .L48
- 384 0086 FFF7FEFF 		bl	strlen
- 385 008a 0B28     		cmp	r0, #11
- 386 008c 0146     		mov	r1, r0
- 387 008e 02D9     		bls	.L29
- 388 0090 8648     		ldr	r0, .L48+32
- 389 0092 FFF7FEFF 		bl	USB_printf
- 390              	.L29:
- 391 0096 7D49     		ldr	r1, .L48
- 392 0098 8548     		ldr	r0, .L48+36
- 393 009a FFF7FEFF 		bl	strcpy
- 394 009e 0323     		movs	r3, #3
- 395 00a0 EEE7     		b	.L44
- 396              	.L25:
- 397 00a2 8449     		ldr	r1, .L48+40
- 398 00a4 7948     		ldr	r0, .L48
- 399 00a6 FFF7FEFF 		bl	strcmp
- 400 00aa 0546     		mov	r5, r0
- 401 00ac 88B9     		cbnz	r0, .L30
- 402 00ae 824B     		ldr	r3, .L48+44
- 403 00b0 7A4E     		ldr	r6, .L48+16
- 404 00b2 1B88     		ldrh	r3, [r3]
- 405 00b4 8148     		ldr	r0, .L48+48
- 406 00b6 3384     		strh	r3, [r6, #32]	@ movhi
- 407 00b8 FFF7FEFF 		bl	TMP102_GetReading
- 408 00bc 8048     		ldr	r0, .L48+52
- 409 00be 86ED070A 		vstr.32	s0, [r6, #28]
- 410 00c2 3146     		mov	r1, r6
- 411 00c4 FFF7FEFF 		bl	WriteCalibrationData
- 412 00c8 7E48     		ldr	r0, .L48+56
- 413 00ca 2570     		strb	r5, [r4]
- 414              	.L45:
- 415 00cc FFF7FEFF 		bl	USB_printf
- 416 00d0 BEE7     		b	.L16
- 417              	.L30:
- 418 00d2 7D48     		ldr	r0, .L48+60
- 419 00d4 FAE7     		b	.L45
- 420              	.L24:
- 421 00d6 0523     		movs	r3, #5
- 422 00d8 6C48     		ldr	r0, .L48
- 423 00da 2370     		strb	r3, [r4]
- 424 00dc 1022     		movs	r2, #16
- 425 00de 0021     		movs	r1, #0
- 426 00e0 FFF7FEFF 		bl	strtoul
- 427 00e4 794B     		ldr	r3, .L48+64
-ARM GAS  /tmp/ccFlSigC.s 			page 9
+ 363 0054 FFF7FEFF 		bl	strcmp
+ 364 0058 0028     		cmp	r0, #0
+ 365 005a 40F0A080 		bne	.L31
+ 366 005e 1021     		movs	r1, #16
+ 367 0060 4FF09040 		mov	r0, #1207959552
+ 368 0064 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 369 0068 0028     		cmp	r0, #0
+ 370 006a 40F09280 		bne	.L32
+ 371 006e 0123     		movs	r3, #1
+ 372              	.L48:
+ 373 0070 2370     		strb	r3, [r4]
+ 374 0072 D8E0     		b	.L15
+ 375              	.L17:
+ 376 0074 8A48     		ldr	r0, .L51
+ 377 0076 FFF7FEFF 		bl	strlen
+ 378 007a 0B28     		cmp	r0, #11
+ 379 007c 0146     		mov	r1, r0
+ 380 007e 02D9     		bls	.L28
+ 381 0080 8D48     		ldr	r0, .L51+24
+ 382 0082 FFF7FEFF 		bl	USB_printf
+ 383              	.L28:
+ 384 0086 8649     		ldr	r1, .L51
+ 385 0088 8C48     		ldr	r0, .L51+28
+ 386 008a FFF7FEFF 		bl	strcpy
+ 387 008e 0223     		movs	r3, #2
+ 388              	.L46:
+ 389 0090 2370     		strb	r3, [r4]
+ 390 0092 DDE7     		b	.L16
+ 391              	.L26:
+ 392 0094 8248     		ldr	r0, .L51
+ 393 0096 FFF7FEFF 		bl	strlen
+ 394 009a 0B28     		cmp	r0, #11
+ 395 009c 0146     		mov	r1, r0
+ 396 009e 02D9     		bls	.L29
+ 397 00a0 8748     		ldr	r0, .L51+32
+ 398 00a2 FFF7FEFF 		bl	USB_printf
+ 399              	.L29:
+ 400 00a6 7E49     		ldr	r1, .L51
+ 401 00a8 8648     		ldr	r0, .L51+36
+ 402 00aa FFF7FEFF 		bl	strcpy
+ 403 00ae 0323     		movs	r3, #3
+ 404 00b0 EEE7     		b	.L46
+ 405              	.L25:
+ 406 00b2 8549     		ldr	r1, .L51+40
+ 407 00b4 7A48     		ldr	r0, .L51
+ 408 00b6 FFF7FEFF 		bl	strcmp
+ 409 00ba 0546     		mov	r5, r0
+ 410 00bc 88B9     		cbnz	r0, .L30
+ 411 00be 834B     		ldr	r3, .L51+44
+ 412 00c0 7B4E     		ldr	r6, .L51+16
+ 413 00c2 1B88     		ldrh	r3, [r3]
+ 414 00c4 8248     		ldr	r0, .L51+48
+ 415 00c6 3384     		strh	r3, [r6, #32]	@ movhi
+ 416 00c8 FFF7FEFF 		bl	TMP102_GetReading
+ 417 00cc 8148     		ldr	r0, .L51+52
+ 418 00ce 86ED070A 		vstr.32	s0, [r6, #28]
+ 419 00d2 3146     		mov	r1, r6
+ARM GAS  /tmp/ccY4VdjR.s 			page 9
 
 
- 428 00e6 C0B2     		uxtb	r0, r0
- 429 00e8 1880     		strh	r0, [r3]	@ movhi
- 430 00ea B1E7     		b	.L16
- 431              	.L23:
- 432 00ec 774B     		ldr	r3, .L48+64
- 433 00ee 7448     		ldr	r0, .L48+52
- 434 00f0 1A88     		ldrh	r2, [r3]
- 435 00f2 04A9     		add	r1, sp, #16
- 436 00f4 FFF7FEFF 		bl	ReadCalibrationData
- 437 00f8 DDED0B7A 		vldr.32	s15, [sp, #44]
- 438 00fc 9DF81010 		ldrb	r1, [sp, #16]	@ zero_extendqisi2
- 439 0100 7348     		ldr	r0, .L48+68
- 440 0102 BDEEE77A 		vcvt.s32.f32	s14, s15
- 441 0106 17EE103A 		vmov	r3, s14	@ int
- 442 010a 9AB2     		uxth	r2, r3
- 443 010c 07EE102A 		vmov	s14, r2	@ int
- 444 0110 B8EEC77A 		vcvt.f32.s32	s14, s14
- 445 0114 BDF83030 		ldrh	r3, [sp, #48]
- 446 0118 0293     		str	r3, [sp, #8]
- 447 011a 77EEC77A 		vsub.f32	s15, s15, s14
- 448 011e 9FED6D7A 		vldr.32	s14, .L48+72
- 449 0122 67EE877A 		vmul.f32	s15, s15, s14
- 450 0126 FDEEE77A 		vcvt.s32.f32	s15, s15
- 451 012a 17EE903A 		vmov	r3, s15	@ int
- 452 012e 9BB2     		uxth	r3, r3
- 453 0130 CDE90023 		strd	r2, r3, [sp]
- 454 0134 0DF11D03 		add	r3, sp, #29
- 455 0138 0DF11102 		add	r2, sp, #17
- 456 013c FFF7FEFF 		bl	USB_printf
- 457 0140 0023     		movs	r3, #0
- 458 0142 9DE7     		b	.L44
- 459              	.L22:
- 460 0144 5149     		ldr	r1, .L48
- 461 0146 6448     		ldr	r0, .L48+76
- 462 0148 FFF7FEFF 		bl	strcpy
- 463 014c 0923     		movs	r3, #9
- 464 014e 97E7     		b	.L44
- 465              	.L21:
- 466 0150 4E49     		ldr	r1, .L48
- 467 0152 6248     		ldr	r0, .L48+80
- 468 0154 FFF7FEFF 		bl	strcpy
- 469 0158 0A23     		movs	r3, #10
- 470 015a 91E7     		b	.L44
- 471              	.L20:
- 472 015c 4B49     		ldr	r1, .L48
- 473 015e 6048     		ldr	r0, .L48+84
- 474 0160 FFF7FEFF 		bl	strcpy
- 475 0164 0B23     		movs	r3, #11
- 476 0166 8BE7     		b	.L44
- 477              	.L19:
- 478 0168 5448     		ldr	r0, .L48+48
- 479 016a FFF7FEFF 		bl	TMP102_GetReading
- 480 016e 5A49     		ldr	r1, .L48+76
- 481 0170 5348     		ldr	r0, .L48+52
- 482 0172 81ED0B0A 		vstr.32	s0, [r1, #44]
- 483 0176 FFF7FEFF 		bl	WriteInitialCalibration
- 484 017a 0023     		movs	r3, #0
-ARM GAS  /tmp/ccFlSigC.s 			page 10
+ 420 00d4 FFF7FEFF 		bl	WriteCalibrationData
+ 421 00d8 7F48     		ldr	r0, .L51+56
+ 422 00da 2570     		strb	r5, [r4]
+ 423              	.L47:
+ 424 00dc FFF7FEFF 		bl	USB_printf
+ 425 00e0 B6E7     		b	.L16
+ 426              	.L30:
+ 427 00e2 7E48     		ldr	r0, .L51+60
+ 428 00e4 FAE7     		b	.L47
+ 429              	.L24:
+ 430 00e6 0523     		movs	r3, #5
+ 431 00e8 6D48     		ldr	r0, .L51
+ 432 00ea 2370     		strb	r3, [r4]
+ 433 00ec 1022     		movs	r2, #16
+ 434 00ee 0021     		movs	r1, #0
+ 435 00f0 FFF7FEFF 		bl	strtoul
+ 436 00f4 7A4B     		ldr	r3, .L51+64
+ 437 00f6 C0B2     		uxtb	r0, r0
+ 438 00f8 1880     		strh	r0, [r3]	@ movhi
+ 439 00fa A9E7     		b	.L16
+ 440              	.L23:
+ 441 00fc 784B     		ldr	r3, .L51+64
+ 442 00fe 7548     		ldr	r0, .L51+52
+ 443 0100 1A88     		ldrh	r2, [r3]
+ 444 0102 04A9     		add	r1, sp, #16
+ 445 0104 FFF7FEFF 		bl	ReadCalibrationData
+ 446 0108 DDED0B7A 		vldr.32	s15, [sp, #44]
+ 447 010c 9DF81010 		ldrb	r1, [sp, #16]	@ zero_extendqisi2
+ 448 0110 7448     		ldr	r0, .L51+68
+ 449 0112 BDEEE77A 		vcvt.s32.f32	s14, s15
+ 450 0116 17EE103A 		vmov	r3, s14	@ int
+ 451 011a 9AB2     		uxth	r2, r3
+ 452 011c 07EE102A 		vmov	s14, r2	@ int
+ 453 0120 B8EEC77A 		vcvt.f32.s32	s14, s14
+ 454 0124 BDF83030 		ldrh	r3, [sp, #48]
+ 455 0128 0293     		str	r3, [sp, #8]
+ 456 012a 77EEC77A 		vsub.f32	s15, s15, s14
+ 457 012e 9FED6E7A 		vldr.32	s14, .L51+72
+ 458 0132 67EE877A 		vmul.f32	s15, s15, s14
+ 459 0136 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 460 013a 17EE903A 		vmov	r3, s15	@ int
+ 461 013e 9BB2     		uxth	r3, r3
+ 462 0140 CDE90023 		strd	r2, r3, [sp]
+ 463 0144 0DF11D03 		add	r3, sp, #29
+ 464 0148 0DF11102 		add	r2, sp, #17
+ 465 014c FFF7FEFF 		bl	USB_printf
+ 466 0150 0023     		movs	r3, #0
+ 467 0152 9DE7     		b	.L46
+ 468              	.L22:
+ 469 0154 5249     		ldr	r1, .L51
+ 470 0156 6548     		ldr	r0, .L51+76
+ 471 0158 FFF7FEFF 		bl	strcpy
+ 472 015c 0923     		movs	r3, #9
+ 473 015e 97E7     		b	.L46
+ 474              	.L21:
+ 475 0160 4F49     		ldr	r1, .L51
+ 476 0162 6348     		ldr	r0, .L51+80
+ARM GAS  /tmp/ccY4VdjR.s 			page 10
 
 
- 485 017c 5948     		ldr	r0, .L48+88
- 486 017e 2370     		strb	r3, [r4]
- 487 0180 A4E7     		b	.L45
- 488              	.L31:
- 489 0182 5949     		ldr	r1, .L48+92
- 490 0184 4148     		ldr	r0, .L48
- 491 0186 FFF7FEFF 		bl	strcmp
- 492 018a 08B9     		cbnz	r0, .L33
- 493 018c 0423     		movs	r3, #4
- 494 018e 67E7     		b	.L46
- 495              	.L33:
- 496 0190 5649     		ldr	r1, .L48+96
- 497 0192 3E48     		ldr	r0, .L48
- 498 0194 FFF7FEFF 		bl	strcmp
- 499 0198 78B9     		cbnz	r0, .L34
- 500 019a 04A8     		add	r0, sp, #16
- 501 019c 4849     		ldr	r1, .L48+52
- 502 019e FFF7FEFF 		bl	ReadCalHeader
- 503 01a2 BDF81030 		ldrh	r3, [sp, #16]
- 504 01a6 BDF81220 		ldrh	r2, [sp, #18]
- 505 01aa BDF81410 		ldrh	r1, [sp, #20]
- 506 01ae 5048     		ldr	r0, .L48+100
- 507 01b0 10B0     		add	sp, sp, #64
- 508              		@ sp needed
- 509 01b2 BDE87040 		pop	{r4, r5, r6, lr}
- 510 01b6 FFF7FEBF 		b	USB_printf
+ 477 0164 FFF7FEFF 		bl	strcpy
+ 478 0168 0A23     		movs	r3, #10
+ 479 016a 91E7     		b	.L46
+ 480              	.L20:
+ 481 016c 4C49     		ldr	r1, .L51
+ 482 016e 6148     		ldr	r0, .L51+84
+ 483 0170 FFF7FEFF 		bl	strcpy
+ 484 0174 0B23     		movs	r3, #11
+ 485 0176 8BE7     		b	.L46
+ 486              	.L19:
+ 487 0178 5548     		ldr	r0, .L51+48
+ 488 017a FFF7FEFF 		bl	TMP102_GetReading
+ 489 017e 5B49     		ldr	r1, .L51+76
+ 490 0180 5448     		ldr	r0, .L51+52
+ 491 0182 81ED0B0A 		vstr.32	s0, [r1, #44]
+ 492 0186 FFF7FEFF 		bl	WriteInitialCalibration
+ 493 018a 0023     		movs	r3, #0
+ 494 018c 5A48     		ldr	r0, .L51+88
+ 495 018e 2370     		strb	r3, [r4]
+ 496 0190 A4E7     		b	.L47
+ 497              	.L32:
+ 498 0192 5A48     		ldr	r0, .L51+92
+ 499              	.L49:
+ 500 0194 10B0     		add	sp, sp, #64
+ 501              		@ sp needed
+ 502 0196 BDE87040 		pop	{r4, r5, r6, lr}
+ 503 019a FFF7FEBF 		b	USB_printf
+ 504              	.L31:
+ 505 019e 5849     		ldr	r1, .L51+96
+ 506 01a0 3F48     		ldr	r0, .L51
+ 507 01a2 FFF7FEFF 		bl	strcmp
+ 508 01a6 08B9     		cbnz	r0, .L34
+ 509 01a8 0423     		movs	r3, #4
+ 510 01aa 61E7     		b	.L48
  511              	.L34:
- 512 01ba 4E49     		ldr	r1, .L48+104
- 513 01bc 3348     		ldr	r0, .L48
- 514 01be FFF7FEFF 		bl	strcmp
- 515 01c2 40BB     		cbnz	r0, .L35
- 516 01c4 3E48     		ldr	r0, .L48+52
- 517 01c6 04A9     		add	r1, sp, #16
- 518 01c8 FFF7FEFF 		bl	ReadInitialCalibration
- 519 01cc F8B1     		cbz	r0, .L36
- 520 01ce DDED0F7A 		vldr.32	s15, [sp, #60]
- 521 01d2 4948     		ldr	r0, .L48+108
- 522 01d4 BDEEE77A 		vcvt.s32.f32	s14, s15
- 523 01d8 04A9     		add	r1, sp, #16
- 524 01da 17EE103A 		vmov	r3, s14	@ int
- 525 01de 9AB2     		uxth	r2, r3
- 526 01e0 07EE102A 		vmov	s14, r2	@ int
- 527 01e4 B8EEC77A 		vcvt.f32.s32	s14, s14
- 528 01e8 77EEC77A 		vsub.f32	s15, s15, s14
- 529 01ec 9FED397A 		vldr.32	s14, .L48+72
- 530 01f0 67EE877A 		vmul.f32	s15, s15, s14
- 531 01f4 FDEEE77A 		vcvt.s32.f32	s15, s15
- 532 01f8 17EE903A 		vmov	r3, s15	@ int
- 533 01fc 9BB2     		uxth	r3, r3
- 534 01fe CDE90023 		strd	r2, r3, [sp]
- 535 0202 0CAB     		add	r3, sp, #48
- 536 0204 09AA     		add	r2, sp, #36
- 537 0206 FFF7FEFF 		bl	USB_printf
- 538              	.L15:
- 539 020a 10B0     		add	sp, sp, #64
- 540              		@ sp needed
- 541 020c 70BD     		pop	{r4, r5, r6, pc}
-ARM GAS  /tmp/ccFlSigC.s 			page 11
+ 512 01ac 5549     		ldr	r1, .L51+100
+ 513 01ae 3C48     		ldr	r0, .L51
+ 514 01b0 FFF7FEFF 		bl	strcmp
+ 515 01b4 78B9     		cbnz	r0, .L35
+ 516 01b6 04A8     		add	r0, sp, #16
+ 517 01b8 4649     		ldr	r1, .L51+52
+ 518 01ba FFF7FEFF 		bl	ReadCalHeader
+ 519 01be BDF81030 		ldrh	r3, [sp, #16]
+ 520 01c2 BDF81220 		ldrh	r2, [sp, #18]
+ 521 01c6 BDF81410 		ldrh	r1, [sp, #20]
+ 522 01ca 4F48     		ldr	r0, .L51+104
+ 523 01cc 10B0     		add	sp, sp, #64
+ 524              		@ sp needed
+ 525 01ce BDE87040 		pop	{r4, r5, r6, lr}
+ 526 01d2 FFF7FEBF 		b	USB_printf
+ 527              	.L35:
+ 528 01d6 4D49     		ldr	r1, .L51+108
+ 529 01d8 3148     		ldr	r0, .L51
+ 530 01da FFF7FEFF 		bl	strcmp
+ 531 01de 40BB     		cbnz	r0, .L36
+ 532 01e0 3C48     		ldr	r0, .L51+52
+ 533 01e2 04A9     		add	r1, sp, #16
+ARM GAS  /tmp/ccY4VdjR.s 			page 11
 
 
- 542              	.L36:
- 543 020e 3B48     		ldr	r0, .L48+112
- 544 0210 FFF7FEFF 		bl	USB_printf
- 545 0214 F9E7     		b	.L15
- 546              	.L35:
- 547 0216 3A49     		ldr	r1, .L48+116
- 548 0218 1C48     		ldr	r0, .L48
- 549 021a FFF7FEFF 		bl	strcmp
- 550 021e 60B9     		cbnz	r0, .L38
- 551              		.syntax unified
- 552              	@ 946 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 553 0220 BFF34F8F 		dsb 0xF
- 554              	@ 0 "" 2
- 555              		.thumb
- 556              		.syntax unified
- 557 0224 3749     		ldr	r1, .L48+120
- 558 0226 384B     		ldr	r3, .L48+124
- 559 0228 CA68     		ldr	r2, [r1, #12]
- 560 022a 02F4E062 		and	r2, r2, #1792
- 561 022e 1343     		orrs	r3, r3, r2
- 562 0230 CB60     		str	r3, [r1, #12]
- 563              		.syntax unified
- 564              	@ 946 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 565 0232 BFF34F8F 		dsb 0xF
- 566              	@ 0 "" 2
- 567              		.thumb
- 568              		.syntax unified
- 569              	.L39:
- 570              		.syntax unified
- 571              	@ 1944 "Drivers/CMSIS/Include/core_cm4.h" 1
- 572 0236 00BF     		nop
- 573              	@ 0 "" 2
- 574              		.thumb
- 575              		.syntax unified
- 576 0238 FDE7     		b	.L39
- 577              	.L38:
- 578 023a 3449     		ldr	r1, .L48+128
- 579 023c 1348     		ldr	r0, .L48
- 580 023e FFF7FEFF 		bl	strcmp
- 581 0242 40B9     		cbnz	r0, .L40
- 582 0244 1E48     		ldr	r0, .L48+52
- 583 0246 FFF7FEFF 		bl	InitCalHeader
- 584              	.L47:
- 585 024a 2648     		ldr	r0, .L48+88
- 586 024c 10B0     		add	sp, sp, #64
- 587              		@ sp needed
- 588 024e BDE87040 		pop	{r4, r5, r6, lr}
- 589 0252 FFF7FEBF 		b	USB_printf
- 590              	.L40:
- 591 0256 2E49     		ldr	r1, .L48+132
- 592 0258 0C48     		ldr	r0, .L48
- 593 025a FFF7FEFF 		bl	strcmp
- 594 025e 0146     		mov	r1, r0
- 595 0260 18B9     		cbnz	r0, .L41
- 596 0262 1748     		ldr	r0, .L48+52
- 597 0264 FFF7FEFF 		bl	WriteHourStats
- 598 0268 EFE7     		b	.L47
-ARM GAS  /tmp/ccFlSigC.s 			page 12
+ 534 01e4 FFF7FEFF 		bl	ReadInitialCalibration
+ 535 01e8 F8B1     		cbz	r0, .L37
+ 536 01ea DDED0F7A 		vldr.32	s15, [sp, #60]
+ 537 01ee 4848     		ldr	r0, .L51+112
+ 538 01f0 BDEEE77A 		vcvt.s32.f32	s14, s15
+ 539 01f4 04A9     		add	r1, sp, #16
+ 540 01f6 17EE103A 		vmov	r3, s14	@ int
+ 541 01fa 9AB2     		uxth	r2, r3
+ 542 01fc 07EE102A 		vmov	s14, r2	@ int
+ 543 0200 B8EEC77A 		vcvt.f32.s32	s14, s14
+ 544 0204 77EEC77A 		vsub.f32	s15, s15, s14
+ 545 0208 9FED377A 		vldr.32	s14, .L51+72
+ 546 020c 67EE877A 		vmul.f32	s15, s15, s14
+ 547 0210 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 548 0214 17EE903A 		vmov	r3, s15	@ int
+ 549 0218 9BB2     		uxth	r3, r3
+ 550 021a CDE90023 		strd	r2, r3, [sp]
+ 551 021e 0CAB     		add	r3, sp, #48
+ 552 0220 09AA     		add	r2, sp, #36
+ 553 0222 FFF7FEFF 		bl	USB_printf
+ 554              	.L15:
+ 555 0226 10B0     		add	sp, sp, #64
+ 556              		@ sp needed
+ 557 0228 70BD     		pop	{r4, r5, r6, pc}
+ 558              	.L37:
+ 559 022a 3A48     		ldr	r0, .L51+116
+ 560 022c FFF7FEFF 		bl	USB_printf
+ 561 0230 F9E7     		b	.L15
+ 562              	.L36:
+ 563 0232 3949     		ldr	r1, .L51+120
+ 564 0234 1A48     		ldr	r0, .L51
+ 565 0236 FFF7FEFF 		bl	strcmp
+ 566 023a 60B9     		cbnz	r0, .L39
+ 567              		.syntax unified
+ 568              	@ 946 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 569 023c BFF34F8F 		dsb 0xF
+ 570              	@ 0 "" 2
+ 571              		.thumb
+ 572              		.syntax unified
+ 573 0240 3649     		ldr	r1, .L51+124
+ 574 0242 374B     		ldr	r3, .L51+128
+ 575 0244 CA68     		ldr	r2, [r1, #12]
+ 576 0246 02F4E062 		and	r2, r2, #1792
+ 577 024a 1343     		orrs	r3, r3, r2
+ 578 024c CB60     		str	r3, [r1, #12]
+ 579              		.syntax unified
+ 580              	@ 946 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 581 024e BFF34F8F 		dsb 0xF
+ 582              	@ 0 "" 2
+ 583              		.thumb
+ 584              		.syntax unified
+ 585              	.L40:
+ 586              		.syntax unified
+ 587              	@ 1944 "Drivers/CMSIS/Include/core_cm4.h" 1
+ 588 0252 00BF     		nop
+ 589              	@ 0 "" 2
+ 590              		.thumb
+ARM GAS  /tmp/ccY4VdjR.s 			page 12
 
 
- 599              	.L41:
- 600 026a 2A49     		ldr	r1, .L48+136
- 601 026c 0748     		ldr	r0, .L48
- 602 026e FFF7FEFF 		bl	strcmp
- 603 0272 18B9     		cbnz	r0, .L42
- 604 0274 284B     		ldr	r3, .L48+140
- 605 0276 0122     		movs	r2, #1
- 606 0278 1A70     		strb	r2, [r3]
- 607 027a C6E7     		b	.L15
- 608              	.L42:
- 609 027c 2749     		ldr	r1, .L48+144
- 610 027e 0348     		ldr	r0, .L48
- 611 0280 FFF7FEFF 		bl	strcmp
- 612 0284 0028     		cmp	r0, #0
- 613 0286 C0D1     		bne	.L15
- 614 0288 0823     		movs	r3, #8
- 615 028a E9E6     		b	.L46
- 616              	.L49:
- 617              		.align	2
- 618              	.L48:
- 619 028c 00000000 		.word	usbRxBuffer
- 620 0290 00000000 		.word	usbRxBufferLen
- 621 0294 00000000 		.word	USB_CalDataPos
- 622 0298 00000000 		.word	usbRxFlag
- 623 029c 00000000 		.word	USB_CalData
- 624 02a0 97000000 		.word	.LC7
- 625 02a4 00000000 		.word	.LC0
- 626 02a8 01000000 		.word	USB_CalData+1
- 627 02ac 2B000000 		.word	.LC1
- 628 02b0 0D000000 		.word	USB_CalData+13
- 629 02b4 53000000 		.word	.LC2
- 630 02b8 00000000 		.word	uptime_h
- 631 02bc 00000000 		.word	hi2c1
- 632 02c0 00000000 		.word	eeprom
- 633 02c4 57000000 		.word	.LC3
- 634 02c8 62000000 		.word	.LC4
- 635 02cc 00000000 		.word	USB_Cal_Index
- 636 02d0 6A000000 		.word	.LC5
- 637 02d4 0000C842 		.word	1120403456
- 638 02d8 00000000 		.word	USB_InitialCal
- 639 02dc 14000000 		.word	USB_InitialCal+20
- 640 02e0 20000000 		.word	USB_InitialCal+32
- 641 02e4 90000000 		.word	.LC6
- 642 02e8 A1000000 		.word	.LC8
- 643 02ec AF000000 		.word	.LC9
- 644 02f0 B8000000 		.word	.LC10
- 645 02f4 D1000000 		.word	.LC11
- 646 02f8 DE000000 		.word	.LC12
- 647 02fc FE000000 		.word	.LC13
- 648 0300 0C010000 		.word	.LC14
- 649 0304 00ED00E0 		.word	-536810240
- 650 0308 0400FA05 		.word	100270084
- 651 030c 12010000 		.word	.LC15
- 652 0310 1C010000 		.word	.LC16
- 653 0314 28010000 		.word	.LC17
- 654 0318 00000000 		.word	USB_GET_Data_Flag
- 655 031c 2C010000 		.word	.LC18
-ARM GAS  /tmp/ccFlSigC.s 			page 13
+ 591              		.syntax unified
+ 592 0254 FDE7     		b	.L40
+ 593              	.L39:
+ 594 0256 3349     		ldr	r1, .L51+132
+ 595 0258 1148     		ldr	r0, .L51
+ 596 025a FFF7FEFF 		bl	strcmp
+ 597 025e 58B9     		cbnz	r0, .L41
+ 598 0260 1021     		movs	r1, #16
+ 599 0262 4FF09040 		mov	r0, #1207959552
+ 600 0266 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 601 026a 0028     		cmp	r0, #0
+ 602 026c 91D1     		bne	.L32
+ 603 026e 1948     		ldr	r0, .L51+52
+ 604 0270 FFF7FEFF 		bl	InitCalHeader
+ 605              	.L50:
+ 606 0274 2048     		ldr	r0, .L51+88
+ 607 0276 8DE7     		b	.L49
+ 608              	.L41:
+ 609 0278 2B49     		ldr	r1, .L51+136
+ 610 027a 0948     		ldr	r0, .L51
+ 611 027c FFF7FEFF 		bl	strcmp
+ 612 0280 0028     		cmp	r0, #0
+ 613 0282 53D1     		bne	.L42
+ 614 0284 1021     		movs	r1, #16
+ 615 0286 4FF09040 		mov	r0, #1207959552
+ 616 028a FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 617 028e 0146     		mov	r1, r0
+ 618 0290 0028     		cmp	r0, #0
+ 619 0292 7FF47EAF 		bne	.L32
+ 620 0296 0F48     		ldr	r0, .L51+52
+ 621 0298 FFF7FEFF 		bl	WriteHourStats
+ 622 029c EAE7     		b	.L50
+ 623              	.L52:
+ 624 029e 00BF     		.align	2
+ 625              	.L51:
+ 626 02a0 00000000 		.word	usbRxBuffer
+ 627 02a4 00000000 		.word	usbRxBufferLen
+ 628 02a8 00000000 		.word	USB_CalDataPos
+ 629 02ac 00000000 		.word	usbRxFlag
+ 630 02b0 00000000 		.word	USB_CalData
+ 631 02b4 97000000 		.word	.LC7
+ 632 02b8 00000000 		.word	.LC0
+ 633 02bc 01000000 		.word	USB_CalData+1
+ 634 02c0 2B000000 		.word	.LC1
+ 635 02c4 0D000000 		.word	USB_CalData+13
+ 636 02c8 53000000 		.word	.LC2
+ 637 02cc 00000000 		.word	uptime_h
+ 638 02d0 00000000 		.word	hi2c1
+ 639 02d4 00000000 		.word	eeprom
+ 640 02d8 57000000 		.word	.LC3
+ 641 02dc 62000000 		.word	.LC4
+ 642 02e0 00000000 		.word	USB_Cal_Index
+ 643 02e4 6A000000 		.word	.LC5
+ 644 02e8 0000C842 		.word	1120403456
+ 645 02ec 00000000 		.word	USB_InitialCal
+ 646 02f0 14000000 		.word	USB_InitialCal+20
+ 647 02f4 20000000 		.word	USB_InitialCal+32
+ARM GAS  /tmp/ccY4VdjR.s 			page 13
 
 
- 657              		.section	.text.SystemClock_Config,"ax",%progbits
- 658              		.align	1
- 659              		.global	SystemClock_Config
- 660              		.syntax unified
- 661              		.thumb
- 662              		.thumb_func
- 664              	SystemClock_Config:
- 665              		@ args = 0, pretend = 0, frame = 80
- 666              		@ frame_needed = 0, uses_anonymous_args = 0
- 667 0000 10B5     		push	{r4, lr}
- 668 0002 94B0     		sub	sp, sp, #80
- 669 0004 3822     		movs	r2, #56
- 670 0006 0021     		movs	r1, #0
- 671 0008 06A8     		add	r0, sp, #24
- 672 000a FFF7FEFF 		bl	memset
- 673 000e 1422     		movs	r2, #20
- 674 0010 0021     		movs	r1, #0
- 675 0012 01A8     		add	r0, sp, #4
- 676 0014 FFF7FEFF 		bl	memset
- 677 0018 4FF40070 		mov	r0, #512
- 678 001c FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
- 679 0020 0122     		movs	r2, #1
- 680 0022 4FF48033 		mov	r3, #65536
- 681 0026 CDE90623 		strd	r2, r3, [sp, #24]
- 682 002a 0F92     		str	r2, [sp, #60]
- 683 002c 0223     		movs	r3, #2
- 684 002e 1222     		movs	r2, #18
- 685 0030 CDE91023 		strd	r2, r3, [sp, #64]
- 686 0034 0324     		movs	r4, #3
- 687 0036 0622     		movs	r2, #6
- 688 0038 06A8     		add	r0, sp, #24
- 689 003a CDE90D34 		strd	r3, r4, [sp, #52]
- 690 003e CDE91223 		strd	r2, r3, [sp, #72]
- 691 0042 FFF7FEFF 		bl	HAL_RCC_OscConfig
- 692 0046 08B1     		cbz	r0, .L51
- 693              		.syntax unified
- 694              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 695 0048 72B6     		cpsid i
- 696              	@ 0 "" 2
- 697              		.thumb
- 698              		.syntax unified
- 699              	.L52:
- 700 004a FEE7     		b	.L52
- 701              	.L51:
- 702 004c 0421     		movs	r1, #4
- 703 004e CDE90300 		strd	r0, r0, [sp, #12]
- 704 0052 0F23     		movs	r3, #15
- 705 0054 0590     		str	r0, [sp, #20]
- 706 0056 0DEB0100 		add	r0, sp, r1
- 707 005a CDE90134 		strd	r3, r4, [sp, #4]
- 708 005e FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 709 0062 08B1     		cbz	r0, .L50
- 710              		.syntax unified
- 711              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 712 0064 72B6     		cpsid i
- 713              	@ 0 "" 2
- 714              		.thumb
-ARM GAS  /tmp/ccFlSigC.s 			page 14
+ 648 02f8 90000000 		.word	.LC6
+ 649 02fc A1000000 		.word	.LC8
+ 650 0300 BC000000 		.word	.LC9
+ 651 0304 CA000000 		.word	.LC10
+ 652 0308 D3000000 		.word	.LC11
+ 653 030c EC000000 		.word	.LC12
+ 654 0310 F9000000 		.word	.LC13
+ 655 0314 19010000 		.word	.LC14
+ 656 0318 27010000 		.word	.LC15
+ 657 031c 00ED00E0 		.word	-536810240
+ 658 0320 0400FA05 		.word	100270084
+ 659 0324 2D010000 		.word	.LC16
+ 660 0328 37010000 		.word	.LC17
+ 661              	.L42:
+ 662 032c 1149     		ldr	r1, .L53
+ 663 032e 1248     		ldr	r0, .L53+4
+ 664 0330 FFF7FEFF 		bl	strcmp
+ 665 0334 18B9     		cbnz	r0, .L43
+ 666 0336 114B     		ldr	r3, .L53+8
+ 667 0338 0122     		movs	r2, #1
+ 668 033a 1A70     		strb	r2, [r3]
+ 669 033c 73E7     		b	.L15
+ 670              	.L43:
+ 671 033e 1049     		ldr	r1, .L53+12
+ 672 0340 0D48     		ldr	r0, .L53+4
+ 673 0342 FFF7FEFF 		bl	strcmp
+ 674 0346 0028     		cmp	r0, #0
+ 675 0348 7FF46DAF 		bne	.L15
+ 676 034c 1021     		movs	r1, #16
+ 677 034e 4FF09040 		mov	r0, #1207959552
+ 678 0352 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 679 0356 0028     		cmp	r0, #0
+ 680 0358 7FF41BAF 		bne	.L32
+ 681 035c 0949     		ldr	r1, .L53+16
+ 682 035e 04A8     		add	r0, sp, #16
+ 683 0360 FFF7FEFF 		bl	ReadCalHeader
+ 684 0364 BDF81830 		ldrh	r3, [sp, #24]
+ 685 0368 0BB1     		cbz	r3, .L44
+ 686 036a 0748     		ldr	r0, .L53+20
+ 687 036c 12E7     		b	.L49
+ 688              	.L44:
+ 689 036e 0823     		movs	r3, #8
+ 690 0370 7EE6     		b	.L48
+ 691              	.L54:
+ 692 0372 00BF     		.align	2
+ 693              	.L53:
+ 694 0374 43010000 		.word	.LC18
+ 695 0378 00000000 		.word	usbRxBuffer
+ 696 037c 00000000 		.word	USB_GET_Data_Flag
+ 697 0380 47010000 		.word	.LC19
+ 698 0384 00000000 		.word	eeprom
+ 699 0388 56010000 		.word	.LC20
+ 701              		.section	.text.SystemClock_Config,"ax",%progbits
+ 702              		.align	1
+ 703              		.global	SystemClock_Config
+ 704              		.syntax unified
+ 705              		.thumb
+ARM GAS  /tmp/ccY4VdjR.s 			page 14
 
 
- 715              		.syntax unified
- 716              	.L54:
- 717 0066 FEE7     		b	.L54
- 718              	.L50:
- 719 0068 14B0     		add	sp, sp, #80
- 720              		@ sp needed
- 721 006a 10BD     		pop	{r4, pc}
- 723              		.section	.rodata.main.str1.1,"aMS",%progbits,1
- 724              	.LC19:
- 725 0000 42454749 		.ascii	"BEGIN\015\012\000"
- 725      4E0D0A00 
- 726              	.LC20:
- 727 0008 55707469 		.ascii	"Uptime: %uh %umin %us\015\012\000"
- 727      6D653A20 
- 727      25756820 
- 727      25756D69 
- 727      6E202575 
- 728              	.LC21:
- 729 0020 54656D70 		.ascii	"Temperature External: %lu.%02lu\302\260C\015\012\000"
- 729      65726174 
- 729      75726520 
- 729      45787465 
- 729      726E616C 
- 730              	.LC22:
- 731 0045 52656665 		.ascii	"Reference Voltage: %lu.%02luV\015\012\000"
- 731      72656E63 
- 731      6520566F 
- 731      6C746167 
- 731      653A2025 
- 732              	.LC23:
- 733 0065 48656174 		.ascii	"Heater Voltage: %lu.%02luV\015\012\000"
- 733      65722056 
- 733      6F6C7461 
- 733      67653A20 
- 733      256C752E 
- 734              	.LC24:
- 735 0082 48656174 		.ascii	"Heater Current: %lu.%02lumA\015\012\000"
- 735      65722043 
- 735      75727265 
- 735      6E743A20 
- 735      256C752E 
- 736              	.LC25:
- 737 00a0 454E440D 		.ascii	"END\015\012\000"
- 737      0A00
- 738              		.section	.text.startup.main,"ax",%progbits
- 739              		.align	1
- 740              		.global	main
- 741              		.syntax unified
- 742              		.thumb
- 743              		.thumb_func
- 745              	main:
- 746              		@ args = 0, pretend = 0, frame = 80
- 747              		@ frame_needed = 0, uses_anonymous_args = 0
- 748 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
- 749 0004 2DED048B 		vpush.64	{d8, d9}
- 750 0008 96B0     		sub	sp, sp, #88
- 751 000a FFF7FEFF 		bl	HAL_Init
-ARM GAS  /tmp/ccFlSigC.s 			page 15
+ 706              		.thumb_func
+ 708              	SystemClock_Config:
+ 709              		@ args = 0, pretend = 0, frame = 80
+ 710              		@ frame_needed = 0, uses_anonymous_args = 0
+ 711 0000 10B5     		push	{r4, lr}
+ 712 0002 94B0     		sub	sp, sp, #80
+ 713 0004 3822     		movs	r2, #56
+ 714 0006 0021     		movs	r1, #0
+ 715 0008 06A8     		add	r0, sp, #24
+ 716 000a FFF7FEFF 		bl	memset
+ 717 000e 1422     		movs	r2, #20
+ 718 0010 0021     		movs	r1, #0
+ 719 0012 01A8     		add	r0, sp, #4
+ 720 0014 FFF7FEFF 		bl	memset
+ 721 0018 4FF40070 		mov	r0, #512
+ 722 001c FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
+ 723 0020 0122     		movs	r2, #1
+ 724 0022 4FF48033 		mov	r3, #65536
+ 725 0026 CDE90623 		strd	r2, r3, [sp, #24]
+ 726 002a 0F92     		str	r2, [sp, #60]
+ 727 002c 0223     		movs	r3, #2
+ 728 002e 1222     		movs	r2, #18
+ 729 0030 CDE91023 		strd	r2, r3, [sp, #64]
+ 730 0034 0324     		movs	r4, #3
+ 731 0036 0622     		movs	r2, #6
+ 732 0038 06A8     		add	r0, sp, #24
+ 733 003a CDE90D34 		strd	r3, r4, [sp, #52]
+ 734 003e CDE91223 		strd	r2, r3, [sp, #72]
+ 735 0042 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 736 0046 08B1     		cbz	r0, .L56
+ 737              		.syntax unified
+ 738              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 739 0048 72B6     		cpsid i
+ 740              	@ 0 "" 2
+ 741              		.thumb
+ 742              		.syntax unified
+ 743              	.L57:
+ 744 004a FEE7     		b	.L57
+ 745              	.L56:
+ 746 004c 0421     		movs	r1, #4
+ 747 004e CDE90300 		strd	r0, r0, [sp, #12]
+ 748 0052 0F23     		movs	r3, #15
+ 749 0054 0590     		str	r0, [sp, #20]
+ 750 0056 0DEB0100 		add	r0, sp, r1
+ 751 005a CDE90134 		strd	r3, r4, [sp, #4]
+ 752 005e FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 753 0062 08B1     		cbz	r0, .L55
+ 754              		.syntax unified
+ 755              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 756 0064 72B6     		cpsid i
+ 757              	@ 0 "" 2
+ 758              		.thumb
+ 759              		.syntax unified
+ 760              	.L59:
+ 761 0066 FEE7     		b	.L59
+ 762              	.L55:
+ 763 0068 14B0     		add	sp, sp, #80
+ARM GAS  /tmp/ccY4VdjR.s 			page 15
 
 
- 752 000e FFF7FEFF 		bl	SystemClock_Config
- 753 0012 0022     		movs	r2, #0
- 754 0014 4FF48051 		mov	r1, #4096
- 755 0018 4FF09040 		mov	r0, #1207959552
- 756 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
- 757 0020 4FF4FA70 		mov	r0, #500
- 758 0024 FFF7FEFF 		bl	HAL_Delay
- 759 0028 1422     		movs	r2, #20
- 760 002a 0021     		movs	r1, #0
- 761 002c 0EA8     		add	r0, sp, #56
- 762 002e FFF7FEFF 		bl	memset
- 763 0032 694B     		ldr	r3, .L85
- 764 0034 DA6C     		ldr	r2, [r3, #76]
- 765 0036 42F02002 		orr	r2, r2, #32
- 766 003a DA64     		str	r2, [r3, #76]
- 767 003c DA6C     		ldr	r2, [r3, #76]
- 768 003e 02F02002 		and	r2, r2, #32
- 769 0042 0892     		str	r2, [sp, #32]
- 770 0044 089A     		ldr	r2, [sp, #32]
- 771 0046 DA6C     		ldr	r2, [r3, #76]
- 772 0048 42F00102 		orr	r2, r2, #1
- 773 004c DA64     		str	r2, [r3, #76]
- 774 004e DA6C     		ldr	r2, [r3, #76]
- 775 0050 02F00102 		and	r2, r2, #1
- 776 0054 0992     		str	r2, [sp, #36]
- 777 0056 099A     		ldr	r2, [sp, #36]
- 778 0058 DA6C     		ldr	r2, [r3, #76]
- 779 005a 42F00202 		orr	r2, r2, #2
- 780 005e DA64     		str	r2, [r3, #76]
- 781 0060 DB6C     		ldr	r3, [r3, #76]
- 782 0062 03F00203 		and	r3, r3, #2
- 783 0066 0022     		movs	r2, #0
- 784 0068 0A93     		str	r3, [sp, #40]
- 785 006a E021     		movs	r1, #224
- 786 006c 4FF09040 		mov	r0, #1207959552
- 787 0070 0024     		movs	r4, #0
- 788 0072 0127     		movs	r7, #1
- 789 0074 0A9B     		ldr	r3, [sp, #40]
- 790 0076 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 791 007a 1023     		movs	r3, #16
- 792 007c 0EA9     		add	r1, sp, #56
- 793 007e 4FF09040 		mov	r0, #1207959552
- 794 0082 CDE90E34 		strd	r3, r4, [sp, #56]
- 795 0086 1097     		str	r7, [sp, #64]
- 796 0088 FFF7FEFF 		bl	HAL_GPIO_Init
- 797 008c E023     		movs	r3, #224
- 798 008e 0EA9     		add	r1, sp, #56
- 799 0090 4FF09040 		mov	r0, #1207959552
- 800 0094 CDE90E37 		strd	r3, r7, [sp, #56]
- 801 0098 CDE91044 		strd	r4, r4, [sp, #64]
- 802 009c 4FF02008 		mov	r8, #32
- 803 00a0 FFF7FEFF 		bl	HAL_GPIO_Init
- 804 00a4 4FF48063 		mov	r3, #1024
- 805 00a8 0EA9     		add	r1, sp, #56
- 806 00aa 4FF09040 		mov	r0, #1207959552
- 807 00ae CDE90E34 		strd	r3, r4, [sp, #56]
- 808 00b2 1094     		str	r4, [sp, #64]
-ARM GAS  /tmp/ccFlSigC.s 			page 16
+ 764              		@ sp needed
+ 765 006a 10BD     		pop	{r4, pc}
+ 767              		.section	.rodata.main.str1.1,"aMS",%progbits,1
+ 768              	.LC21:
+ 769 0000 42454749 		.ascii	"BEGIN\015\012\000"
+ 769      4E0D0A00 
+ 770              	.LC22:
+ 771 0008 55707469 		.ascii	"Uptime: %uh %umin %us\015\012\000"
+ 771      6D653A20 
+ 771      25756820 
+ 771      25756D69 
+ 771      6E202575 
+ 772              	.LC23:
+ 773 0020 54656D70 		.ascii	"Temperature External: %lu.%02lu\302\260C\015\012\000"
+ 773      65726174 
+ 773      75726520 
+ 773      45787465 
+ 773      726E616C 
+ 774              	.LC24:
+ 775 0045 52656665 		.ascii	"Reference Voltage: %lu.%02luV\015\012\000"
+ 775      72656E63 
+ 775      6520566F 
+ 775      6C746167 
+ 775      653A2025 
+ 776              	.LC25:
+ 777 0065 48656174 		.ascii	"Heater Voltage: %lu.%02luV\015\012\000"
+ 777      65722056 
+ 777      6F6C7461 
+ 777      67653A20 
+ 777      256C752E 
+ 778              	.LC26:
+ 779 0082 48656174 		.ascii	"Heater Current: %lu.%02lumA\015\012\000"
+ 779      65722043 
+ 779      75727265 
+ 779      6E743A20 
+ 779      256C752E 
+ 780              	.LC27:
+ 781 00a0 454E440D 		.ascii	"END\015\012\000"
+ 781      0A00
+ 782              		.section	.text.startup.main,"ax",%progbits
+ 783              		.align	1
+ 784              		.global	main
+ 785              		.syntax unified
+ 786              		.thumb
+ 787              		.thumb_func
+ 789              	main:
+ 790              		@ args = 0, pretend = 0, frame = 80
+ 791              		@ frame_needed = 0, uses_anonymous_args = 0
+ 792 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 793 0004 2DED048B 		vpush.64	{d8, d9}
+ 794 0008 96B0     		sub	sp, sp, #88
+ 795 000a FFF7FEFF 		bl	HAL_Init
+ 796 000e FFF7FEFF 		bl	SystemClock_Config
+ 797 0012 0022     		movs	r2, #0
+ 798 0014 4FF48051 		mov	r1, #4096
+ 799 0018 4FF09040 		mov	r0, #1207959552
+ 800 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  /tmp/ccY4VdjR.s 			page 16
 
 
- 809 00b4 FFF7FEFF 		bl	HAL_GPIO_Init
- 810 00b8 4246     		mov	r2, r8
- 811 00ba 2146     		mov	r1, r4
- 812 00bc 0EA8     		add	r0, sp, #56
- 813 00be CDE90B44 		strd	r4, r4, [sp, #44]
- 814 00c2 0D94     		str	r4, [sp, #52]
- 815 00c4 FFF7FEFF 		bl	memset
- 816 00c8 444A     		ldr	r2, .L85+4
- 817 00ca 4FF0A043 		mov	r3, #1342177280
- 818 00ce 1360     		str	r3, [r2]
- 819 00d0 0425     		movs	r5, #4
- 820 00d2 4FF44033 		mov	r3, #196608
- 821 00d6 0326     		movs	r6, #3
- 822 00d8 1046     		mov	r0, r2
- 823 00da C2E90134 		strd	r3, r4, [r2, #4]
- 824 00de C2E90344 		strd	r4, r4, [r2, #12]
- 825 00e2 C2E90A74 		strd	r7, r4, [r2, #40]
- 826 00e6 5761     		str	r7, [r2, #20]
- 827 00e8 9561     		str	r5, [r2, #24]
- 828 00ea 9483     		strh	r4, [r2, #28]	@ movhi
- 829 00ec 1662     		str	r6, [r2, #32]
- 830 00ee 82F82470 		strb	r7, [r2, #36]
- 831 00f2 1463     		str	r4, [r2, #48]
- 832 00f4 82F83840 		strb	r4, [r2, #56]
- 833 00f8 D463     		str	r4, [r2, #60]
- 834 00fa 82F84040 		strb	r4, [r2, #64]
- 835 00fe FFF7FEFF 		bl	HAL_ADC_Init
- 836 0102 08B1     		cbz	r0, .L56
- 837              		.syntax unified
- 838              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 839 0104 72B6     		cpsid i
- 840              	@ 0 "" 2
- 841              		.thumb
- 842              		.syntax unified
- 843              	.L57:
- 844 0106 FEE7     		b	.L57
- 845              	.L56:
- 846 0108 0B90     		str	r0, [sp, #44]
- 847 010a 0BA9     		add	r1, sp, #44
- 848 010c 3348     		ldr	r0, .L85+4
- 849 010e FFF7FEFF 		bl	HAL_ADCEx_MultiModeConfigChannel
- 850 0112 08B1     		cbz	r0, .L58
- 851              		.syntax unified
- 852              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 853 0114 72B6     		cpsid i
- 854              	@ 0 "" 2
- 855              		.thumb
- 856              		.syntax unified
- 857              	.L59:
- 858 0116 FEE7     		b	.L59
- 859              	.L58:
- 860 0118 314C     		ldr	r4, .L85+8
- 861 011a 1390     		str	r0, [sp, #76]
- 862 011c 0623     		movs	r3, #6
- 863 011e CDE90E43 		strd	r4, r3, [sp, #56]
- 864 0122 2E48     		ldr	r0, .L85+4
- 865 0124 1096     		str	r6, [sp, #64]
-ARM GAS  /tmp/ccFlSigC.s 			page 17
+ 801 0020 4FF4FA70 		mov	r0, #500
+ 802 0024 FFF7FEFF 		bl	HAL_Delay
+ 803 0028 1422     		movs	r2, #20
+ 804 002a 0021     		movs	r1, #0
+ 805 002c 0EA8     		add	r0, sp, #56
+ 806 002e FFF7FEFF 		bl	memset
+ 807 0032 694B     		ldr	r3, .L90
+ 808 0034 DA6C     		ldr	r2, [r3, #76]
+ 809 0036 42F02002 		orr	r2, r2, #32
+ 810 003a DA64     		str	r2, [r3, #76]
+ 811 003c DA6C     		ldr	r2, [r3, #76]
+ 812 003e 02F02002 		and	r2, r2, #32
+ 813 0042 0892     		str	r2, [sp, #32]
+ 814 0044 089A     		ldr	r2, [sp, #32]
+ 815 0046 DA6C     		ldr	r2, [r3, #76]
+ 816 0048 42F00102 		orr	r2, r2, #1
+ 817 004c DA64     		str	r2, [r3, #76]
+ 818 004e DA6C     		ldr	r2, [r3, #76]
+ 819 0050 02F00102 		and	r2, r2, #1
+ 820 0054 0992     		str	r2, [sp, #36]
+ 821 0056 099A     		ldr	r2, [sp, #36]
+ 822 0058 DA6C     		ldr	r2, [r3, #76]
+ 823 005a 42F00202 		orr	r2, r2, #2
+ 824 005e DA64     		str	r2, [r3, #76]
+ 825 0060 DB6C     		ldr	r3, [r3, #76]
+ 826 0062 03F00203 		and	r3, r3, #2
+ 827 0066 0022     		movs	r2, #0
+ 828 0068 0A93     		str	r3, [sp, #40]
+ 829 006a E021     		movs	r1, #224
+ 830 006c 4FF09040 		mov	r0, #1207959552
+ 831 0070 0024     		movs	r4, #0
+ 832 0072 0127     		movs	r7, #1
+ 833 0074 0A9B     		ldr	r3, [sp, #40]
+ 834 0076 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 835 007a 1023     		movs	r3, #16
+ 836 007c 0EA9     		add	r1, sp, #56
+ 837 007e 4FF09040 		mov	r0, #1207959552
+ 838 0082 CDE90E34 		strd	r3, r4, [sp, #56]
+ 839 0086 1097     		str	r7, [sp, #64]
+ 840 0088 FFF7FEFF 		bl	HAL_GPIO_Init
+ 841 008c E023     		movs	r3, #224
+ 842 008e 0EA9     		add	r1, sp, #56
+ 843 0090 4FF09040 		mov	r0, #1207959552
+ 844 0094 CDE90E37 		strd	r3, r7, [sp, #56]
+ 845 0098 CDE91044 		strd	r4, r4, [sp, #64]
+ 846 009c 4FF02008 		mov	r8, #32
+ 847 00a0 FFF7FEFF 		bl	HAL_GPIO_Init
+ 848 00a4 4FF48063 		mov	r3, #1024
+ 849 00a8 0EA9     		add	r1, sp, #56
+ 850 00aa 4FF09040 		mov	r0, #1207959552
+ 851 00ae CDE90E34 		strd	r3, r4, [sp, #56]
+ 852 00b2 1094     		str	r4, [sp, #64]
+ 853 00b4 FFF7FEFF 		bl	HAL_GPIO_Init
+ 854 00b8 4246     		mov	r2, r8
+ 855 00ba 2146     		mov	r1, r4
+ 856 00bc 0EA8     		add	r0, sp, #56
+ 857 00be CDE90B44 		strd	r4, r4, [sp, #44]
+ARM GAS  /tmp/ccY4VdjR.s 			page 17
 
 
- 866 0126 7F23     		movs	r3, #127
- 867 0128 0EA9     		add	r1, sp, #56
- 868 012a CDE91135 		strd	r3, r5, [sp, #68]
- 869 012e FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 870 0132 08B1     		cbz	r0, .L60
- 871              		.syntax unified
- 872              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 873 0134 72B6     		cpsid i
- 874              	@ 0 "" 2
- 875              		.thumb
- 876              		.syntax unified
- 877              	.L61:
- 878 0136 FEE7     		b	.L61
- 879              	.L60:
- 880 0138 2A48     		ldr	r0, .L85+12
- 881 013a 0C23     		movs	r3, #12
- 882 013c CDE90E03 		strd	r0, r3, [sp, #56]
- 883 0140 0EA9     		add	r1, sp, #56
- 884 0142 2648     		ldr	r0, .L85+4
- 885 0144 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 886 0148 08B1     		cbz	r0, .L62
- 887              		.syntax unified
- 888              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 889 014a 72B6     		cpsid i
- 890              	@ 0 "" 2
- 891              		.thumb
- 892              		.syntax unified
- 893              	.L63:
- 894 014c FEE7     		b	.L63
- 895              	.L62:
- 896 014e 2649     		ldr	r1, .L85+16
- 897 0150 2248     		ldr	r0, .L85+4
- 898 0152 1223     		movs	r3, #18
- 899 0154 CDE90E13 		strd	r1, r3, [sp, #56]
- 900 0158 0EA9     		add	r1, sp, #56
- 901 015a FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 902 015e 08B1     		cbz	r0, .L64
- 903              		.syntax unified
- 904              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 905 0160 72B6     		cpsid i
- 906              	@ 0 "" 2
- 907              		.thumb
- 908              		.syntax unified
- 909              	.L65:
- 910 0162 FEE7     		b	.L65
- 911              	.L64:
- 912 0164 214D     		ldr	r5, .L85+20
- 913 0166 224B     		ldr	r3, .L85+24
- 914 0168 2B60     		str	r3, [r5]
- 915 016a 03F10453 		add	r3, r3, #553648128
- 916 016e A3F50F03 		sub	r3, r3, #9371648
- 917 0172 A3F28B33 		subw	r3, r3, #907
- 918 0176 C5E90130 		strd	r3, r0, [r5, #4]
- 919 017a C5E90370 		strd	r7, r0, [r5, #12]
- 920 017e C5E90500 		strd	r0, r0, [r5, #20]
- 921 0182 C5E90700 		strd	r0, r0, [r5, #28]
- 922 0186 2846     		mov	r0, r5
-ARM GAS  /tmp/ccFlSigC.s 			page 18
+ 858 00c2 0D94     		str	r4, [sp, #52]
+ 859 00c4 FFF7FEFF 		bl	memset
+ 860 00c8 444A     		ldr	r2, .L90+4
+ 861 00ca 4FF0A043 		mov	r3, #1342177280
+ 862 00ce 1360     		str	r3, [r2]
+ 863 00d0 0425     		movs	r5, #4
+ 864 00d2 4FF44033 		mov	r3, #196608
+ 865 00d6 0326     		movs	r6, #3
+ 866 00d8 1046     		mov	r0, r2
+ 867 00da C2E90134 		strd	r3, r4, [r2, #4]
+ 868 00de C2E90344 		strd	r4, r4, [r2, #12]
+ 869 00e2 C2E90A74 		strd	r7, r4, [r2, #40]
+ 870 00e6 5761     		str	r7, [r2, #20]
+ 871 00e8 9561     		str	r5, [r2, #24]
+ 872 00ea 9483     		strh	r4, [r2, #28]	@ movhi
+ 873 00ec 1662     		str	r6, [r2, #32]
+ 874 00ee 82F82470 		strb	r7, [r2, #36]
+ 875 00f2 1463     		str	r4, [r2, #48]
+ 876 00f4 82F83840 		strb	r4, [r2, #56]
+ 877 00f8 D463     		str	r4, [r2, #60]
+ 878 00fa 82F84040 		strb	r4, [r2, #64]
+ 879 00fe FFF7FEFF 		bl	HAL_ADC_Init
+ 880 0102 08B1     		cbz	r0, .L61
+ 881              		.syntax unified
+ 882              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 883 0104 72B6     		cpsid i
+ 884              	@ 0 "" 2
+ 885              		.thumb
+ 886              		.syntax unified
+ 887              	.L62:
+ 888 0106 FEE7     		b	.L62
+ 889              	.L61:
+ 890 0108 0B90     		str	r0, [sp, #44]
+ 891 010a 0BA9     		add	r1, sp, #44
+ 892 010c 3348     		ldr	r0, .L90+4
+ 893 010e FFF7FEFF 		bl	HAL_ADCEx_MultiModeConfigChannel
+ 894 0112 08B1     		cbz	r0, .L63
+ 895              		.syntax unified
+ 896              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 897 0114 72B6     		cpsid i
+ 898              	@ 0 "" 2
+ 899              		.thumb
+ 900              		.syntax unified
+ 901              	.L64:
+ 902 0116 FEE7     		b	.L64
+ 903              	.L63:
+ 904 0118 314C     		ldr	r4, .L90+8
+ 905 011a 1390     		str	r0, [sp, #76]
+ 906 011c 0623     		movs	r3, #6
+ 907 011e CDE90E43 		strd	r4, r3, [sp, #56]
+ 908 0122 2E48     		ldr	r0, .L90+4
+ 909 0124 1096     		str	r6, [sp, #64]
+ 910 0126 7F23     		movs	r3, #127
+ 911 0128 0EA9     		add	r1, sp, #56
+ 912 012a CDE91135 		strd	r3, r5, [sp, #68]
+ 913 012e FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 914 0132 08B1     		cbz	r0, .L65
+ARM GAS  /tmp/ccY4VdjR.s 			page 18
 
 
- 923 0188 FFF7FEFF 		bl	HAL_I2C_Init
- 924 018c 0146     		mov	r1, r0
- 925 018e 08B1     		cbz	r0, .L66
- 926              		.syntax unified
- 927              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 928 0190 72B6     		cpsid i
- 929              	@ 0 "" 2
- 930              		.thumb
+ 915              		.syntax unified
+ 916              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 917 0134 72B6     		cpsid i
+ 918              	@ 0 "" 2
+ 919              		.thumb
+ 920              		.syntax unified
+ 921              	.L66:
+ 922 0136 FEE7     		b	.L66
+ 923              	.L65:
+ 924 0138 2A48     		ldr	r0, .L90+12
+ 925 013a 0C23     		movs	r3, #12
+ 926 013c CDE90E03 		strd	r0, r3, [sp, #56]
+ 927 0140 0EA9     		add	r1, sp, #56
+ 928 0142 2648     		ldr	r0, .L90+4
+ 929 0144 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 930 0148 08B1     		cbz	r0, .L67
  931              		.syntax unified
- 932              	.L67:
- 933 0192 FEE7     		b	.L67
- 934              	.L66:
- 935 0194 2846     		mov	r0, r5
- 936 0196 FFF7FEFF 		bl	HAL_I2CEx_ConfigAnalogFilter
- 937 019a 0146     		mov	r1, r0
- 938 019c 08B1     		cbz	r0, .L68
- 939              		.syntax unified
- 940              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 941 019e 72B6     		cpsid i
- 942              	@ 0 "" 2
- 943              		.thumb
- 944              		.syntax unified
- 945              	.L69:
- 946 01a0 FEE7     		b	.L69
- 947              	.L68:
- 948 01a2 2846     		mov	r0, r5
- 949 01a4 FFF7FEFF 		bl	HAL_I2CEx_ConfigDigitalFilter
- 950 01a8 08B1     		cbz	r0, .L70
- 951              		.syntax unified
- 952              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 953 01aa 72B6     		cpsid i
- 954              	@ 0 "" 2
- 955              		.thumb
- 956              		.syntax unified
- 957              	.L71:
- 958 01ac FEE7     		b	.L71
- 959              	.L70:
- 960 01ae 114E     		ldr	r6, .L85+28
- 961 01b0 114A     		ldr	r2, .L85+32
- 962 01b2 B060     		str	r0, [r6, #8]
- 963 01b4 40F69F73 		movw	r3, #3999
- 964 01b8 C6E90023 		strd	r2, r3, [r6]
- 965 01bc 4FF6FF73 		movw	r3, #65535
- 966 01c0 C6E90330 		strd	r3, r0, [r6, #12]
- 967 01c4 C6E90500 		strd	r0, r0, [r6, #20]
- 968 01c8 3046     		mov	r0, r6
- 969 01ca FFF7FEFF 		bl	HAL_TIM_Base_Init
- 970 01ce 0446     		mov	r4, r0
- 971 01d0 A0B1     		cbz	r0, .L72
- 972              		.syntax unified
- 973              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 974 01d2 72B6     		cpsid i
- 975              	@ 0 "" 2
- 976              		.thumb
- 977              		.syntax unified
- 978              	.L73:
- 979 01d4 FEE7     		b	.L73
-ARM GAS  /tmp/ccFlSigC.s 			page 19
+ 932              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 933 014a 72B6     		cpsid i
+ 934              	@ 0 "" 2
+ 935              		.thumb
+ 936              		.syntax unified
+ 937              	.L68:
+ 938 014c FEE7     		b	.L68
+ 939              	.L67:
+ 940 014e 2649     		ldr	r1, .L90+16
+ 941 0150 2248     		ldr	r0, .L90+4
+ 942 0152 1223     		movs	r3, #18
+ 943 0154 CDE90E13 		strd	r1, r3, [sp, #56]
+ 944 0158 0EA9     		add	r1, sp, #56
+ 945 015a FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 946 015e 08B1     		cbz	r0, .L69
+ 947              		.syntax unified
+ 948              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 949 0160 72B6     		cpsid i
+ 950              	@ 0 "" 2
+ 951              		.thumb
+ 952              		.syntax unified
+ 953              	.L70:
+ 954 0162 FEE7     		b	.L70
+ 955              	.L69:
+ 956 0164 214D     		ldr	r5, .L90+20
+ 957 0166 224B     		ldr	r3, .L90+24
+ 958 0168 2B60     		str	r3, [r5]
+ 959 016a 03F10453 		add	r3, r3, #553648128
+ 960 016e A3F50F03 		sub	r3, r3, #9371648
+ 961 0172 A3F28B33 		subw	r3, r3, #907
+ 962 0176 C5E90130 		strd	r3, r0, [r5, #4]
+ 963 017a C5E90370 		strd	r7, r0, [r5, #12]
+ 964 017e C5E90500 		strd	r0, r0, [r5, #20]
+ 965 0182 C5E90700 		strd	r0, r0, [r5, #28]
+ 966 0186 2846     		mov	r0, r5
+ 967 0188 FFF7FEFF 		bl	HAL_I2C_Init
+ 968 018c 0146     		mov	r1, r0
+ 969 018e 08B1     		cbz	r0, .L71
+ 970              		.syntax unified
+ 971              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ARM GAS  /tmp/ccY4VdjR.s 			page 19
 
 
- 980              	.L86:
- 981 01d6 00BF     		.align	2
- 982              	.L85:
- 983 01d8 00100240 		.word	1073876992
- 984 01dc 00000000 		.word	hadc1
- 985 01e0 1000C010 		.word	281018384
- 986 01e4 00106032 		.word	845156352
- 987 01e8 0080F03E 		.word	1055948800
- 988 01ec 00000000 		.word	hi2c1
- 989 01f0 00540040 		.word	1073763328
- 990 01f4 00000000 		.word	htim16
- 991 01f8 00440140 		.word	1073824768
- 992              	.L72:
- 993 01fc FFF7FEFF 		bl	MX_USB_Device_Init
- 994 0200 FFF7FEFF 		bl	HAL_GetTick
- 995 0204 3A46     		mov	r2, r7
- 996 0206 4146     		mov	r1, r8
- 997 0208 8246     		mov	r10, r0
- 998 020a 4FF09040 		mov	r0, #1207959552
- 999 020e FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1000 0212 3046     		mov	r0, r6
- 1001 0214 FFF7FEFF 		bl	HAL_TIM_Base_Start
- 1002 0218 FFF7FEFF 		bl	HAL_GetTick
- 1003 021c 0DF11009 		add	r9, sp, #16
- 1004 0220 0223     		movs	r3, #2
- 1005 0222 CDE90083 		strd	r8, r3, [sp]
- 1006 0226 2946     		mov	r1, r5
- 1007 0228 4FF40053 		mov	r3, #8192
- 1008 022c 5022     		movs	r2, #80
- 1009 022e 0646     		mov	r6, r0
- 1010 0230 4846     		mov	r0, r9
- 1011 0232 FFF7FEFF 		bl	M24Cxx_Init
- 1012 0236 99E80700 		ldm	r9, {r0, r1, r2}
- 1013 023a 834F     		ldr	r7, .L87+8
- 1014 023c 834D     		ldr	r5, .L87+12
- 1015 023e DFF85492 		ldr	r9, .L87+84
- 1016 0242 87E80700 		stm	r7, {r0, r1, r2}
- 1017 0246 3846     		mov	r0, r7
- 1018 0248 FFF7FEFF 		bl	ReadHourStats
- 1019 024c 2880     		strh	r0, [r5]	@ movhi
- 1020 024e 4FF4FA60 		mov	r0, #2000
- 1021 0252 FFF7FEFF 		bl	HAL_Delay
- 1022 0256 4FF00008 		mov	r8, #0
- 1023              	.L74:
- 1024 025a 9CB9     		cbnz	r4, .L77
- 1025 025c FFF7FEFF 		bl	HAL_GetTick
- 1026 0260 7B4B     		ldr	r3, .L87+16
- 1027 0262 A0EB0A00 		sub	r0, r0, r10
- 1028 0266 9842     		cmp	r0, r3
- 1029 0268 0CD9     		bls	.L77
- 1030 026a 2246     		mov	r2, r4
- 1031 026c 2021     		movs	r1, #32
- 1032 026e 4FF09040 		mov	r0, #1207959552
- 1033 0272 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1034 0276 0122     		movs	r2, #1
- 1035 0278 4021     		movs	r1, #64
- 1036 027a 4FF09040 		mov	r0, #1207959552
-ARM GAS  /tmp/ccFlSigC.s 			page 20
+ 972 0190 72B6     		cpsid i
+ 973              	@ 0 "" 2
+ 974              		.thumb
+ 975              		.syntax unified
+ 976              	.L72:
+ 977 0192 FEE7     		b	.L72
+ 978              	.L71:
+ 979 0194 2846     		mov	r0, r5
+ 980 0196 FFF7FEFF 		bl	HAL_I2CEx_ConfigAnalogFilter
+ 981 019a 0146     		mov	r1, r0
+ 982 019c 08B1     		cbz	r0, .L73
+ 983              		.syntax unified
+ 984              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 985 019e 72B6     		cpsid i
+ 986              	@ 0 "" 2
+ 987              		.thumb
+ 988              		.syntax unified
+ 989              	.L74:
+ 990 01a0 FEE7     		b	.L74
+ 991              	.L73:
+ 992 01a2 2846     		mov	r0, r5
+ 993 01a4 FFF7FEFF 		bl	HAL_I2CEx_ConfigDigitalFilter
+ 994 01a8 08B1     		cbz	r0, .L75
+ 995              		.syntax unified
+ 996              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 997 01aa 72B6     		cpsid i
+ 998              	@ 0 "" 2
+ 999              		.thumb
+ 1000              		.syntax unified
+ 1001              	.L76:
+ 1002 01ac FEE7     		b	.L76
+ 1003              	.L75:
+ 1004 01ae 114E     		ldr	r6, .L90+28
+ 1005 01b0 114A     		ldr	r2, .L90+32
+ 1006 01b2 B060     		str	r0, [r6, #8]
+ 1007 01b4 40F69F73 		movw	r3, #3999
+ 1008 01b8 C6E90023 		strd	r2, r3, [r6]
+ 1009 01bc 4FF6FF73 		movw	r3, #65535
+ 1010 01c0 C6E90330 		strd	r3, r0, [r6, #12]
+ 1011 01c4 C6E90500 		strd	r0, r0, [r6, #20]
+ 1012 01c8 3046     		mov	r0, r6
+ 1013 01ca FFF7FEFF 		bl	HAL_TIM_Base_Init
+ 1014 01ce 0446     		mov	r4, r0
+ 1015 01d0 A0B1     		cbz	r0, .L77
+ 1016              		.syntax unified
+ 1017              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 1018 01d2 72B6     		cpsid i
+ 1019              	@ 0 "" 2
+ 1020              		.thumb
+ 1021              		.syntax unified
+ 1022              	.L78:
+ 1023 01d4 FEE7     		b	.L78
+ 1024              	.L91:
+ 1025 01d6 00BF     		.align	2
+ 1026              	.L90:
+ 1027 01d8 00100240 		.word	1073876992
+ 1028 01dc 00000000 		.word	hadc1
+ARM GAS  /tmp/ccY4VdjR.s 			page 20
 
 
- 1037 027e FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1038 0282 0124     		movs	r4, #1
- 1039              	.L77:
- 1040 0284 FFF7FEFF 		bl	HAL_GetTick
- 1041 0288 831B     		subs	r3, r0, r6
- 1042 028a B3F57A7F 		cmp	r3, #1000
- 1043 028e 0746     		mov	r7, r0
- 1044 0290 08D9     		bls	.L78
- 1045 0292 704A     		ldr	r2, .L87+20
- 1046 0294 1368     		ldr	r3, [r2]
- 1047 0296 0133     		adds	r3, r3, #1
- 1048 0298 B3F5616F 		cmp	r3, #3600
- 1049 029c 80F0C480 		bcs	.L79
- 1050 02a0 1360     		str	r3, [r2]
- 1051              	.L80:
- 1052 02a2 3E46     		mov	r6, r7
- 1053              	.L78:
- 1054 02a4 6C4B     		ldr	r3, .L87+24
- 1055 02a6 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 1056 02a8 002A     		cmp	r2, #0
- 1057 02aa D6D0     		beq	.L74
- 1058 02ac 0022     		movs	r2, #0
- 1059 02ae 6B48     		ldr	r0, .L87+28
- 1060 02b0 1A70     		strb	r2, [r3]
- 1061 02b2 FFF7FEFF 		bl	USB_printf
- 1062 02b6 674B     		ldr	r3, .L87+20
- 1063 02b8 6948     		ldr	r0, .L87+32
- 1064 02ba 1968     		ldr	r1, [r3]
- 1065 02bc 9FED698A 		vldr.32	s16, .L87+36
- 1066 02c0 DFED699A 		vldr.32	s19, .L87+40
- 1067 02c4 9FED699A 		vldr.32	s18, .L87+44
- 1068 02c8 DFED698A 		vldr.32	s17, .L87+48
- 1069 02cc 3C23     		movs	r3, #60
- 1070 02ce B1FBF3F2 		udiv	r2, r1, r3
- 1071 02d2 03FB1213 		mls	r3, r3, r2, r1
- 1072 02d6 2988     		ldrh	r1, [r5]
- 1073 02d8 FFF7FEFF 		bl	USB_printf
- 1074 02dc 6548     		ldr	r0, .L87+52
- 1075 02de FFF7FEFF 		bl	TMP102_GetReading
- 1076 02e2 FDEEC07A 		vcvt.s32.f32	s15, s0
- 1077 02e6 6448     		ldr	r0, .L87+56
- 1078 02e8 B8EE677A 		vcvt.f32.u32	s14, s15
- 1079 02ec 17EE901A 		vmov	r1, s15	@ int
- 1080 02f0 30EE470A 		vsub.f32	s0, s0, s14
- 1081 02f4 20EE080A 		vmul.f32	s0, s0, s16
- 1082 02f8 BDEEC07A 		vcvt.s32.f32	s14, s0
- 1083 02fc 17EE102A 		vmov	r2, s14	@ int
- 1084 0300 FFF7FEFF 		bl	USB_printf
- 1085 0304 5D48     		ldr	r0, .L87+60
- 1086 0306 FFF7FEFF 		bl	HAL_ADC_Start
- 1087 030a 4FF0FF31 		mov	r1, #-1
- 1088 030e 5B48     		ldr	r0, .L87+60
- 1089 0310 FFF7FEFF 		bl	HAL_ADC_PollForConversion
- 1090 0314 5948     		ldr	r0, .L87+60
- 1091 0316 FFF7FEFF 		bl	HAL_ADC_GetValue
- 1092 031a 83B2     		uxth	r3, r0
- 1093 031c 07EE103A 		vmov	s14, r3	@ int
-ARM GAS  /tmp/ccFlSigC.s 			page 21
+ 1029 01e0 1000C010 		.word	281018384
+ 1030 01e4 00106032 		.word	845156352
+ 1031 01e8 0080F03E 		.word	1055948800
+ 1032 01ec 00000000 		.word	hi2c1
+ 1033 01f0 00540040 		.word	1073763328
+ 1034 01f4 00000000 		.word	htim16
+ 1035 01f8 00440140 		.word	1073824768
+ 1036              	.L77:
+ 1037 01fc FFF7FEFF 		bl	MX_USB_Device_Init
+ 1038 0200 FFF7FEFF 		bl	HAL_GetTick
+ 1039 0204 3A46     		mov	r2, r7
+ 1040 0206 4146     		mov	r1, r8
+ 1041 0208 8246     		mov	r10, r0
+ 1042 020a 4FF09040 		mov	r0, #1207959552
+ 1043 020e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1044 0212 3046     		mov	r0, r6
+ 1045 0214 FFF7FEFF 		bl	HAL_TIM_Base_Start
+ 1046 0218 FFF7FEFF 		bl	HAL_GetTick
+ 1047 021c 0DF11009 		add	r9, sp, #16
+ 1048 0220 0223     		movs	r3, #2
+ 1049 0222 CDE90083 		strd	r8, r3, [sp]
+ 1050 0226 2946     		mov	r1, r5
+ 1051 0228 4FF40053 		mov	r3, #8192
+ 1052 022c 5022     		movs	r2, #80
+ 1053 022e 0646     		mov	r6, r0
+ 1054 0230 4846     		mov	r0, r9
+ 1055 0232 FFF7FEFF 		bl	M24Cxx_Init
+ 1056 0236 99E80700 		ldm	r9, {r0, r1, r2}
+ 1057 023a 834F     		ldr	r7, .L92+8
+ 1058 023c 834D     		ldr	r5, .L92+12
+ 1059 023e DFF85492 		ldr	r9, .L92+84
+ 1060 0242 87E80700 		stm	r7, {r0, r1, r2}
+ 1061 0246 3846     		mov	r0, r7
+ 1062 0248 FFF7FEFF 		bl	ReadHourStats
+ 1063 024c 2880     		strh	r0, [r5]	@ movhi
+ 1064 024e 4FF4FA60 		mov	r0, #2000
+ 1065 0252 FFF7FEFF 		bl	HAL_Delay
+ 1066 0256 4FF00008 		mov	r8, #0
+ 1067              	.L79:
+ 1068 025a 9CB9     		cbnz	r4, .L82
+ 1069 025c FFF7FEFF 		bl	HAL_GetTick
+ 1070 0260 7B4B     		ldr	r3, .L92+16
+ 1071 0262 A0EB0A00 		sub	r0, r0, r10
+ 1072 0266 9842     		cmp	r0, r3
+ 1073 0268 0CD9     		bls	.L82
+ 1074 026a 2246     		mov	r2, r4
+ 1075 026c 2021     		movs	r1, #32
+ 1076 026e 4FF09040 		mov	r0, #1207959552
+ 1077 0272 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1078 0276 0122     		movs	r2, #1
+ 1079 0278 4021     		movs	r1, #64
+ 1080 027a 4FF09040 		mov	r0, #1207959552
+ 1081 027e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1082 0282 0124     		movs	r4, #1
+ 1083              	.L82:
+ 1084 0284 FFF7FEFF 		bl	HAL_GetTick
+ 1085 0288 831B     		subs	r3, r0, r6
+ARM GAS  /tmp/ccY4VdjR.s 			page 21
 
 
- 1094 0320 B8EEC77A 		vcvt.f32.s32	s14, s14
- 1095 0324 5648     		ldr	r0, .L87+64
- 1096 0326 27EE297A 		vmul.f32	s14, s14, s19
- 1097 032a C7EE097A 		vdiv.f32	s15, s14, s18
- 1098 032e 77EEA87A 		vadd.f32	s15, s15, s17
- 1099 0332 BDEEE77A 		vcvt.s32.f32	s14, s15
- 1100 0336 F8EEC76A 		vcvt.f32.s32	s13, s14
- 1101 033a 17EE101A 		vmov	r1, s14	@ int
- 1102 033e 77EEE67A 		vsub.f32	s15, s15, s13
- 1103 0342 67EE887A 		vmul.f32	s15, s15, s16
- 1104 0346 FDEEE77A 		vcvt.s32.f32	s15, s15
- 1105 034a 17EE902A 		vmov	r2, s15	@ int
- 1106 034e FFF7FEFF 		bl	USB_printf
- 1107 0352 4A48     		ldr	r0, .L87+60
- 1108 0354 FFF7FEFF 		bl	HAL_ADC_Start
- 1109 0358 4FF0FF31 		mov	r1, #-1
- 1110 035c 4748     		ldr	r0, .L87+60
- 1111 035e FFF7FEFF 		bl	HAL_ADC_PollForConversion
- 1112 0362 4648     		ldr	r0, .L87+60
- 1113 0364 FFF7FEFF 		bl	HAL_ADC_GetValue
- 1114 0368 83B2     		uxth	r3, r0
- 1115 036a 07EE103A 		vmov	s14, r3	@ int
- 1116 036e B8EEC77A 		vcvt.f32.s32	s14, s14
- 1117 0372 4448     		ldr	r0, .L87+68
- 1118 0374 27EE297A 		vmul.f32	s14, s14, s19
- 1119 0378 C7EE097A 		vdiv.f32	s15, s14, s18
- 1120 037c 77EEA87A 		vadd.f32	s15, s15, s17
- 1121 0380 BDEEE77A 		vcvt.s32.f32	s14, s15
- 1122 0384 F8EEC76A 		vcvt.f32.s32	s13, s14
- 1123 0388 17EE101A 		vmov	r1, s14	@ int
- 1124 038c 77EEE67A 		vsub.f32	s15, s15, s13
- 1125 0390 67EE887A 		vmul.f32	s15, s15, s16
- 1126 0394 FDEEE77A 		vcvt.s32.f32	s15, s15
- 1127 0398 17EE902A 		vmov	r2, s15	@ int
- 1128 039c FFF7FEFF 		bl	USB_printf
- 1129 03a0 3648     		ldr	r0, .L87+60
- 1130 03a2 FFF7FEFF 		bl	HAL_ADC_Start
- 1131 03a6 4FF0FF31 		mov	r1, #-1
- 1132 03aa 3448     		ldr	r0, .L87+60
- 1133 03ac FFF7FEFF 		bl	HAL_ADC_PollForConversion
- 1134 03b0 3248     		ldr	r0, .L87+60
- 1135 03b2 FFF7FEFF 		bl	HAL_ADC_GetValue
- 1136 03b6 80B2     		uxth	r0, r0
- 1137 03b8 07EE900A 		vmov	s15, r0	@ int
- 1138 03bc 9FED327A 		vldr.32	s14, .L87+72
- 1139 03c0 F8EEE77A 		vcvt.f32.s32	s15, s15
- 1140 03c4 67EE877A 		vmul.f32	s15, s15, s14
- 1141 03c8 17EE900A 		vmov	r0, s15
- 1142 03cc FFF7FEFF 		bl	__aeabi_f2d
- 1143 03d0 1BA3     		adr	r3, .L87
- 1144 03d2 D3E90023 		ldrd	r2, [r3]
- 1145 03d6 FFF7FEFF 		bl	__aeabi_ddiv
- 1146 03da 4246     		mov	r2, r8
- 1147 03dc 4B46     		mov	r3, r9
- 1148 03de FFF7FEFF 		bl	__aeabi_dmul
- 1149 03e2 0022     		movs	r2, #0
- 1150 03e4 0023     		movs	r3, #0
-ARM GAS  /tmp/ccFlSigC.s 			page 22
+ 1086 028a B3F57A7F 		cmp	r3, #1000
+ 1087 028e 0746     		mov	r7, r0
+ 1088 0290 08D9     		bls	.L83
+ 1089 0292 704A     		ldr	r2, .L92+20
+ 1090 0294 1368     		ldr	r3, [r2]
+ 1091 0296 0133     		adds	r3, r3, #1
+ 1092 0298 B3F5616F 		cmp	r3, #3600
+ 1093 029c 80F0C480 		bcs	.L84
+ 1094 02a0 1360     		str	r3, [r2]
+ 1095              	.L85:
+ 1096 02a2 3E46     		mov	r6, r7
+ 1097              	.L83:
+ 1098 02a4 6C4B     		ldr	r3, .L92+24
+ 1099 02a6 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1100 02a8 002A     		cmp	r2, #0
+ 1101 02aa D6D0     		beq	.L79
+ 1102 02ac 0022     		movs	r2, #0
+ 1103 02ae 6B48     		ldr	r0, .L92+28
+ 1104 02b0 1A70     		strb	r2, [r3]
+ 1105 02b2 FFF7FEFF 		bl	USB_printf
+ 1106 02b6 674B     		ldr	r3, .L92+20
+ 1107 02b8 6948     		ldr	r0, .L92+32
+ 1108 02ba 1968     		ldr	r1, [r3]
+ 1109 02bc 9FED698A 		vldr.32	s16, .L92+36
+ 1110 02c0 DFED699A 		vldr.32	s19, .L92+40
+ 1111 02c4 9FED699A 		vldr.32	s18, .L92+44
+ 1112 02c8 DFED698A 		vldr.32	s17, .L92+48
+ 1113 02cc 3C23     		movs	r3, #60
+ 1114 02ce B1FBF3F2 		udiv	r2, r1, r3
+ 1115 02d2 03FB1213 		mls	r3, r3, r2, r1
+ 1116 02d6 2988     		ldrh	r1, [r5]
+ 1117 02d8 FFF7FEFF 		bl	USB_printf
+ 1118 02dc 6548     		ldr	r0, .L92+52
+ 1119 02de FFF7FEFF 		bl	TMP102_GetReading
+ 1120 02e2 FDEEC07A 		vcvt.s32.f32	s15, s0
+ 1121 02e6 6448     		ldr	r0, .L92+56
+ 1122 02e8 B8EE677A 		vcvt.f32.u32	s14, s15
+ 1123 02ec 17EE901A 		vmov	r1, s15	@ int
+ 1124 02f0 30EE470A 		vsub.f32	s0, s0, s14
+ 1125 02f4 20EE080A 		vmul.f32	s0, s0, s16
+ 1126 02f8 BDEEC07A 		vcvt.s32.f32	s14, s0
+ 1127 02fc 17EE102A 		vmov	r2, s14	@ int
+ 1128 0300 FFF7FEFF 		bl	USB_printf
+ 1129 0304 5D48     		ldr	r0, .L92+60
+ 1130 0306 FFF7FEFF 		bl	HAL_ADC_Start
+ 1131 030a 4FF0FF31 		mov	r1, #-1
+ 1132 030e 5B48     		ldr	r0, .L92+60
+ 1133 0310 FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 1134 0314 5948     		ldr	r0, .L92+60
+ 1135 0316 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 1136 031a 83B2     		uxth	r3, r0
+ 1137 031c 07EE103A 		vmov	s14, r3	@ int
+ 1138 0320 B8EEC77A 		vcvt.f32.s32	s14, s14
+ 1139 0324 5648     		ldr	r0, .L92+64
+ 1140 0326 27EE297A 		vmul.f32	s14, s14, s19
+ 1141 032a C7EE097A 		vdiv.f32	s15, s14, s18
+ 1142 032e 77EEA87A 		vadd.f32	s15, s15, s17
+ARM GAS  /tmp/ccY4VdjR.s 			page 22
 
 
- 1151 03e6 FFF7FEFF 		bl	__aeabi_dadd
- 1152 03ea CDE90201 		strd	r0, [sp, #8]
- 1153 03ee FFF7FEFF 		bl	__aeabi_d2iz
- 1154 03f2 0746     		mov	r7, r0
- 1155 03f4 FFF7FEFF 		bl	__aeabi_ui2d
- 1156 03f8 0246     		mov	r2, r0
- 1157 03fa 0B46     		mov	r3, r1
- 1158 03fc DDE90201 		ldrd	r0, [sp, #8]
- 1159 0400 FFF7FEFF 		bl	__aeabi_dsub
- 1160 0404 4B46     		mov	r3, r9
- 1161 0406 4246     		mov	r2, r8
- 1162 0408 FFF7FEFF 		bl	__aeabi_dmul
- 1163 040c FFF7FEFF 		bl	__aeabi_d2iz
- 1164 0410 3946     		mov	r1, r7
- 1165 0412 0246     		mov	r2, r0
- 1166 0414 1D48     		ldr	r0, .L87+76
- 1167 0416 FFF7FEFF 		bl	USB_printf
- 1168 041a 1848     		ldr	r0, .L87+60
- 1169 041c FFF7FEFF 		bl	HAL_ADC_Stop
- 1170 0420 1B48     		ldr	r0, .L87+80
- 1171 0422 FFF7FEFF 		bl	USB_printf
- 1172 0426 18E7     		b	.L74
- 1173              	.L79:
- 1174 0428 2988     		ldrh	r1, [r5]
- 1175 042a 0748     		ldr	r0, .L87+8
- 1176 042c 0131     		adds	r1, r1, #1
- 1177 042e 0023     		movs	r3, #0
- 1178 0430 89B2     		uxth	r1, r1
- 1179 0432 1360     		str	r3, [r2]
- 1180 0434 2980     		strh	r1, [r5]	@ movhi
- 1181 0436 FFF7FEFF 		bl	WriteHourStats
- 1182 043a 32E7     		b	.L80
- 1183              	.L88:
- 1184 043c AFF30080 		.align	3
- 1185              	.L87:
- 1186 0440 00000000 		.word	0
- 1187 0444 00FEAF40 		.word	1085275648
- 1188 0448 00000000 		.word	eeprom
- 1189 044c 00000000 		.word	uptime_h
- 1190 0450 C0270900 		.word	600000
- 1191 0454 00000000 		.word	uptime_s
- 1192 0458 00000000 		.word	USB_GET_Data_Flag
- 1193 045c 00000000 		.word	.LC19
- 1194 0460 08000000 		.word	.LC20
- 1195 0464 0000C842 		.word	1120403456
- 1196 0468 00009441 		.word	1100218368
- 1197 046c 00F07F45 		.word	1166012416
- 1198 0470 00000000 		.word	0
- 1199 0474 00000000 		.word	hi2c1
- 1200 0478 20000000 		.word	.LC21
- 1201 047c 00000000 		.word	hadc1
- 1202 0480 45000000 		.word	.LC22
- 1203 0484 65000000 		.word	.LC23
- 1204 0488 33335340 		.word	1079194419
- 1205 048c 82000000 		.word	.LC24
- 1206 0490 A0000000 		.word	.LC25
- 1207 0494 00005940 		.word	1079574528
-ARM GAS  /tmp/ccFlSigC.s 			page 23
+ 1143 0332 BDEEE77A 		vcvt.s32.f32	s14, s15
+ 1144 0336 F8EEC76A 		vcvt.f32.s32	s13, s14
+ 1145 033a 17EE101A 		vmov	r1, s14	@ int
+ 1146 033e 77EEE67A 		vsub.f32	s15, s15, s13
+ 1147 0342 67EE887A 		vmul.f32	s15, s15, s16
+ 1148 0346 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 1149 034a 17EE902A 		vmov	r2, s15	@ int
+ 1150 034e FFF7FEFF 		bl	USB_printf
+ 1151 0352 4A48     		ldr	r0, .L92+60
+ 1152 0354 FFF7FEFF 		bl	HAL_ADC_Start
+ 1153 0358 4FF0FF31 		mov	r1, #-1
+ 1154 035c 4748     		ldr	r0, .L92+60
+ 1155 035e FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 1156 0362 4648     		ldr	r0, .L92+60
+ 1157 0364 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 1158 0368 83B2     		uxth	r3, r0
+ 1159 036a 07EE103A 		vmov	s14, r3	@ int
+ 1160 036e B8EEC77A 		vcvt.f32.s32	s14, s14
+ 1161 0372 4448     		ldr	r0, .L92+68
+ 1162 0374 27EE297A 		vmul.f32	s14, s14, s19
+ 1163 0378 C7EE097A 		vdiv.f32	s15, s14, s18
+ 1164 037c 77EEA87A 		vadd.f32	s15, s15, s17
+ 1165 0380 BDEEE77A 		vcvt.s32.f32	s14, s15
+ 1166 0384 F8EEC76A 		vcvt.f32.s32	s13, s14
+ 1167 0388 17EE101A 		vmov	r1, s14	@ int
+ 1168 038c 77EEE67A 		vsub.f32	s15, s15, s13
+ 1169 0390 67EE887A 		vmul.f32	s15, s15, s16
+ 1170 0394 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 1171 0398 17EE902A 		vmov	r2, s15	@ int
+ 1172 039c FFF7FEFF 		bl	USB_printf
+ 1173 03a0 3648     		ldr	r0, .L92+60
+ 1174 03a2 FFF7FEFF 		bl	HAL_ADC_Start
+ 1175 03a6 4FF0FF31 		mov	r1, #-1
+ 1176 03aa 3448     		ldr	r0, .L92+60
+ 1177 03ac FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 1178 03b0 3248     		ldr	r0, .L92+60
+ 1179 03b2 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 1180 03b6 80B2     		uxth	r0, r0
+ 1181 03b8 07EE900A 		vmov	s15, r0	@ int
+ 1182 03bc 9FED327A 		vldr.32	s14, .L92+72
+ 1183 03c0 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 1184 03c4 67EE877A 		vmul.f32	s15, s15, s14
+ 1185 03c8 17EE900A 		vmov	r0, s15
+ 1186 03cc FFF7FEFF 		bl	__aeabi_f2d
+ 1187 03d0 1BA3     		adr	r3, .L92
+ 1188 03d2 D3E90023 		ldrd	r2, [r3]
+ 1189 03d6 FFF7FEFF 		bl	__aeabi_ddiv
+ 1190 03da 4246     		mov	r2, r8
+ 1191 03dc 4B46     		mov	r3, r9
+ 1192 03de FFF7FEFF 		bl	__aeabi_dmul
+ 1193 03e2 0022     		movs	r2, #0
+ 1194 03e4 0023     		movs	r3, #0
+ 1195 03e6 FFF7FEFF 		bl	__aeabi_dadd
+ 1196 03ea CDE90201 		strd	r0, [sp, #8]
+ 1197 03ee FFF7FEFF 		bl	__aeabi_d2iz
+ 1198 03f2 0746     		mov	r7, r0
+ 1199 03f4 FFF7FEFF 		bl	__aeabi_ui2d
+ARM GAS  /tmp/ccY4VdjR.s 			page 23
 
 
- 1209              		.section	.text.Error_Handler,"ax",%progbits
- 1210              		.align	1
- 1211              		.global	Error_Handler
- 1212              		.syntax unified
- 1213              		.thumb
- 1214              		.thumb_func
- 1216              	Error_Handler:
- 1217              		@ Volatile: function does not return.
- 1218              		@ args = 0, pretend = 0, frame = 0
- 1219              		@ frame_needed = 0, uses_anonymous_args = 0
- 1220              		@ link register save eliminated.
- 1221              		.syntax unified
- 1222              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 1223 0000 72B6     		cpsid i
- 1224              	@ 0 "" 2
- 1225              		.thumb
- 1226              		.syntax unified
- 1227              	.L90:
- 1228 0002 FEE7     		b	.L90
- 1230              		.global	USB_GET_Data_Flag
- 1231              		.section	.bss.USB_GET_Data_Flag,"aw",%nobits
- 1234              	USB_GET_Data_Flag:
- 1235 0000 00       		.space	1
- 1236              		.global	USB_Cal_Index
- 1237              		.section	.bss.USB_Cal_Index,"aw",%nobits
- 1238              		.align	1
- 1241              	USB_Cal_Index:
- 1242 0000 0000     		.space	2
- 1243              		.global	USB_CalDataPos
- 1244              		.section	.bss.USB_CalDataPos,"aw",%nobits
- 1247              	USB_CalDataPos:
- 1248 0000 00       		.space	1
- 1249              		.global	USB_InitialCal
- 1250              		.section	.bss.USB_InitialCal,"aw",%nobits
- 1251              		.align	2
- 1254              	USB_InitialCal:
- 1255 0000 00000000 		.space	48
- 1255      00000000 
- 1255      00000000 
- 1255      00000000 
- 1255      00000000 
- 1256              		.global	USB_CalData
- 1257              		.section	.bss.USB_CalData,"aw",%nobits
- 1258              		.align	2
- 1261              	USB_CalData:
- 1262 0000 00000000 		.space	36
- 1262      00000000 
- 1262      00000000 
- 1262      00000000 
- 1262      00000000 
- 1263              		.global	uptime_h
- 1264              		.section	.bss.uptime_h,"aw",%nobits
- 1265              		.align	1
- 1268              	uptime_h:
- 1269 0000 0000     		.space	2
- 1270              		.global	uptime_s
- 1271              		.section	.bss.uptime_s,"aw",%nobits
-ARM GAS  /tmp/ccFlSigC.s 			page 24
+ 1200 03f8 0246     		mov	r2, r0
+ 1201 03fa 0B46     		mov	r3, r1
+ 1202 03fc DDE90201 		ldrd	r0, [sp, #8]
+ 1203 0400 FFF7FEFF 		bl	__aeabi_dsub
+ 1204 0404 4B46     		mov	r3, r9
+ 1205 0406 4246     		mov	r2, r8
+ 1206 0408 FFF7FEFF 		bl	__aeabi_dmul
+ 1207 040c FFF7FEFF 		bl	__aeabi_d2iz
+ 1208 0410 3946     		mov	r1, r7
+ 1209 0412 0246     		mov	r2, r0
+ 1210 0414 1D48     		ldr	r0, .L92+76
+ 1211 0416 FFF7FEFF 		bl	USB_printf
+ 1212 041a 1848     		ldr	r0, .L92+60
+ 1213 041c FFF7FEFF 		bl	HAL_ADC_Stop
+ 1214 0420 1B48     		ldr	r0, .L92+80
+ 1215 0422 FFF7FEFF 		bl	USB_printf
+ 1216 0426 18E7     		b	.L79
+ 1217              	.L84:
+ 1218 0428 2988     		ldrh	r1, [r5]
+ 1219 042a 0748     		ldr	r0, .L92+8
+ 1220 042c 0131     		adds	r1, r1, #1
+ 1221 042e 0023     		movs	r3, #0
+ 1222 0430 89B2     		uxth	r1, r1
+ 1223 0432 1360     		str	r3, [r2]
+ 1224 0434 2980     		strh	r1, [r5]	@ movhi
+ 1225 0436 FFF7FEFF 		bl	WriteHourStats
+ 1226 043a 32E7     		b	.L85
+ 1227              	.L93:
+ 1228 043c AFF30080 		.align	3
+ 1229              	.L92:
+ 1230 0440 00000000 		.word	0
+ 1231 0444 00FEAF40 		.word	1085275648
+ 1232 0448 00000000 		.word	eeprom
+ 1233 044c 00000000 		.word	uptime_h
+ 1234 0450 C0270900 		.word	600000
+ 1235 0454 00000000 		.word	uptime_s
+ 1236 0458 00000000 		.word	USB_GET_Data_Flag
+ 1237 045c 00000000 		.word	.LC21
+ 1238 0460 08000000 		.word	.LC22
+ 1239 0464 0000C842 		.word	1120403456
+ 1240 0468 00009441 		.word	1100218368
+ 1241 046c 00F07F45 		.word	1166012416
+ 1242 0470 00000000 		.word	0
+ 1243 0474 00000000 		.word	hi2c1
+ 1244 0478 20000000 		.word	.LC23
+ 1245 047c 00000000 		.word	hadc1
+ 1246 0480 45000000 		.word	.LC24
+ 1247 0484 65000000 		.word	.LC25
+ 1248 0488 33335340 		.word	1079194419
+ 1249 048c 82000000 		.word	.LC26
+ 1250 0490 A0000000 		.word	.LC27
+ 1251 0494 00005940 		.word	1079574528
+ 1253              		.section	.text.Error_Handler,"ax",%progbits
+ 1254              		.align	1
+ 1255              		.global	Error_Handler
+ 1256              		.syntax unified
+ 1257              		.thumb
+ARM GAS  /tmp/ccY4VdjR.s 			page 24
 
 
- 1272              		.align	2
- 1275              	uptime_s:
- 1276 0000 00000000 		.space	4
- 1277              		.global	eeprom
- 1278              		.section	.bss.eeprom,"aw",%nobits
- 1279              		.align	2
- 1282              	eeprom:
- 1283 0000 00000000 		.space	12
- 1283      00000000 
- 1283      00000000 
- 1284              		.global	usbRxFlag
- 1285              		.section	.bss.usbRxFlag,"aw",%nobits
- 1288              	usbRxFlag:
- 1289 0000 00       		.space	1
- 1290              		.global	usbRxBufferLen
- 1291              		.section	.bss.usbRxBufferLen,"aw",%nobits
- 1292              		.align	1
- 1295              	usbRxBufferLen:
- 1296 0000 0000     		.space	2
- 1297              		.global	usbRxBuffer
- 1298              		.section	.bss.usbRxBuffer,"aw",%nobits
- 1301              	usbRxBuffer:
- 1302 0000 00000000 		.space	128
- 1302      00000000 
- 1302      00000000 
- 1302      00000000 
- 1302      00000000 
- 1303              		.global	htim16
- 1304              		.section	.bss.htim16,"aw",%nobits
- 1305              		.align	2
- 1308              	htim16:
- 1309 0000 00000000 		.space	76
- 1309      00000000 
- 1309      00000000 
- 1309      00000000 
- 1309      00000000 
- 1310              		.global	hi2c1
- 1311              		.section	.bss.hi2c1,"aw",%nobits
- 1312              		.align	2
- 1315              	hi2c1:
- 1316 0000 00000000 		.space	84
- 1316      00000000 
- 1316      00000000 
- 1316      00000000 
- 1316      00000000 
- 1317              		.global	hadc1
- 1318              		.section	.bss.hadc1,"aw",%nobits
- 1319              		.align	2
- 1322              	hadc1:
- 1323 0000 00000000 		.space	108
- 1323      00000000 
- 1323      00000000 
- 1323      00000000 
- 1323      00000000 
- 1324              		.global	__aeabi_dsub
- 1325              		.global	__aeabi_ui2d
- 1326              		.global	__aeabi_d2iz
-ARM GAS  /tmp/ccFlSigC.s 			page 25
+ 1258              		.thumb_func
+ 1260              	Error_Handler:
+ 1261              		@ Volatile: function does not return.
+ 1262              		@ args = 0, pretend = 0, frame = 0
+ 1263              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1264              		@ link register save eliminated.
+ 1265              		.syntax unified
+ 1266              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 1267 0000 72B6     		cpsid i
+ 1268              	@ 0 "" 2
+ 1269              		.thumb
+ 1270              		.syntax unified
+ 1271              	.L95:
+ 1272 0002 FEE7     		b	.L95
+ 1274              		.global	USB_GET_Data_Flag
+ 1275              		.section	.bss.USB_GET_Data_Flag,"aw",%nobits
+ 1278              	USB_GET_Data_Flag:
+ 1279 0000 00       		.space	1
+ 1280              		.global	USB_Cal_Index
+ 1281              		.section	.bss.USB_Cal_Index,"aw",%nobits
+ 1282              		.align	1
+ 1285              	USB_Cal_Index:
+ 1286 0000 0000     		.space	2
+ 1287              		.global	USB_CalDataPos
+ 1288              		.section	.bss.USB_CalDataPos,"aw",%nobits
+ 1291              	USB_CalDataPos:
+ 1292 0000 00       		.space	1
+ 1293              		.global	USB_InitialCal
+ 1294              		.section	.bss.USB_InitialCal,"aw",%nobits
+ 1295              		.align	2
+ 1298              	USB_InitialCal:
+ 1299 0000 00000000 		.space	48
+ 1299      00000000 
+ 1299      00000000 
+ 1299      00000000 
+ 1299      00000000 
+ 1300              		.global	USB_CalData
+ 1301              		.section	.bss.USB_CalData,"aw",%nobits
+ 1302              		.align	2
+ 1305              	USB_CalData:
+ 1306 0000 00000000 		.space	36
+ 1306      00000000 
+ 1306      00000000 
+ 1306      00000000 
+ 1306      00000000 
+ 1307              		.global	uptime_h
+ 1308              		.section	.bss.uptime_h,"aw",%nobits
+ 1309              		.align	1
+ 1312              	uptime_h:
+ 1313 0000 0000     		.space	2
+ 1314              		.global	uptime_s
+ 1315              		.section	.bss.uptime_s,"aw",%nobits
+ 1316              		.align	2
+ 1319              	uptime_s:
+ 1320 0000 00000000 		.space	4
+ 1321              		.global	eeprom
+ 1322              		.section	.bss.eeprom,"aw",%nobits
+ARM GAS  /tmp/ccY4VdjR.s 			page 25
 
 
- 1327              		.global	__aeabi_dadd
- 1328              		.global	__aeabi_dmul
- 1329              		.global	__aeabi_ddiv
- 1330              		.global	__aeabi_f2d
- 1331              		.ident	"GCC: (Arch Repository) 16.2.0"
-ARM GAS  /tmp/ccFlSigC.s 			page 26
+ 1323              		.align	2
+ 1326              	eeprom:
+ 1327 0000 00000000 		.space	12
+ 1327      00000000 
+ 1327      00000000 
+ 1328              		.global	usbRxFlag
+ 1329              		.section	.bss.usbRxFlag,"aw",%nobits
+ 1332              	usbRxFlag:
+ 1333 0000 00       		.space	1
+ 1334              		.global	usbRxBufferLen
+ 1335              		.section	.bss.usbRxBufferLen,"aw",%nobits
+ 1336              		.align	1
+ 1339              	usbRxBufferLen:
+ 1340 0000 0000     		.space	2
+ 1341              		.global	usbRxBuffer
+ 1342              		.section	.bss.usbRxBuffer,"aw",%nobits
+ 1345              	usbRxBuffer:
+ 1346 0000 00000000 		.space	128
+ 1346      00000000 
+ 1346      00000000 
+ 1346      00000000 
+ 1346      00000000 
+ 1347              		.global	htim16
+ 1348              		.section	.bss.htim16,"aw",%nobits
+ 1349              		.align	2
+ 1352              	htim16:
+ 1353 0000 00000000 		.space	76
+ 1353      00000000 
+ 1353      00000000 
+ 1353      00000000 
+ 1353      00000000 
+ 1354              		.global	hi2c1
+ 1355              		.section	.bss.hi2c1,"aw",%nobits
+ 1356              		.align	2
+ 1359              	hi2c1:
+ 1360 0000 00000000 		.space	84
+ 1360      00000000 
+ 1360      00000000 
+ 1360      00000000 
+ 1360      00000000 
+ 1361              		.global	hadc1
+ 1362              		.section	.bss.hadc1,"aw",%nobits
+ 1363              		.align	2
+ 1366              	hadc1:
+ 1367 0000 00000000 		.space	108
+ 1367      00000000 
+ 1367      00000000 
+ 1367      00000000 
+ 1367      00000000 
+ 1368              		.global	__aeabi_dsub
+ 1369              		.global	__aeabi_ui2d
+ 1370              		.global	__aeabi_d2iz
+ 1371              		.global	__aeabi_dadd
+ 1372              		.global	__aeabi_dmul
+ 1373              		.global	__aeabi_ddiv
+ 1374              		.global	__aeabi_f2d
+ 1375              		.ident	"GCC: (Arch Repository) 16.2.0"
+ARM GAS  /tmp/ccY4VdjR.s 			page 26
+
+
+ARM GAS  /tmp/ccY4VdjR.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-     /tmp/ccFlSigC.s:18     .text.ReadHourStats:00000000 $t
-     /tmp/ccFlSigC.s:24     .text.ReadHourStats:00000000 ReadHourStats
-     /tmp/ccFlSigC.s:38     .text.WriteHourStats:00000000 $t
-     /tmp/ccFlSigC.s:44     .text.WriteHourStats:00000000 WriteHourStats
-     /tmp/ccFlSigC.s:58     .text.ReadCalHeader:00000000 $t
-     /tmp/ccFlSigC.s:64     .text.ReadCalHeader:00000000 ReadCalHeader
-     /tmp/ccFlSigC.s:86     .text.WriteCalHeader:00000000 $t
-     /tmp/ccFlSigC.s:92     .text.WriteCalHeader:00000000 WriteCalHeader
-     /tmp/ccFlSigC.s:102    .text.InitCalHeader:00000000 $t
-     /tmp/ccFlSigC.s:108    .text.InitCalHeader:00000000 InitCalHeader
-     /tmp/ccFlSigC.s:125    .text.InitCalHeader:0000001c $d
-     /tmp/ccFlSigC.s:128    .text.WriteInitialCalibration:00000000 $t
-     /tmp/ccFlSigC.s:134    .text.WriteInitialCalibration:00000000 WriteInitialCalibration
-     /tmp/ccFlSigC.s:162    .text.ReadInitialCalibration:00000000 $t
-     /tmp/ccFlSigC.s:168    .text.ReadInitialCalibration:00000000 ReadInitialCalibration
-     /tmp/ccFlSigC.s:192    .text.WriteCalibrationData:00000000 $t
-     /tmp/ccFlSigC.s:198    .text.WriteCalibrationData:00000000 WriteCalibrationData
-     /tmp/ccFlSigC.s:229    .text.ReadCalibrationData:00000000 $t
-     /tmp/ccFlSigC.s:235    .text.ReadCalibrationData:00000000 ReadCalibrationData
-     /tmp/ccFlSigC.s:301    .text.USB_RXCallback:00000000 $t
-     /tmp/ccFlSigC.s:307    .text.USB_RXCallback:00000000 USB_RXCallback
-     /tmp/ccFlSigC.s:334    .text.USB_RXCallback:00000032 $d
-     /tmp/ccFlSigC.s:346    .text.USB_RXCallback:0000003e $t
-     /tmp/ccFlSigC.s:619    .text.USB_RXCallback:0000028c $d
-     /tmp/ccFlSigC.s:1301   .bss.usbRxBuffer:00000000 usbRxBuffer
-     /tmp/ccFlSigC.s:1295   .bss.usbRxBufferLen:00000000 usbRxBufferLen
-     /tmp/ccFlSigC.s:1247   .bss.USB_CalDataPos:00000000 USB_CalDataPos
-     /tmp/ccFlSigC.s:1288   .bss.usbRxFlag:00000000 usbRxFlag
-     /tmp/ccFlSigC.s:1261   .bss.USB_CalData:00000000 USB_CalData
-     /tmp/ccFlSigC.s:1268   .bss.uptime_h:00000000 uptime_h
-     /tmp/ccFlSigC.s:1315   .bss.hi2c1:00000000 hi2c1
-     /tmp/ccFlSigC.s:1282   .bss.eeprom:00000000 eeprom
-     /tmp/ccFlSigC.s:1241   .bss.USB_Cal_Index:00000000 USB_Cal_Index
-     /tmp/ccFlSigC.s:1254   .bss.USB_InitialCal:00000000 USB_InitialCal
-     /tmp/ccFlSigC.s:1234   .bss.USB_GET_Data_Flag:00000000 USB_GET_Data_Flag
-     /tmp/ccFlSigC.s:658    .text.SystemClock_Config:00000000 $t
-     /tmp/ccFlSigC.s:664    .text.SystemClock_Config:00000000 SystemClock_Config
-     /tmp/ccFlSigC.s:739    .text.startup.main:00000000 $t
-     /tmp/ccFlSigC.s:745    .text.startup.main:00000000 main
-     /tmp/ccFlSigC.s:983    .text.startup.main:000001d8 $d
-     /tmp/ccFlSigC.s:1322   .bss.hadc1:00000000 hadc1
-     /tmp/ccFlSigC.s:1308   .bss.htim16:00000000 htim16
-     /tmp/ccFlSigC.s:993    .text.startup.main:000001fc $t
-     /tmp/ccFlSigC.s:1186   .text.startup.main:00000440 $d
-     /tmp/ccFlSigC.s:1275   .bss.uptime_s:00000000 uptime_s
-     /tmp/ccFlSigC.s:1210   .text.Error_Handler:00000000 $t
-     /tmp/ccFlSigC.s:1216   .text.Error_Handler:00000000 Error_Handler
-     /tmp/ccFlSigC.s:1235   .bss.USB_GET_Data_Flag:00000000 $d
-     /tmp/ccFlSigC.s:1238   .bss.USB_Cal_Index:00000000 $d
-     /tmp/ccFlSigC.s:1248   .bss.USB_CalDataPos:00000000 $d
-     /tmp/ccFlSigC.s:1251   .bss.USB_InitialCal:00000000 $d
-     /tmp/ccFlSigC.s:1258   .bss.USB_CalData:00000000 $d
-     /tmp/ccFlSigC.s:1265   .bss.uptime_h:00000000 $d
-     /tmp/ccFlSigC.s:1272   .bss.uptime_s:00000000 $d
-     /tmp/ccFlSigC.s:1279   .bss.eeprom:00000000 $d
-ARM GAS  /tmp/ccFlSigC.s 			page 27
+     /tmp/ccY4VdjR.s:18     .text.ReadHourStats:00000000 $t
+     /tmp/ccY4VdjR.s:24     .text.ReadHourStats:00000000 ReadHourStats
+     /tmp/ccY4VdjR.s:38     .text.WriteHourStats:00000000 $t
+     /tmp/ccY4VdjR.s:44     .text.WriteHourStats:00000000 WriteHourStats
+     /tmp/ccY4VdjR.s:58     .text.ReadCalHeader:00000000 $t
+     /tmp/ccY4VdjR.s:64     .text.ReadCalHeader:00000000 ReadCalHeader
+     /tmp/ccY4VdjR.s:86     .text.WriteCalHeader:00000000 $t
+     /tmp/ccY4VdjR.s:92     .text.WriteCalHeader:00000000 WriteCalHeader
+     /tmp/ccY4VdjR.s:102    .text.InitCalHeader:00000000 $t
+     /tmp/ccY4VdjR.s:108    .text.InitCalHeader:00000000 InitCalHeader
+     /tmp/ccY4VdjR.s:125    .text.InitCalHeader:0000001c $d
+     /tmp/ccY4VdjR.s:128    .text.WriteInitialCalibration:00000000 $t
+     /tmp/ccY4VdjR.s:134    .text.WriteInitialCalibration:00000000 WriteInitialCalibration
+     /tmp/ccY4VdjR.s:162    .text.ReadInitialCalibration:00000000 $t
+     /tmp/ccY4VdjR.s:168    .text.ReadInitialCalibration:00000000 ReadInitialCalibration
+     /tmp/ccY4VdjR.s:192    .text.WriteCalibrationData:00000000 $t
+     /tmp/ccY4VdjR.s:198    .text.WriteCalibrationData:00000000 WriteCalibrationData
+     /tmp/ccY4VdjR.s:229    .text.ReadCalibrationData:00000000 $t
+     /tmp/ccY4VdjR.s:235    .text.ReadCalibrationData:00000000 ReadCalibrationData
+     /tmp/ccY4VdjR.s:305    .text.USB_RXCallback:00000000 $t
+     /tmp/ccY4VdjR.s:311    .text.USB_RXCallback:00000000 USB_RXCallback
+     /tmp/ccY4VdjR.s:338    .text.USB_RXCallback:00000032 $d
+     /tmp/ccY4VdjR.s:350    .text.USB_RXCallback:0000003e $t
+     /tmp/ccY4VdjR.s:626    .text.USB_RXCallback:000002a0 $d
+     /tmp/ccY4VdjR.s:1345   .bss.usbRxBuffer:00000000 usbRxBuffer
+     /tmp/ccY4VdjR.s:1339   .bss.usbRxBufferLen:00000000 usbRxBufferLen
+     /tmp/ccY4VdjR.s:1291   .bss.USB_CalDataPos:00000000 USB_CalDataPos
+     /tmp/ccY4VdjR.s:1332   .bss.usbRxFlag:00000000 usbRxFlag
+     /tmp/ccY4VdjR.s:1305   .bss.USB_CalData:00000000 USB_CalData
+     /tmp/ccY4VdjR.s:1312   .bss.uptime_h:00000000 uptime_h
+     /tmp/ccY4VdjR.s:1359   .bss.hi2c1:00000000 hi2c1
+     /tmp/ccY4VdjR.s:1326   .bss.eeprom:00000000 eeprom
+     /tmp/ccY4VdjR.s:1285   .bss.USB_Cal_Index:00000000 USB_Cal_Index
+     /tmp/ccY4VdjR.s:1298   .bss.USB_InitialCal:00000000 USB_InitialCal
+     /tmp/ccY4VdjR.s:662    .text.USB_RXCallback:0000032c $t
+     /tmp/ccY4VdjR.s:694    .text.USB_RXCallback:00000374 $d
+     /tmp/ccY4VdjR.s:1278   .bss.USB_GET_Data_Flag:00000000 USB_GET_Data_Flag
+     /tmp/ccY4VdjR.s:702    .text.SystemClock_Config:00000000 $t
+     /tmp/ccY4VdjR.s:708    .text.SystemClock_Config:00000000 SystemClock_Config
+     /tmp/ccY4VdjR.s:783    .text.startup.main:00000000 $t
+     /tmp/ccY4VdjR.s:789    .text.startup.main:00000000 main
+     /tmp/ccY4VdjR.s:1027   .text.startup.main:000001d8 $d
+     /tmp/ccY4VdjR.s:1366   .bss.hadc1:00000000 hadc1
+     /tmp/ccY4VdjR.s:1352   .bss.htim16:00000000 htim16
+     /tmp/ccY4VdjR.s:1037   .text.startup.main:000001fc $t
+     /tmp/ccY4VdjR.s:1230   .text.startup.main:00000440 $d
+     /tmp/ccY4VdjR.s:1319   .bss.uptime_s:00000000 uptime_s
+     /tmp/ccY4VdjR.s:1254   .text.Error_Handler:00000000 $t
+     /tmp/ccY4VdjR.s:1260   .text.Error_Handler:00000000 Error_Handler
+     /tmp/ccY4VdjR.s:1279   .bss.USB_GET_Data_Flag:00000000 $d
+     /tmp/ccY4VdjR.s:1282   .bss.USB_Cal_Index:00000000 $d
+     /tmp/ccY4VdjR.s:1292   .bss.USB_CalDataPos:00000000 $d
+     /tmp/ccY4VdjR.s:1295   .bss.USB_InitialCal:00000000 $d
+     /tmp/ccY4VdjR.s:1302   .bss.USB_CalData:00000000 $d
+     /tmp/ccY4VdjR.s:1309   .bss.uptime_h:00000000 $d
+ARM GAS  /tmp/ccY4VdjR.s 			page 28
 
 
-     /tmp/ccFlSigC.s:1289   .bss.usbRxFlag:00000000 $d
-     /tmp/ccFlSigC.s:1292   .bss.usbRxBufferLen:00000000 $d
-     /tmp/ccFlSigC.s:1302   .bss.usbRxBuffer:00000000 $d
-     /tmp/ccFlSigC.s:1305   .bss.htim16:00000000 $d
-     /tmp/ccFlSigC.s:1312   .bss.hi2c1:00000000 $d
-     /tmp/ccFlSigC.s:1319   .bss.hadc1:00000000 $d
+     /tmp/ccY4VdjR.s:1316   .bss.uptime_s:00000000 $d
+     /tmp/ccY4VdjR.s:1323   .bss.eeprom:00000000 $d
+     /tmp/ccY4VdjR.s:1333   .bss.usbRxFlag:00000000 $d
+     /tmp/ccY4VdjR.s:1336   .bss.usbRxBufferLen:00000000 $d
+     /tmp/ccY4VdjR.s:1346   .bss.usbRxBuffer:00000000 $d
+     /tmp/ccY4VdjR.s:1349   .bss.htim16:00000000 $d
+     /tmp/ccY4VdjR.s:1356   .bss.hi2c1:00000000 $d
+     /tmp/ccY4VdjR.s:1363   .bss.hadc1:00000000 $d
 
 UNDEFINED SYMBOLS
 M24Cxx_Read_Bytes
@@ -1522,6 +1579,7 @@ M24Cxx_Write_Buffer
 memcpy
 strtoul
 strcmp
+HAL_GPIO_ReadPin
 strlen
 USB_printf
 strcpy
