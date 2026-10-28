@@ -41,6 +41,20 @@ Also there are a few text fields to input measurements, when the device is first
 
 <img width="743" height="727" alt="obraz" src="https://github.com/user-attachments/assets/2b4be532-8f04-475a-87cf-915e5dc6fe1f" />
 
+## Gallery
+<img width="1542" height="2047" alt="866519307_2180052555939868_5182472449521369803_n(1)" src="https://github.com/user-attachments/assets/ac208975-fe61-4998-b505-f6458c308ef3" />
+
+<img width="1542" height="2047" alt="876545869_992198979977593_2324098559912250930_n" src="https://github.com/user-attachments/assets/7747ef9a-f7b2-4d48-834a-22c0f7a6b1d5" />
+
+<img width="2048" height="1542" alt="870524854_1154811696968642_4580220781798994946_n" src="https://github.com/user-attachments/assets/b44b0fea-5713-4082-a1db-484bcf827af9" />
+
+
+<img width="576" height="1024" alt="AQPV5MHPnuaBnd2dGWVxHe5OO-5tEl-Y2_EjqWZW3jtNE19Zy_EjqBOB38XeHsCUpxiR-6BePGkumeMqMDvoQD9K2QbnkCG4WUnZwBHdlQ" src="https://github.com/user-attachments/assets/faf332d7-9911-4009-851a-ffea7493aaf0" />
+
+
+
+
+
 
 
 ## Software
